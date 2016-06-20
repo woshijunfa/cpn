@@ -1,0 +1,9 @@
+/node_modules
+Homestead.yaml
+.env
+.*
+storage/*
+!.gitignore
+/*.buildpath
+/*.project
+

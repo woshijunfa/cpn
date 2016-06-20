@@ -1,0 +1,203 @@
+@font-face {
+  font-family: 'pingfontweb';
+  src: url('PingFont-Bold.eot'); /* IE9 Compat Modes */
+  src: url('PingFont-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('PingFont-Bold.woff') format('woff'), /* Modern Browsers */
+       url('PingFont-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('PingFont-Bold.svg#99fdce2515534b4a586f02c3ce316794') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'pingfontweb';
+  src: url('PingFont-Light.eot'); /* IE9 Compat Modes */
+  src: url('PingFont-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('PingFont-Light.woff') format('woff'), /* Modern Browsers */
+       url('PingFont-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('PingFont-Light.svg#df3683e0096c9f90a24f5ef1c309dc9c') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  300;
+}
+
+@font-face {
+  font-family: 'pingfontweb';
+  src: url('PingFont-Medium.eot'); /* IE9 Compat Modes */
+  src: url('PingFont-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('PingFont-Medium.woff') format('woff'), /* Modern Browsers */
+       url('PingFont-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('PingFont-Medium.svg#f1e9b05794e933027e209a5958137292') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  500;
+}
+
+@font-face {
+  font-family: 'pingfontweb';
+  src: url('PingFont-Regular.eot'); /* IE9 Compat Modes */
+  src: url('PingFont-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('PingFont-Regular.woff') format('woff'), /* Modern Browsers */
+       url('PingFont-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('PingFont-Regular.svg#0530596f273d8e50808b667357b13a64') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'pingfontweb';
+  src: url('PingFont-Semibold.eot'); /* IE9 Compat Modes */
+  src: url('PingFont-Semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('PingFont-Semibold.woff') format('woff'), /* Modern Browsers */
+       url('PingFont-Semibold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('PingFont-Semibold.svg#27ec055812d67ed783112e868ee85214') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  600;
+}
+
+@font-face {
+  font-family: 'pingfontweb';
+  src: url('PingFont-Thin.eot'); /* IE9 Compat Modes */
+  src: url('PingFont-Thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('PingFont-Thin.woff') format('woff'), /* Modern Browsers */
+       url('PingFont-Thin.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('PingFont-Thin.svg#3ad51247e18ef2a64403f4197035aa10') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  200;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:    url('icomoon.eot?ft0ir4');
+    src:    url('icomoon.eot?ft0ir4#iefix') format('embedded-opentype'),
+        url('icomoon.ttf?ft0ir4') format('truetype'),
+        url('icomoon.woff?ft0ir4') format('woff'),
+        url('icomoon.svg?ft0ir4#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pingplusplus:before {
+    content: "\e90a";
+}
+.icon-visa:before {
+    content: "\e802";
+}
+.icon-master:before {
+    content: "\e803";
+}
+.icon-jd:before {
+    content: "\e800";
+}
+.icon-jdpay:before {
+    content: "\e60b";
+}
+.icon-yeepay:before {
+    content: "\e616";
+}
+.icon-apple:before {
+    content: "\e60e";
+}
+.icon-qr:before {
+    content: "\e614";
+}
+.icon-qq:before {
+    content: "\e613";
+}
+.icon-weibo:before {
+    content: "\e612";
+}
+.icon-baidu:before {
+    content: "\e615";
+}
+.icon-wechat:before {
+    content: "\e60f";
+}
+.icon-unionpay:before {
+    content: "\e610";
+}
+.icon-alipay:before {
+    content: "\e611";
+}
+.icon-weixin:before {
+    content: "\e61e";
+}
+.icon-bag:before {
+    content: "\e61f";
+}
+.icon-play:before {
+    content: "\e622";
+}
+.icon-check-alt:before {
+    content: "\e623";
+}
+.icon-help:before {
+    content: "\e908";
+}
+.icon-external:before {
+    content: "\e907";
+}
+.icon-chev-board:before {
+    content: "\e909";
+}
+.icon-chev-down:before {
+    content: "\e906";
+}
+.icon-chevron-left:before {
+    content: "\e900";
+}
+.icon-chevron-right:before {
+    content: "\e901";
+}
+.icon-arrow-down:before {
+    content: "\e902";
+}
+.icon-arrow-back:before {
+    content: "\e903";
+}
+.icon-arrow-forward:before {
+    content: "\e904";
+}
+.icon-arrow-up:before {
+    content: "\e905";
+}
+.icon-minus:before {
+    content: "\e115";
+}
+.icon-close:before {
+    content: "\e117";
+}
+.icon-power:before {
+    content: "\e086";
+}
+.icon-plus:before {
+    content: "\e114";
+}
+.icon-check:before {
+    content: "\e116";
+}
+.icon-menu:before {
+    content: "\e120";
+}
+.icon-info:before {
+    content: "\e617";
+}
