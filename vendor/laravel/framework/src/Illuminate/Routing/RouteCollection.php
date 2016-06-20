@@ -158,6 +158,8 @@ class RouteCollection implements Countable, IteratorAggregate
             return $this->getRouteForMethods($request, $others);
         }
 
+        \App\Services\CommonService::autoLoadPage();        
+
         throw new NotFoundHttpException;
     }
 

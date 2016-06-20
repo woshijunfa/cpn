@@ -19,6 +19,31 @@ Route::get('/guides', 'CopyController@common');
 Route::get('/faq', 'CopyController@common');
 Route::get('/refund_policy', 'CopyController@common');
 
+#guide
+Route::get('/guides/windows8_pptp', 'CopyController@common');
+Route::get('/guides/windows8_l2tp', 'CopyController@common');
+Route::get('/guides/pptp_vs_l2tp', 'CopyController@common');
+Route::get('/guides/windows7_pptp', 'CopyController@common');
+Route::get('/guides/windows7_l2tp', 'CopyController@common');
+Route::get('/guides/windows_xp_pptp', 'CopyController@common');
+Route::get('/guides/windows_xp_l2tp', 'CopyController@common');
+Route::get('/guides/mac_os_mobile_config', 'CopyController@common');
+Route::get('/guides/mac_os_pptp', 'CopyController@common');
+Route::get('/guides/mac_os_l2tp', 'CopyController@common');
+Route::get('/guides/ubuntu_pptp', 'CopyController@common');
+Route::get('/guides/ubuntu_l2tp', 'CopyController@common');
+
+Route::get('/guides/iphone_mobile_config', 'CopyController@common');
+Route::get('/guides/iphone_pptp', 'CopyController@common');
+Route::get('/guides/iphone_l2tp', 'CopyController@common');
+Route::get('/guides/ipad_mobile_config', 'CopyController@common');
+Route::get('/guides/ipad_pptp', 'CopyController@common');
+Route::get('/guides/ipad_l2tp', 'CopyController@common');
+Route::get('/guides/android_pptp', 'CopyController@common');
+Route::get('/guides/android_l2tp', 'CopyController@common');
+Route::get('/guides/android_2_pptp', 'CopyController@common');
+Route::get('/guides/android_2_l2tp', 'CopyController@common');
+
 #常见问题相关
 Route::get('/faq/function', 'CopyController@common');
 Route::get('/faq/link', 'CopyController@common');
@@ -43,7 +68,8 @@ Route::get('/logout',"UserController@logout");
 
 
 
-// Route::get('/test',function(){var_dump(\Auth::user());});
+Route::get('/test',function(){return App\Services\CommonService::autoLoadPage();});
+Route::get('/assets/steps/android_2/l2tp/step10-73a4ef35ee2e2516217c70bd63695534.jpg',function(){return App\Services\CommonService::autoLoadPage();});
 
 
 
