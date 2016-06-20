@@ -10,7 +10,7 @@
 <meta name="twitter:creator" content="@VPNCloud">
 <meta name="twitter:title" content="云梯 VPN" />
 <meta name="twitter:description" content="云梯 VPN - 自动智能加速国内外访问，速度快又稳定，推荐给需要的人。" />
-<meta name="twitter:image" content="https://www.yuntiprivaten.com/assets/twitter/image-ef62a4541213f068d2911972dec4fafd.png" />
+<meta name="twitter:image" content="/assets/twitter/image-ef62a4541213f068d2911972dec4fafd.png" />
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
 
@@ -34,11 +34,11 @@
   <div class="container">
     <div class="pull-right content">
         <span>
-          <a href="https://www.yuntiprivaten.com/users/sign_in">登录</a>
+          <a href="/users/sign_in">登录</a>
         </span>
         <span>/</span>
         <span>
-          <a href="https://www.yuntiprivaten.com/users/sign_up">注册</a>
+          <a href="/users/sign_up">注册</a>
         </span>
     </div>
   </div>
@@ -309,7 +309,7 @@ $(".typeahead-email").mailgun_validator({
     <div class="row">
       <div class="col-md-12">
         <div class='social-share-button' data-title='云梯 VPN - 自动智能加速国内外访问，速度快又稳定，推荐给需要的人。' data-img=''
-data-url='https://www.yuntiprivaten.com/users/sign_up' data-desc='' data-popup='true' data-via=''>
+data-url='/users/sign_up' data-desc='' data-popup='true' data-via=''>
 <a href="#" class="social-share-button-twitter" data-site="twitter" onclick="return SocialShareButton.share(this);" rel="nofollow " title="分享到 Twitter"></a>
 <a href="#" class="social-share-button-facebook" data-site="facebook" onclick="return SocialShareButton.share(this);" rel="nofollow " title="分享到 Facebook"></a>
 <a href="#" class="social-share-button-google_plus" data-site="google_plus" onclick="return SocialShareButton.share(this);" rel="nofollow " title="分享到 Google+"></a>
