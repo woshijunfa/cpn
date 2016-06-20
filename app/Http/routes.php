@@ -11,11 +11,30 @@
 |
 */
 
-Route::get('/', function () {
-    return view('content.imgdesc');
-});
+Route::get('/', 'CopyController@common');
+Route::get('/feature', 'CopyController@common');
+Route::get('/pricing', 'CopyController@common');
+Route::get('/guides', 'CopyController@common');
+Route::get('/faq', 'CopyController@common');
+Route::get('/refund_policy', 'CopyController@common');
+
+//登录注册相关
+Route::get('/users/sign_in', 'CopyController@common');
+Route::get('/users/sign_up', 'CopyController@common');
+
+Route::get('/faq/function', 'CopyController@common');
+Route::get('/faq/link', 'CopyController@common');
+Route::get('/faq/account', 'CopyController@common');
+Route::get('/faq/shop', 'CopyController@common');
+Route::get('/terms_of_service', 'CopyController@common');
+Route::get('/users/password/new', 'CopyController@common');
+
+
+
 
 // Route::get('/test',function(){var_dump(\Auth::user());});
+
+
 
 
 Route::get('/doc/{doc}',"DocController@showdoc");
