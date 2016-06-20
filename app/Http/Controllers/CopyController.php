@@ -18,6 +18,12 @@ class CopyController extends Controller
         if ($bladename[0] == '_') $bladename = substr($bladename,1);
         if (empty($bladename)) $bladename = 'index';
 
+
+        if ($pos = strpos($bladename,'?')) 
+        {
+            $bladename = substr($bladename,0,$pos);
+        }
+
         $content = View::make('copy.' . $bladename)->render();
 
         return response($content);

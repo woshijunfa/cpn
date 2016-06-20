@@ -26,23 +26,16 @@ class UserController extends Controller
         if (empty($email)) return $this->json(1,[],"邮箱不能为空");
         if (!gIsEmail($email)) return $this->json(1,[],"邮箱格式不正确");
 
+        $password = Input::get("password");
+        if (empty($password)) return $this->json(1,[],"密码不能为空");
+
         //用户信息，是否已经注册
         $userInfo = User::where("email",$email)->first();
-        $uuid = '';
-        if (empty($userInfo)) 
-        {   
-            //进行注册
-            $uuid = User::initEmail($email);
-            if (empty($uuid)) return $this->json(3,[],"注册失败，请稍后再试");
-        }
-        else
-        {
-            if ($userInfo->status == -1) $uuid = $userInfo->email_key;
-            else return $this->json(2,[],"已经注册，请直接登录");
-        }
+        if (!empty($userInfo)) return $this->json(1,[],"该邮箱已经注册，请直接登录");
 
-        //发送激活邮件
-        UserService::sendRegiestEmail($email,$uuid);
+        //进行注册
+        $uuid = User::reg($email,$password);
+        if (!$uuid) return $this->json(3,[],"注册失败，请稍后再试");
 
         return $this->json(0,[],"");
     }

@@ -43,7 +43,18 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
                             'updated_at'
                             ];
 
+    //注册用户
+    public static function reg($email,$password)
+    {
+        if (empty($email)) return false;
+        if (empty($password)) return false;
 
+        $password = Hash::make($password);
+        $result = self::insert(['status'=>0,'email'=>$email,'password'=>$password]);
+
+        return $result ? true : false;
+    }    
+    
     //设置邮箱
     public static function initEmail($email)
     {
