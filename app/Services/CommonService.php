@@ -33,13 +33,15 @@ class CommonService
 
     public static function autoLoadPage()
     {
+    	if (strtoupper(request()->getMethod()) != 'GET') return false;
+
     	$uri = request()->getRequestUri();
         if ($pos = strpos($uri,'?')) 
             $uri = substr($uri,0,$pos);
         if($pos = strrpos($uri,'.'))
         {
         	$fix = substr($uri,$pos+1);
-        	if (!in_array($fix,['jpg','png','css','js'])) return false;
+        	if (!in_array($fix,['jpg','png','css','js','ttf','woff'])) return false;
         }
         else return self::autoLoadHtml();
 
@@ -57,6 +59,7 @@ class CommonService
     public static function autoLoadHtml()
     {
     	$uri = request()->getRequestUri();
+    	$simUri = $uri;
         if ($pos = strpos($uri,'?')) $simUri = substr($uri,0,$pos);
 
     	$curlurl = "https://www.yuntiprivaten.com" . $uri;
@@ -79,15 +82,20 @@ class CommonService
         //存储到制定路径的指定模板
         $bladePath = base_path() .'/resources/views/autocopy'. $simUri . '.blade.php';
 		self::createDir(dirname($bladePath));
-
-		//写入文件
+		exec("rm -f " . $bladePath);
 		file_put_contents($bladePath,$htmlContent,0777);
 
         //生成指定文件路由
-        var_dump($bladePath);
-        die;
+        $routePath = app_path() . '/Http/routes.php';
+        $content = file_get_contents($routePath);
+        $addContent = "Route::get('".$simUri."', 'CopyController@autoNavi');
+";
+		if (!strpos($content,$addContent))
+		{
+			file_put_contents($routePath,$addContent,FILE_APPEND);
+		}
 
-
+		return true;
     }
 
 }

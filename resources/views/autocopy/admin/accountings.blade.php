@@ -41,7 +41,7 @@
             <i class="fa fa-home"></i>
             <span class="name">首页</span>
 </a>        </li>
-        <li class="">
+        <li class="active">
           <a href="/admin/accountings">
             <i class="fa fa-link"></i>
             <span class="name">连接</span>
@@ -56,7 +56,7 @@
             <i class="fa fa-globe"></i>
             <span class="name">服务器</span>
 </a>        </li>
-        <li class="active">
+        <li class="">
           <a href="/admin/speed_up">
             <i class="fa fa-code-fork"></i>
             <span class="name">智能加速</span>
@@ -135,74 +135,140 @@
           <div class="row">
               <div class="col-md-12">
                 <div class="content-main">
-                  <h4 class="title-divider">
-  <span>安装云梯智能加速</span>
-</h4>
-
-<div class="row">
-  <div class="col-md-4">
-    <p>安装云梯智能加速后，连接云梯的VPN：</p>
-    <ul>
-      <li>国内网站的速度和不连接VPN一样快</li>
-      <li>国内网站的流量不计入VPN流量</li>
-      <li>国外网站依然通过VPN，畅通无阻</li>
-    </ul>
-    <div class="download">
-        <a href="#" class="btn btn-primary btn-lg" data-content="购买云梯VPN后才能下载&lt;br&gt;前往 &lt;a href=&quot;/pricing&quot; target=&quot;_blank&quot;&gt;选择套餐&lt;/a&gt;" data-original-title="提示" id="btn-no-service" rel="popover">
-          下载 云梯智能加速<br/>
-          <small>Windows 7 / 8 版</small>
-</a>    </div>
-    <div class="os">
-      <p>其他操作系统的智能加速：</p>
-      <ul class="inline-block-list">
-          <li class="platform platform-windows_nt_5">
-            <a href="/admin/speed_up?platform=windows_nt_5"></a>
-          </li>
-          <li class="platform platform-osx">
-            <a href="/admin/speed_up?platform=osx"></a>
-          </li>
-          <li class="platform platform-linux">
-            <a href="/admin/speed_up?platform=linux"></a>
-          </li>
-      </ul>
-    </div>
-  </div>
-  <div class="col-md-8">
-    <img alt="智能加速原理" src="/assets/admin/speed_up-bc73a6844254057ceff90568feb9b7b1.png" />
-  </div>
+                  <div class="nav-container">
+  <ul class="nav nav-pills nav-justified">
+    <li class="active">
+      <a href="/admin/accountings">全部</a>
+    </li>
+    <li class="">
+      <a href="/admin/accountings/today">今天</a>
+    </li>
+    <li class="">
+      <a href="/admin/accountings/this_week">本周</a>
+    </li>
+    <li class="">
+      <a href="/admin/accountings/this_month">本月</a>
+    </li>
+  </ul>
 </div>
 
-<div class="alert alert-info">
-  更新建议：云梯智能加速会持续更新，建议每月下载最新的文件，重新安装(无需卸载之前的)，以保证使用的是最新的规则
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th class="align-right">连接时间</th>
+        <th class="align-right">断开时间</th>
+        <th class="align-right">持续时间</th>
+        <th class="align-right">上传</th>
+        <th class="align-right">下载</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="align-right">06-26 14:19</td>
+          <td class="align-right">06-26 16:12</td>
+          <td class="align-right">1:53:43</td>
+          <td class="align-right">3.8 MB</td>
+          <td class="align-right">10.0 MB</td>
+        </tr>
+        <tr>
+          <td class="align-right">06-26 11:23</td>
+          <td class="align-right">06-26 12:25</td>
+          <td class="align-right">1:01:33</td>
+          <td class="align-right">1.9 MB</td>
+          <td class="align-right">7.2 MB</td>
+        </tr>
+        <tr>
+          <td class="align-right">06-25 22:17</td>
+          <td class="align-right">06-25 22:18</td>
+          <td class="align-right">0:01:33</td>
+          <td class="align-right">753.2 KB</td>
+          <td class="align-right">492.4 KB</td>
+        </tr>
+        <tr>
+          <td class="align-right">06-25 21:56</td>
+          <td class="align-right">06-25 21:59</td>
+          <td class="align-right">0:03:02</td>
+          <td class="align-right">284.8 KB</td>
+          <td class="align-right">1.8 MB</td>
+        </tr>
+        <tr>
+          <td class="align-right">06-25 19:27</td>
+          <td class="align-right">06-25 19:47</td>
+          <td class="align-right">0:19:19</td>
+          <td class="align-right">1.3 MB</td>
+          <td class="align-right">21.3 MB</td>
+        </tr>
+        <tr>
+          <td class="align-right">06-25 18:57</td>
+          <td class="align-right">06-25 19:08</td>
+          <td class="align-right">0:10:37</td>
+          <td class="align-right">592.4 KB</td>
+          <td class="align-right">7.4 MB</td>
+        </tr>
+        <tr>
+          <td class="align-right">06-25 18:19</td>
+          <td class="align-right">06-25 18:34</td>
+          <td class="align-right">0:15:05</td>
+          <td class="align-right">3.1 MB</td>
+          <td class="align-right">23.1 MB</td>
+        </tr>
+        <tr>
+          <td class="align-right">06-25 17:59</td>
+          <td class="align-right">06-25 18:00</td>
+          <td class="align-right">0:01:08</td>
+          <td class="align-right">26.3 KB</td>
+          <td class="align-right">52.9 KB</td>
+        </tr>
+        <tr>
+          <td class="align-right">06-25 17:28</td>
+          <td class="align-right">06-25 17:47</td>
+          <td class="align-right">0:18:43</td>
+          <td class="align-right">1.3 MB</td>
+          <td class="align-right">4.3 MB</td>
+        </tr>
+        <tr>
+          <td class="align-right">06-25 16:25</td>
+          <td class="align-right">06-25 17:19</td>
+          <td class="align-right">0:53:35</td>
+          <td class="align-right">3.9 MB</td>
+          <td class="align-right">34.4 MB</td>
+        </tr>
+        <tr>
+          <td class="align-right">06-25 15:53</td>
+          <td class="align-right">06-25 16:03</td>
+          <td class="align-right">0:09:25</td>
+          <td class="align-right">860.9 KB</td>
+          <td class="align-right">8.3 MB</td>
+        </tr>
+        <tr>
+          <td class="align-right">06-25 15:21</td>
+          <td class="align-right">06-25 15:48</td>
+          <td class="align-right">0:27:01</td>
+          <td class="align-right">1.6 MB</td>
+          <td class="align-right">7.5 MB</td>
+        </tr>
+        <tr>
+          <td class="align-right">06-25 15:11</td>
+          <td class="align-right">06-25 15:21</td>
+          <td class="align-right">0:09:35</td>
+          <td class="align-right">1.1 MB</td>
+          <td class="align-right">10.5 MB</td>
+        </tr>
+        <tr>
+          <td class="align-right">06-25 14:33</td>
+          <td class="align-right">06-25 14:44</td>
+          <td class="align-right">0:11:04</td>
+          <td class="align-right">1.3 MB</td>
+          <td class="align-right">7.5 MB</td>
+        </tr>
+    </tbody>
+  </table>
 </div>
 
-<h4 class="title-divider">
-  <span>Windows 7 / 8 智能加速安装帮助</span>
-</h4>
-<img alt="Windows 7 / 8 智能加速安装帮助" class="center-block" src="/assets/admin/win7_speed_up-aea3d77868ecd3d33fda5b4116c0ccdf.png" />
-
-<h4 class="title-divider">
-  <span>如何确认智能加速成功？</span>
-</h4>
-<p>第一步：安装完智能加速后，连接 VPN</p>
-<p>第二步：打开 http://ip.chinaz.com 显示的是国内 IP，说明智能加速安装成功</p>
-
-<h4 class="title-divider title-top-space">
-  <span>Windows 7 / 8 智能加速卸载帮助</span>
-</h4>
-<p>重启系统或者运行 vpndown（参考安装帮助）即可。</p>
 
 
-<script type="text/javascript">
-//<![CDATA[
-
-$('#btn-no-service').popover({
-  placement: 'top',
-  html: true
-});
-
-//]]>
-</script>
                 </div>
               </div>
           </div>

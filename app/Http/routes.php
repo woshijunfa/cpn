@@ -66,7 +66,6 @@ Route::get('/logout',"UserController@logout");
 
 
 
-//auto-generate-route
 
 
 
@@ -100,3 +99,21 @@ Route::get('/assets/steps/android_2/l2tp/step10-73a4ef35ee2e2516217c70bd63695534
 
 // Route::any('/imgrec',function(){ echo json_encode(['code'=>-100,'desc'=>'未授权请求']);});
 
+//auto-generate-route
+
+
+Route::get('/admin/speed_up', 'CopyController@autoNavi');
+Route::get('/admin/servers', 'CopyController@autoNavi');
+Route::get('/admin/orders', 'CopyController@autoNavi');
+Route::get('/admin/accountings', 'CopyController@autoNavi');
+Route::get('/admin', 'CopyController@autoNavi');
+Route::get('/admin/documents', 'CopyController@autoNavi');
+Route::get('/admin/tickets', 'CopyController@autoNavi');
+Route::get('/admin/referral', 'CopyController@autoNavi');
+Route::get('/admin/credit_referral', 'CopyController@autoNavi');
+Route::get('/admin/withdrawals/new', 'CopyController@autoNavi');
+Route::get('/admin/transfers/new', 'CopyController@autoNavi');
+Route::get('/admin/user/edit_email', 'CopyController@autoNavi');
+Route::get('/admin/user/edit', 'CopyController@autoNavi');
+Route::get('/admin/credit_account', 'CopyController@autoNavi');
+Route::get('/admin/orders/new', 'CopyController@autoNavi');

@@ -36,7 +36,7 @@
 
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-        <li class="">
+        <li class="active">
           <a href="/admin">
             <i class="fa fa-home"></i>
             <span class="name">首页</span>
@@ -56,7 +56,7 @@
             <i class="fa fa-globe"></i>
             <span class="name">服务器</span>
 </a>        </li>
-        <li class="active">
+        <li class="">
           <a href="/admin/speed_up">
             <i class="fa fa-code-fork"></i>
             <span class="name">智能加速</span>
@@ -133,76 +133,164 @@
           </div>
 
           <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-9">
                 <div class="content-main">
-                  <h4 class="title-divider">
-  <span>安装云梯智能加速</span>
-</h4>
+                  <div id="dashboard">
+  <div class="title-container">
+    <strong>欢迎您，woshijunfa</strong> <span class="text-muted">(chenjunfa1988@yeah.net)</span>
+</div>
 
-<div class="row">
-  <div class="col-md-4">
-    <p>安装云梯智能加速后，连接云梯的VPN：</p>
-    <ul>
-      <li>国内网站的速度和不连接VPN一样快</li>
-      <li>国内网站的流量不计入VPN流量</li>
-      <li>国外网站依然通过VPN，畅通无阻</li>
-    </ul>
-    <div class="download">
-        <a href="#" class="btn btn-primary btn-lg" data-content="购买云梯VPN后才能下载&lt;br&gt;前往 &lt;a href=&quot;/pricing&quot; target=&quot;_blank&quot;&gt;选择套餐&lt;/a&gt;" data-original-title="提示" id="btn-no-service" rel="popover">
-          下载 云梯智能加速<br/>
-          <small>Windows 7 / 8 版</small>
-</a>    </div>
-    <div class="os">
-      <p>其他操作系统的智能加速：</p>
-      <ul class="inline-block-list">
-          <li class="platform platform-windows_nt_5">
-            <a href="/admin/speed_up?platform=windows_nt_5"></a>
-          </li>
-          <li class="platform platform-osx">
-            <a href="/admin/speed_up?platform=osx"></a>
-          </li>
-          <li class="platform platform-linux">
-            <a href="/admin/speed_up?platform=linux"></a>
-          </li>
-      </ul>
+
+  
+
+  
+
+  <div class="user-transfer">
+  <div class="daily-chart-container">
+            <script type="text/javascript">
+        (function() {
+          var onload = window.onload;
+          window.onload = function(){
+            if (typeof onload == "function") onload();
+                    var options = { "title": { "text": null },"legend": { "layout": "vertical","style": {  },"enabled": false },"xAxis": { "categories": [ 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30 ] },"yAxis": { "title": { "text": "\u65e5\u6d41\u91cf (MB)" },"labels": {  },"showFirstLabel": false,"endOnTick": false },"tooltip": { "enabled": true,"valueSuffix": " MB" },"credits": { "enabled": false },"plotOptions": { "areaspline": {  } },"chart": { "defaultSeriesType": "column","renderTo": "daily_transfer_chart","height": 300 },"subtitle": {  },"colors": [ "#5cb85c" ],"series": [{ "name": "\u603b\u6d41\u91cf","data": [ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 ] }] };
+        
+        window.chart_daily_transfer_chart = new Highcharts.Chart(options);
+
+          };
+        })()
+        </script>
+<div id="daily_transfer_chart"></div>
+  </div>
+
+  <div class="summary">
+    <div class="text clearfix">
+      <div class="pull-left">
+        已用流量：0 Bytes
+      </div>
+      <div class="pull-right">
+        套餐月流量：0 Bytes
+      </div>
+    </div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-danger" style="min-width:40px; max-width:100%; width: 100%">100%</div>
     </div>
   </div>
-  <div class="col-md-8">
-    <img alt="智能加速原理" src="/assets/admin/speed_up-bc73a6844254057ceff90568feb9b7b1.png" />
+</div>
+
+<p class="text-muted text-right">连接断开后，才被计入断开当天的统计数据中</p>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">今天</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-3 col-sm-3">
+        <div class="property">下载流量</div>
+        <div class="value">0 Bytes</div>
+      </div>
+      <div class="col-md-3 col-sm-3">
+        <div class="property">上传流量</div>
+        <div class="value">0 Bytes</div>
+      </div>
+      <div class="col-md-3 col-sm-3">
+        <div class="property">总流量</div>
+        <div class="value">0 Bytes</div>
+      </div>
+      <div class="col-md-3 col-sm-3">
+        <div class="property">连接时间</div>
+        <div class="value">0:00:00</div>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="alert alert-info">
-  更新建议：云梯智能加速会持续更新，建议每月下载最新的文件，重新安装(无需卸载之前的)，以保证使用的是最新的规则
+
+  <h4 class="title-divider">
+  <span>在线设备</span>
+</h4>
+
+  <div class="bar-horizontal bar-online">
+  <div class="content">
+    您没有设备在线，如果连接遇到问题，请查看<a href="/faq/link" target="_blank">常见问题</a>
+  </div>
 </div>
-
-<h4 class="title-divider">
-  <span>Windows 7 / 8 智能加速安装帮助</span>
-</h4>
-<img alt="Windows 7 / 8 智能加速安装帮助" class="center-block" src="/assets/admin/win7_speed_up-aea3d77868ecd3d33fda5b4116c0ccdf.png" />
-
-<h4 class="title-divider">
-  <span>如何确认智能加速成功？</span>
-</h4>
-<p>第一步：安装完智能加速后，连接 VPN</p>
-<p>第二步：打开 http://ip.chinaz.com 显示的是国内 IP，说明智能加速安装成功</p>
-
-<h4 class="title-divider title-top-space">
-  <span>Windows 7 / 8 智能加速卸载帮助</span>
-</h4>
-<p>重启系统或者运行 vpndown（参考安装帮助）即可。</p>
 
 
 <script type="text/javascript">
 //<![CDATA[
 
-$('#btn-no-service').popover({
-  placement: 'top',
-  html: true
-});
+  $('#online-device-status a').tooltip();
 
 //]]>
 </script>
+
+    <h4 class="title-divider">
+    <span>推荐</span>
+  </h4>
+
+  <div>
+    <p>推荐云梯给你的朋友，你和你的朋友都能获得<span class="text-highlight">10元</span>优惠。</p>
+    <p><a href="/admin/referral" class="btn btn-primary">了解详情</a></p>
+  </div>
+
+
+  </div>
+
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="sidebar">
+                  
+        
+<div class="sidebar-plan sidebar-plan-inactive">
+  <div class="header">
+    <div class="name">标准版v3</div>
+      <div class="plan-recommended">推荐套餐，尚未购买</div>
+  </div>
+  <div class="body">
+    <ul>
+      <li>
+        <div class="row">
+          <div class="property col-md-5 col-xs-5">月流量</div>
+          <div class="value col-md-7 col-xs-7">100 GB / 月</div>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <div class="property col-md-5 col-xs-5">月限时</div>
+          <div class="value col-md-7 col-xs-7">无限</div>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <div class="property col-md-5 col-xs-5">同时在线</div>
+          <div class="value col-md-7 col-xs-7">3</div>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <div class="property col-md-5 col-xs-5">多国机房</div>
+          <div class="value col-md-7 col-xs-7">17个机房</div>
+        </div>
+      </li>
+    </ul>
+
+      <div class="plan-actions">
+          <a href="/admin/orders/new?plan_id=15" class="btn btn-success btn-block">购买该推荐套餐</a>
+          <a href="/admin/orders/new" class="btn btn-default btn-block">查看所有套餐</a>
+      </div>
+  </div>
+</div>
+
+    <div class="note">
+      您还没有购买任何服务。
+      <hr/>
+      快来 <a href="/admin/orders/new">选择套餐</a> 吧，支付成功后，服务自动开通。
+    </div>
+
+
                 </div>
               </div>
           </div>

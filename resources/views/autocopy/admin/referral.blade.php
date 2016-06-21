@@ -56,7 +56,7 @@
             <i class="fa fa-globe"></i>
             <span class="name">服务器</span>
 </a>        </li>
-        <li class="active">
+        <li class="">
           <a href="/admin/speed_up">
             <i class="fa fa-code-fork"></i>
             <span class="name">智能加速</span>
@@ -71,7 +71,7 @@
             <i class="fa fa-comments-o"></i>
             <span class="name">联系客服</span>
 </a>        </li>
-          <li class="">
+          <li class="active">
             <a href="/admin/referral">
               <i class="fa fa-thumbs-o-up"></i>
               <span class="name">推荐</span>
@@ -123,9 +123,6 @@
         <p>如果你想把云梯推荐给朋友或网友，建议附上推荐链接，这样你的朋友不会在诈骗网站上当，而且，你和你的朋友每次都能获得10元优惠。<a href="/admin/referral">了解详情</a></p>
       </div>
 
-      <div class="alert alert-info">
-        <p>公告：云梯不限制普通下载，但因发达国家对 P2P 严格限制，请<strong class="text-danger">不要</strong>连着云梯使用 BT，迅雷，eMule，FlashGet 等 P2P 工具</p>
-      </div>
 
 
 
@@ -136,73 +133,63 @@
               <div class="col-md-12">
                 <div class="content-main">
                   <h4 class="title-divider">
-  <span>安装云梯智能加速</span>
+  <span>把云梯推荐给朋友们</span>
 </h4>
 
-<div class="row">
-  <div class="col-md-4">
-    <p>安装云梯智能加速后，连接云梯的VPN：</p>
-    <ul>
-      <li>国内网站的速度和不连接VPN一样快</li>
-      <li>国内网站的流量不计入VPN流量</li>
-      <li>国外网站依然通过VPN，畅通无阻</li>
-    </ul>
-    <div class="download">
-        <a href="#" class="btn btn-primary btn-lg" data-content="购买云梯VPN后才能下载&lt;br&gt;前往 &lt;a href=&quot;/pricing&quot; target=&quot;_blank&quot;&gt;选择套餐&lt;/a&gt;" data-original-title="提示" id="btn-no-service" rel="popover">
-          下载 云梯智能加速<br/>
-          <small>Windows 7 / 8 版</small>
-</a>    </div>
-    <div class="os">
-      <p>其他操作系统的智能加速：</p>
-      <ul class="inline-block-list">
-          <li class="platform platform-windows_nt_5">
-            <a href="/admin/speed_up?platform=windows_nt_5"></a>
-          </li>
-          <li class="platform platform-osx">
-            <a href="/admin/speed_up?platform=osx"></a>
-          </li>
-          <li class="platform platform-linux">
-            <a href="/admin/speed_up?platform=linux"></a>
-          </li>
-      </ul>
-    </div>
-  </div>
-  <div class="col-md-8">
-    <img alt="智能加速原理" src="/assets/admin/speed_up-bc73a6844254057ceff90568feb9b7b1.png" />
-  </div>
-</div>
+<p>让小伙伴们获得优惠和自由，你也同时获得云梯实实在在的感谢！</p>
 
-<div class="alert alert-info">
-  更新建议：云梯智能加速会持续更新，建议每月下载最新的文件，重新安装(无需卸载之前的)，以保证使用的是最新的规则
-</div>
+<p>
+  <span class="text-highlight">你获得奖励：</span>
+  由你推荐注册的用户，购买云梯满30天，你即可获得 <span class="text-highlight">10 元 / 用户</span> 的奖励，推荐越多，奖励越多，没有上限。
+</p>
+<p>
+  <span class="text-highlight">你的朋友获得优惠：</span>
+  点击你的推荐链接，注册的用户，购买时可获得 <span class="text-highlight">10 元</span> 优惠。
+</p>
+
+<br>
+
+<p>你可以把下面的链接，通过社交网络，聊天工具，邮件，博客等方式，分享给你的朋友：</p>
+
+<div class="referral-url">
+  <form accept-charset="UTF-8" action="/admin/referral" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="NeaRyjJM41mLMZch87q3glbNbqEcctietz+l75jMJ8k=" /></div>
+    <input class="form-control auto-select" id="referral_code" name="referral_code" type="text" value="http://reftizi.com/?r=627a549944266f2c" />
+</form></div>
+
+<br>
 
 <h4 class="title-divider">
-  <span>Windows 7 / 8 智能加速安装帮助</span>
+  <span>推荐进度</span>
 </h4>
-<img alt="Windows 7 / 8 智能加速安装帮助" class="center-block" src="/assets/admin/win7_speed_up-aea3d77868ecd3d33fda5b4116c0ccdf.png" />
 
-<h4 class="title-divider">
-  <span>如何确认智能加速成功？</span>
-</h4>
-<p>第一步：安装完智能加速后，连接 VPN</p>
-<p>第二步：打开 http://ip.chinaz.com 显示的是国内 IP，说明智能加速安装成功</p>
+<div id="dashboard">
+  <table class="table table-bordered">
+    <tbody>
+      <tr>
+        <td class="col-md-4">
+          <div class="property">等待中</div>
+          <div class="value">0</div>
+        </td>
+        <td class="col-md-4">
+          <div class="property">成功推荐</div>
+          <div class="value">0</div>
+        </td>
+        <td class="col-md-4">
+          <div class="property">推荐帐户</div>
+          <div class="value">0 元</div>
+          <div class="text-center"><a href="/admin/credit_referral">查看明细</a></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-<h4 class="title-divider title-top-space">
-  <span>Windows 7 / 8 智能加速卸载帮助</span>
-</h4>
-<p>重启系统或者运行 vpndown（参考安装帮助）即可。</p>
+<ul>
+  <li>等待中：点击你的推荐链接注册，但未购买，或购买使用未满30天的人数</li>
+  <li>成功推荐：点击你的推荐链接注册，购买使用，满30天的人数</li>
+  <li>推荐帐户：推荐成功后，获得的奖励会进入推荐帐户，推荐帐户余额可支付订单或提现。</li>
+</ul>
 
-
-<script type="text/javascript">
-//<![CDATA[
-
-$('#btn-no-service').popover({
-  placement: 'top',
-  html: true
-});
-
-//]]>
-</script>
                 </div>
               </div>
           </div>

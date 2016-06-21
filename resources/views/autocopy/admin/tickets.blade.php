@@ -56,7 +56,7 @@
             <i class="fa fa-globe"></i>
             <span class="name">服务器</span>
 </a>        </li>
-        <li class="active">
+        <li class="">
           <a href="/admin/speed_up">
             <i class="fa fa-code-fork"></i>
             <span class="name">智能加速</span>
@@ -66,7 +66,7 @@
             <i class="fa fa-book"></i>
             <span class="name">帮助中心</span>
 </a>        </li>
-        <li class="">
+        <li class="active">
           <a href="/admin/tickets">
             <i class="fa fa-comments-o"></i>
             <span class="name">联系客服</span>
@@ -136,73 +136,61 @@
               <div class="col-md-12">
                 <div class="content-main">
                   <h4 class="title-divider">
-  <span>安装云梯智能加速</span>
+  <span>交流中的服务单</span>
 </h4>
 
-<div class="row">
-  <div class="col-md-4">
-    <p>安装云梯智能加速后，连接云梯的VPN：</p>
-    <ul>
-      <li>国内网站的速度和不连接VPN一样快</li>
-      <li>国内网站的流量不计入VPN流量</li>
-      <li>国外网站依然通过VPN，畅通无阻</li>
-    </ul>
-    <div class="download">
-        <a href="#" class="btn btn-primary btn-lg" data-content="购买云梯VPN后才能下载&lt;br&gt;前往 &lt;a href=&quot;/pricing&quot; target=&quot;_blank&quot;&gt;选择套餐&lt;/a&gt;" data-original-title="提示" id="btn-no-service" rel="popover">
-          下载 云梯智能加速<br/>
-          <small>Windows 7 / 8 版</small>
-</a>    </div>
-    <div class="os">
-      <p>其他操作系统的智能加速：</p>
-      <ul class="inline-block-list">
-          <li class="platform platform-windows_nt_5">
-            <a href="/admin/speed_up?platform=windows_nt_5"></a>
-          </li>
-          <li class="platform platform-osx">
-            <a href="/admin/speed_up?platform=osx"></a>
-          </li>
-          <li class="platform platform-linux">
-            <a href="/admin/speed_up?platform=linux"></a>
-          </li>
-      </ul>
-    </div>
-  </div>
-  <div class="col-md-8">
-    <img alt="智能加速原理" src="/assets/admin/speed_up-bc73a6844254057ceff90568feb9b7b1.png" />
-  </div>
+<div class="ticket-actions">
+  <a href="/admin/tickets/new" class="btn btn-primary pull-right">新开服务单</a>
 </div>
 
-<div class="alert alert-info">
-  更新建议：云梯智能加速会持续更新，建议每月下载最新的文件，重新安装(无需卸载之前的)，以保证使用的是最新的规则
+<div class="table-responsive">
+  <table class="table table-bordered table-striped tickets">
+    <thead>
+      <tr>
+        <th>编号</th>
+        <th>标题</th>
+        <th>状态</th>
+        <th>创建时间</th>
+        <th>最后更新时间</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td colspan="5">无</td>
+        </tr>
+    </tbody>
+  </table>
 </div>
 
 <h4 class="title-divider">
-  <span>Windows 7 / 8 智能加速安装帮助</span>
+  <span>已关闭的服务单</span>
 </h4>
-<img alt="Windows 7 / 8 智能加速安装帮助" class="center-block" src="/assets/admin/win7_speed_up-aea3d77868ecd3d33fda5b4116c0ccdf.png" />
 
-<h4 class="title-divider">
-  <span>如何确认智能加速成功？</span>
-</h4>
-<p>第一步：安装完智能加速后，连接 VPN</p>
-<p>第二步：打开 http://ip.chinaz.com 显示的是国内 IP，说明智能加速安装成功</p>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>编号</th>
+        <th>标题</th>
+        <th>状态</th>
+        <th>创建时间</th>
+        <th>最后更新时间</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>66959388</td>
+            <td><a href="/admin/tickets/66959388">不能正常使用代理，申请退款</a></td>
+            <td>已关闭</td>
+            <td>2015-06-25 14:56</td>
+            <td>2015-06-28 23:07</td>
+          </tr>
+    </tbody>
+  </table>
+</div>
 
-<h4 class="title-divider title-top-space">
-  <span>Windows 7 / 8 智能加速卸载帮助</span>
-</h4>
-<p>重启系统或者运行 vpndown（参考安装帮助）即可。</p>
 
 
-<script type="text/javascript">
-//<![CDATA[
-
-$('#btn-no-service').popover({
-  placement: 'top',
-  html: true
-});
-
-//]]>
-</script>
                 </div>
               </div>
           </div>

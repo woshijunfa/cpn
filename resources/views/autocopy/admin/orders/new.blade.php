@@ -46,7 +46,7 @@
             <i class="fa fa-link"></i>
             <span class="name">连接</span>
 </a>        </li>
-        <li class="">
+        <li class="active">
           <a href="/admin/orders">
             <i class="fa fa-file-text-o"></i>
             <span class="name">订单</span>
@@ -56,7 +56,7 @@
             <i class="fa fa-globe"></i>
             <span class="name">服务器</span>
 </a>        </li>
-        <li class="active">
+        <li class="">
           <a href="/admin/speed_up">
             <i class="fa fa-code-fork"></i>
             <span class="name">智能加速</span>
@@ -135,74 +135,97 @@
           <div class="row">
               <div class="col-md-12">
                 <div class="content-main">
-                  <h4 class="title-divider">
-  <span>安装云梯智能加速</span>
-</h4>
+                  
+<div class="order-state-new">
+  <div class="order-process"></div>
 
-<div class="row">
-  <div class="col-md-4">
-    <p>安装云梯智能加速后，连接云梯的VPN：</p>
-    <ul>
-      <li>国内网站的速度和不连接VPN一样快</li>
-      <li>国内网站的流量不计入VPN流量</li>
-      <li>国外网站依然通过VPN，畅通无阻</li>
-    </ul>
-    <div class="download">
-        <a href="#" class="btn btn-primary btn-lg" data-content="购买云梯VPN后才能下载&lt;br&gt;前往 &lt;a href=&quot;/pricing&quot; target=&quot;_blank&quot;&gt;选择套餐&lt;/a&gt;" data-original-title="提示" id="btn-no-service" rel="popover">
-          下载 云梯智能加速<br/>
-          <small>Windows 7 / 8 版</small>
-</a>    </div>
-    <div class="os">
-      <p>其他操作系统的智能加速：</p>
-      <ul class="inline-block-list">
-          <li class="platform platform-windows_nt_5">
-            <a href="/admin/speed_up?platform=windows_nt_5"></a>
-          </li>
-          <li class="platform platform-osx">
-            <a href="/admin/speed_up?platform=osx"></a>
-          </li>
-          <li class="platform platform-linux">
-            <a href="/admin/speed_up?platform=linux"></a>
-          </li>
-      </ul>
+  <ul class="order-steps">
+    <li class="new">套餐</li>
+    <li class="placed">支付</li>
+    <li class="paid">设置</li>
+    <li class="completed">完成</li>
+  </ul>
+</div>
+
+
+
+<form accept-charset="UTF-8" action="/admin/orders" id="new-order-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="NeaRyjJM41mLMZch87q3glbNbqEcctietz+l75jMJ8k=" /></div>
+  <div class="form-inputs">
+    <h4 class="title-divider">
+      <span>选择套餐</span>
+    </h4>
+    <div class="row plans">
+        
+<div class="col-md-3">
+  <label class="radio-container">
+    <p class="radio-icon"><input id="plan_id_14" name="plan_id" type="radio" value="14" /></p>
+    <p class="name">小流量版v3</p>
+    <p>月流量：10 GB / 月</p>
+    <p>同时在线：2 台</p>
+    <p>月限时：无限</p>
+    <p>多国机房：17个机房</p>
+    <p class="price">180 元 / 年</p>
+</label></div>
+
+        
+<div class="col-md-3">
+  <label class="radio-container">
+    <p class="radio-icon"><input id="plan_id_15" name="plan_id" type="radio" value="15" /></p>
+    <p class="name">标准版v3</p>
+    <p>月流量：100 GB / 月</p>
+    <p>同时在线：3 台</p>
+    <p>月限时：无限</p>
+    <p>多国机房：17个机房</p>
+    <p class="price">240 元 / 年</p>
+</label></div>
+
+        
+<div class="col-md-3">
+  <label class="radio-container">
+    <p class="radio-icon"><input checked="checked" id="plan_id_16" name="plan_id" type="radio" value="16" /></p>
+    <p class="name">大流量版v3</p>
+    <p>月流量：300 GB / 月</p>
+    <p>同时在线：3 台</p>
+    <p>月限时：无限</p>
+    <p>多国机房：17个机房</p>
+    <p class="price">600 元 / 年</p>
+</label></div>
+
+        
+<div class="col-md-3">
+  <label class="radio-container">
+    <p class="radio-icon"><input id="plan_id_17" name="plan_id" type="radio" value="17" /></p>
+    <p class="name">企业版v3</p>
+    <p>月流量：1000 GB / 月</p>
+    <p>同时在线：15 台</p>
+    <p>月限时：无限</p>
+    <p>多国机房：17个机房</p>
+    <p class="price">3,600 元 / 年</p>
+</label></div>
+
+    </div>
+
+    <h4 class="title-divider">
+      <span>选择周期</span>
+    </h4>
+    <div class="row term">
+        <div class="col-md-3">
+          <label class="radio-container">
+            <p class="radio-icon"><input checked="checked" id="quantity_1" name="quantity" type="radio" value="1" /></p>
+            <p class="term-num">1 年</p>
+</label>        </div>
+        <div class="col-md-3">
+          <label class="radio-container">
+            <p class="radio-icon"><input id="quantity_2" name="quantity" type="radio" value="2" /></p>
+            <p class="term-num">2 年</p>
+</label>        </div>
     </div>
   </div>
-  <div class="col-md-8">
-    <img alt="智能加速原理" src="/assets/admin/speed_up-bc73a6844254057ceff90568feb9b7b1.png" />
+
+  <div class="form-group">
+    <input class="btn btn-primary btn-lg" data-disable-with="正在提交..." name="commit" type="submit" value="确认订单" />
   </div>
-</div>
-
-<div class="alert alert-info">
-  更新建议：云梯智能加速会持续更新，建议每月下载最新的文件，重新安装(无需卸载之前的)，以保证使用的是最新的规则
-</div>
-
-<h4 class="title-divider">
-  <span>Windows 7 / 8 智能加速安装帮助</span>
-</h4>
-<img alt="Windows 7 / 8 智能加速安装帮助" class="center-block" src="/assets/admin/win7_speed_up-aea3d77868ecd3d33fda5b4116c0ccdf.png" />
-
-<h4 class="title-divider">
-  <span>如何确认智能加速成功？</span>
-</h4>
-<p>第一步：安装完智能加速后，连接 VPN</p>
-<p>第二步：打开 http://ip.chinaz.com 显示的是国内 IP，说明智能加速安装成功</p>
-
-<h4 class="title-divider title-top-space">
-  <span>Windows 7 / 8 智能加速卸载帮助</span>
-</h4>
-<p>重启系统或者运行 vpndown（参考安装帮助）即可。</p>
-
-
-<script type="text/javascript">
-//<![CDATA[
-
-$('#btn-no-service').popover({
-  placement: 'top',
-  html: true
-});
-
-//]]>
-</script>
+</form>
                 </div>
               </div>
           </div>

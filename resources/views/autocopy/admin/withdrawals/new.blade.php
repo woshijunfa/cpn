@@ -56,7 +56,7 @@
             <i class="fa fa-globe"></i>
             <span class="name">服务器</span>
 </a>        </li>
-        <li class="active">
+        <li class="">
           <a href="/admin/speed_up">
             <i class="fa fa-code-fork"></i>
             <span class="name">智能加速</span>
@@ -136,73 +136,32 @@
               <div class="col-md-12">
                 <div class="content-main">
                   <h4 class="title-divider">
-  <span>安装云梯智能加速</span>
+  <span>提现</span>
 </h4>
+<p>提现通知，将发送到注册邮箱 chenjunfa1988@yeah.net，如邮箱有误，请先<a href="/admin/user/edit_email">修改邮箱</a>。</p>
+<p>所有提现申请，审核通过后，将在3天内转账到相应的支付宝帐号。</p>
 
-<div class="row">
-  <div class="col-md-4">
-    <p>安装云梯智能加速后，连接云梯的VPN：</p>
-    <ul>
-      <li>国内网站的速度和不连接VPN一样快</li>
-      <li>国内网站的流量不计入VPN流量</li>
-      <li>国外网站依然通过VPN，畅通无阻</li>
-    </ul>
-    <div class="download">
-        <a href="#" class="btn btn-primary btn-lg" data-content="购买云梯VPN后才能下载&lt;br&gt;前往 &lt;a href=&quot;/pricing&quot; target=&quot;_blank&quot;&gt;选择套餐&lt;/a&gt;" data-original-title="提示" id="btn-no-service" rel="popover">
-          下载 云梯智能加速<br/>
-          <small>Windows 7 / 8 版</small>
-</a>    </div>
-    <div class="os">
-      <p>其他操作系统的智能加速：</p>
-      <ul class="inline-block-list">
-          <li class="platform platform-windows_nt_5">
-            <a href="/admin/speed_up?platform=windows_nt_5"></a>
-          </li>
-          <li class="platform platform-osx">
-            <a href="/admin/speed_up?platform=osx"></a>
-          </li>
-          <li class="platform platform-linux">
-            <a href="/admin/speed_up?platform=linux"></a>
-          </li>
-      </ul>
+<div class="form-container-large">
+  <form accept-charset="UTF-8" action="/admin/withdrawals" class="simple_form form-horizontal" id="new_withdrawal" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="NeaRyjJM41mLMZch87q3glbNbqEcctietz+l75jMJ8k=" /></div>
+    <div class="form-group">
+      <label class="col-sm-2 control-label">推荐帐户余额</label>
+      <div class="col-sm-10">
+        <p class="form-control-static">0 元</p>
+      </div>
     </div>
-  </div>
-  <div class="col-md-8">
-    <img alt="智能加速原理" src="/assets/admin/speed_up-bc73a6844254057ceff90568feb9b7b1.png" />
-  </div>
-</div>
 
-<div class="alert alert-info">
-  更新建议：云梯智能加速会持续更新，建议每月下载最新的文件，重新安装(无需卸载之前的)，以保证使用的是最新的规则
-</div>
+    <div class="form-group decimal required withdrawal_amount"><label class="decimal required col-sm-2 control-label" for="withdrawal_amount"><abbr title="必填">*</abbr> 金额</label><div class="col-sm-10"><input class="numeric decimal required form-control form-control" id="withdrawal_amount" name="withdrawal[amount]" step="any" type="number" /><p class="help-block">最低20元，最高1000元</p></div></div>
+    <div class="form-group string required withdrawal_receiver_account"><label class="string required col-sm-2 control-label" for="withdrawal_receiver_account"><abbr title="必填">*</abbr> 收款支付宝帐号</label><div class="col-sm-10"><input class="string required form-control" id="withdrawal_receiver_account" name="withdrawal[receiver_account]" size="50" type="text" /></div></div>
+    <div class="form-group string required withdrawal_receiver_name"><label class="string required col-sm-2 control-label" for="withdrawal_receiver_name"><abbr title="必填">*</abbr> 收款人姓名</label><div class="col-sm-10"><input class="string required form-control" id="withdrawal_receiver_name" name="withdrawal[receiver_name]" size="50" type="text" /><p class="help-block">在支付宝预留的姓名，提现时将进行核对</p></div></div>
 
-<h4 class="title-divider">
-  <span>Windows 7 / 8 智能加速安装帮助</span>
-</h4>
-<img alt="Windows 7 / 8 智能加速安装帮助" class="center-block" src="/assets/admin/win7_speed_up-aea3d77868ecd3d33fda5b4116c0ccdf.png" />
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <input class="btn btn-primary" data-disable-with="正在提交..." name="commit" type="submit" value="提现" />
+        <a href="/admin/credit_referral" class="btn btn-default">以后再说</a>
+      </div>
+    </div>
+</form></div>
 
-<h4 class="title-divider">
-  <span>如何确认智能加速成功？</span>
-</h4>
-<p>第一步：安装完智能加速后，连接 VPN</p>
-<p>第二步：打开 http://ip.chinaz.com 显示的是国内 IP，说明智能加速安装成功</p>
-
-<h4 class="title-divider title-top-space">
-  <span>Windows 7 / 8 智能加速卸载帮助</span>
-</h4>
-<p>重启系统或者运行 vpndown（参考安装帮助）即可。</p>
-
-
-<script type="text/javascript">
-//<![CDATA[
-
-$('#btn-no-service').popover({
-  placement: 'top',
-  html: true
-});
-
-//]]>
-</script>
                 </div>
               </div>
           </div>
