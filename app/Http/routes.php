@@ -66,6 +66,9 @@ Route::get('/logout',"UserController@logout");
 
 
 
+//auto-generate-route
+
+
 
 
 Route::get('/test',function(){return App\Services\CommonService::autoLoadPage();});
