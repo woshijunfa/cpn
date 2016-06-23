@@ -46,7 +46,7 @@
             <i class="fa fa-link"></i>
             <span class="name">连接</span>
 </a>        </li>
-        <li class="">
+        <li class="active">
           <a href="/admin/orders">
             <i class="fa fa-file-text-o"></i>
             <span class="name">订单</span>
@@ -83,7 +83,7 @@
             <i class="fa fa-external-link-square"></i>
             <span class="name">云梯首页</span>
 </a>        </li>
-        <li class="dropdown active">
+        <li class="dropdown ">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <i class="fa fa-user"></i>
             <span class="name">帐户<b class="caret"></b></span>
@@ -123,6 +123,9 @@
         <p>如果你想把云梯推荐给朋友或网友，建议附上推荐链接，这样你的朋友不会在诈骗网站上当，而且，你和你的朋友每次都能获得10元优惠。<a href="/admin/referral">了解详情</a></p>
       </div>
 
+      <div class="alert alert-info">
+        <p>公告：云梯不限制普通下载，但因发达国家对 P2P 严格限制，请<strong class="text-danger">不要</strong>连着云梯使用 BT，迅雷，eMule，FlashGet 等 P2P 工具</p>
+      </div>
 
 
 
@@ -132,36 +135,42 @@
           <div class="row">
               <div class="col-md-12">
                 <div class="content-main">
-                  <div class="row">
-  <div class="col-md-6"><h4>推荐帐户 余额：0 元</h4></div>
-  <div class="col-md-6">
-    <div class="pull-right">
-      <a href="/admin/transfers/new" class="btn btn-primary">转账到主帐户</a>
-      <a href="/admin/withdrawals/new" class="btn btn-default">提现</a>
-      <a href="/admin/referral" class="btn btn-default">查看推荐链接</a>
-    </div>
-  </div>
+                  
+<div class="note">
+  7天内未付款，该订单已取消。如有问题，欢迎 <a href="/admin/tickets">联系客服</a>
 </div>
 
 <h4 class="title-divider">
-  <span>推荐帐户 交易明细</span>
+  <span>订单信息</span>
 </h4>
+编号: 552661752
 
-<table class="table table-bordered table-striped">
+<h4 class="title-divider">
+  <span>商品信息</span>
+</h4>
+<table class="table table-bordered">
   <thead>
     <tr>
-      <th class="col-md-3">时间</th>
-      <th class="col-md-7">概述</th>
-      <th class="col-md-2">金额</th>
+      <th>名称</th>
+      <th>价格</th>
+      <th>数量</th>
+      <th>合计</th>
     </tr>
   </thead>
   <tbody>
+      <tr>
+        <td>标准版v3</td>
+        <td>240 元</td>
+        <td>1</td>
+        <td>240 元</td>
+      </tr>
     <tr>
-      <td colspan="2">余额</td>
-      <td class="col-price"><span class="price-green">0.00 元</span></td>
+      <th colspan="3">合计</th>
+      <td>240 元</td>
     </tr>
   </tbody>
 </table>
+
 
 
                 </div>

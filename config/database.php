@@ -64,6 +64,18 @@ return [
             'strict'    => false,
         ],
 
+        'radius' => [
+            'driver'    => 'mysql',
+            'host'      => env('DB_RADIUS_HOST', ''),
+            'database'  => env('DB_RADIUS_DATABASE', ''),
+            'username'  => env('DB_RADIUS_USERNAME', ''),
+            'password'  => env('DB_RADIUS_PASSWORD', ''),
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'    => '',
+            'strict'    => false,
+        ],
+
         'pgsql' => [
             'driver'   => 'pgsql',
             'host'     => env('DB_HOST', 'localhost'),

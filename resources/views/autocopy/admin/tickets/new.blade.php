@@ -66,7 +66,7 @@
             <i class="fa fa-book"></i>
             <span class="name">帮助中心</span>
 </a>        </li>
-        <li class="">
+        <li class="active">
           <a href="/admin/tickets">
             <i class="fa fa-comments-o"></i>
             <span class="name">联系客服</span>
@@ -83,7 +83,7 @@
             <i class="fa fa-external-link-square"></i>
             <span class="name">云梯首页</span>
 </a>        </li>
-        <li class="dropdown active">
+        <li class="dropdown ">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <i class="fa fa-user"></i>
             <span class="name">帐户<b class="caret"></b></span>
@@ -123,6 +123,9 @@
         <p>如果你想把云梯推荐给朋友或网友，建议附上推荐链接，这样你的朋友不会在诈骗网站上当，而且，你和你的朋友每次都能获得10元优惠。<a href="/admin/referral">了解详情</a></p>
       </div>
 
+      <div class="alert alert-info">
+        <p>公告：云梯不限制普通下载，但因发达国家对 P2P 严格限制，请<strong class="text-danger">不要</strong>连着云梯使用 BT，迅雷，eMule，FlashGet 等 P2P 工具</p>
+      </div>
 
 
 
@@ -132,38 +135,64 @@
           <div class="row">
               <div class="col-md-12">
                 <div class="content-main">
-                  <div class="row">
-  <div class="col-md-6"><h4>推荐帐户 余额：0 元</h4></div>
-  <div class="col-md-6">
-    <div class="pull-right">
-      <a href="/admin/transfers/new" class="btn btn-primary">转账到主帐户</a>
-      <a href="/admin/withdrawals/new" class="btn btn-default">提现</a>
-      <a href="/admin/referral" class="btn btn-default">查看推荐链接</a>
+                  <ul class="breadcrumb">
+  <li><a href="/admin/tickets">全部服务单</a></li>
+  <li class="active">新增服务单</li>
+</ul>
+
+<form accept-charset="UTF-8" action="/admin/tickets" class="simple_form form-horizontal" id="new_ticket" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="NeaRyjJM41mLMZch87q3glbNbqEcctietz+l75jMJ8k=" /></div>
+  <div class="form-group string required ticket_title"><label class="string required col-sm-2 control-label" for="ticket_title"><abbr title="必填">*</abbr> 标题</label><div class="col-sm-10"><input class="string required form-control" id="ticket_title" name="ticket[title]" size="50" type="text" /></div></div>
+  <div class="form-group select required ticket_isp"><label class="select required col-sm-2 control-label" for="ticket_isp_id"><abbr title="必填">*</abbr> 运营商</label><div class="col-sm-10"><select class="select required form-control" id="ticket_isp_id" name="ticket[isp_id]"><option value="">请选择</option>
+<option value="1">中国电信</option>
+<option value="2">中国联通 (网通)</option>
+<option value="3">中国移动 (铁通)</option>
+<option value="4">长城宽带</option>
+<option value="5">教育网</option>
+<option value="6">有线通</option>
+<option value="7">艾普宽带</option>
+<option value="8">歌华有线</option>
+<option value="9">其他</option>
+<option value="10">方正宽带</option>
+<option value="11">鹏博士宽带 </option>
+<option value="12">华数宽带</option>
+<option value="13">宽带通</option></select></div></div>
+  <div class="form-group grouped_select required ticket_operation_system_id"><label class="grouped_select required col-sm-2 control-label" for="ticket_operation_system_id"><abbr title="必填">*</abbr> 设备系统</label><div class="col-sm-10"><select class="grouped_select required form-control" id="ticket_operation_system_id" name="ticket[operation_system_id]"><option value="">请选择</option>
+<optgroup label="Windows PC"><option value="1">Windows 8</option>
+<option value="2">Windows 7</option>
+<option value="3">Windows Vista</option>
+<option value="4">Windows XP</option>
+<option value="31">Windows 10</option></optgroup><optgroup label="Mac"><option value="5">OS X Mountain Lion 10.8</option>
+<option value="6">OS X Lion 10.7</option>
+<option value="7">OS X 10.6 或 更低</option>
+<option value="25">OS X Mavericks 10.9</option>
+<option value="28">OS X Yosemite 10.10</option>
+<option value="32">OS X El Capitan 10.11</option>
+<option value="35">macOS Serria</option></optgroup><optgroup label="Linux"><option value="9">Ubuntu</option>
+<option value="10">Fedora</option>
+<option value="11">Debian</option>
+<option value="12">CentOS / RHEL</option>
+<option value="27">其他 Linux 发行版</option></optgroup><optgroup label="iOS"><option value="13">iOS 6 (iPhone, iPad, iPod touch)</option>
+<option value="14">iOS 5 (iPhone, iPad, iPod touch)</option>
+<option value="26">iOS 7 (iPhone, iPad, iPod touch)</option>
+<option value="29">iOS 8 (iPhone, iPad, iPod touch)</option>
+<option value="33">iOS 9 (iPhone, iPad, iPod touch)</option>
+<option value="36">iOS 10 (iPhone, iPad)</option></optgroup><optgroup label="Android"><option value="15">Android 4.x</option>
+<option value="16">Android 3.x</option>
+<option value="17">Android 2.3</option>
+<option value="18">Android 2.2 或 更低</option>
+<option value="30">Android 5.x</option>
+<option value="34">Android 6.x</option></optgroup><optgroup label="其他"><option value="22">其他电脑</option>
+<option value="23">其他移动设备</option>
+<option value="24">其他</option></optgroup></select></div></div>
+  <div class="form-group text required ticket_new_content"><label class="text required col-sm-2 control-label" for="ticket_new_content"><abbr title="必填">*</abbr> 内容</label><div class="col-sm-10"><textarea class="text required form-control" cols="40" id="ticket_new_content" name="ticket[new_content]" rows="10">
+</textarea></div></div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input class="btn btn btn-primary" data-disable-with="正在提交..." name="commit" type="submit" value="提交服务单" />
     </div>
   </div>
-</div>
-
-<h4 class="title-divider">
-  <span>推荐帐户 交易明细</span>
-</h4>
-
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th class="col-md-3">时间</th>
-      <th class="col-md-7">概述</th>
-      <th class="col-md-2">金额</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td colspan="2">余额</td>
-      <td class="col-price"><span class="price-green">0.00 元</span></td>
-    </tr>
-  </tbody>
-</table>
-
-
+</form>
                 </div>
               </div>
           </div>

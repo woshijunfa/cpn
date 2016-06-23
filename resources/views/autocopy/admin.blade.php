@@ -152,7 +152,7 @@
           var onload = window.onload;
           window.onload = function(){
             if (typeof onload == "function") onload();
-                    var options = { "title": { "text": null },"legend": { "layout": "vertical","style": {  },"enabled": false },"xAxis": { "categories": [ 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30 ] },"yAxis": { "title": { "text": "\u65e5\u6d41\u91cf (MB)" },"labels": {  },"showFirstLabel": false,"endOnTick": false },"tooltip": { "enabled": true,"valueSuffix": " MB" },"credits": { "enabled": false },"plotOptions": { "areaspline": {  } },"chart": { "defaultSeriesType": "column","renderTo": "daily_transfer_chart","height": 300 },"subtitle": {  },"colors": [ "#5cb85c" ],"series": [{ "name": "\u603b\u6d41\u91cf","data": [ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 ] }] };
+                    var options = { "title": { "text": null },"legend": { "layout": "vertical","style": {  },"enabled": false },"xAxis": { "categories": {{ json_encode(array_keys($detial)) }} },"yAxis": { "title": { "text": "\u65e5\u6d41\u91cf (MB)" },"labels": {  },"showFirstLabel": false,"endOnTick": false },"tooltip": { "enabled": true,"valueSuffix": " MB" },"credits": { "enabled": false },"plotOptions": { "areaspline": {  } },"chart": { "defaultSeriesType": "column","renderTo": "daily_transfer_chart","height": 300 },"subtitle": {  },"colors": [ "#5cb85c" ],"series": [{ "name": "\u603b\u6d41\u91cf","data": {{ json_encode(array_values($detial)) }} }] };
         
         window.chart_daily_transfer_chart = new Highcharts.Chart(options);
 
@@ -165,7 +165,7 @@
   <div class="summary">
     <div class="text clearfix">
       <div class="pull-left">
-        已用流量：0 Bytes
+        已用流量：{{ gFormatSize($totalSize) }}
       </div>
       <div class="pull-right">
         套餐月流量：0 Bytes
@@ -188,26 +188,26 @@
     <div class="row">
       <div class="col-md-3 col-sm-3">
         <div class="property">下载流量</div>
-        <div class="value">0 Bytes</div>
+        <div class="value">{{ gFormatSize($info['today_acctinputoctets']) }}</div>
       </div>
       <div class="col-md-3 col-sm-3">
         <div class="property">上传流量</div>
-        <div class="value">0 Bytes</div>
+        <div class="value">{{ gFormatSize($info['today_acctoutputoctets']) }}</div>
       </div>
       <div class="col-md-3 col-sm-3">
         <div class="property">总流量</div>
-        <div class="value">0 Bytes</div>
+        <div class="value">{{ gFormatSize($info['today_acctoutputoctets'] + $info['today_acctinputoctets']) }}</div>
       </div>
       <div class="col-md-3 col-sm-3">
         <div class="property">连接时间</div>
-        <div class="value">0:00:00</div>
+        <div class="value">{{ gFormatSecond($info['today_acctsessiontime']) }}</div>
       </div>
     </div>
   </div>
 </div>
 
 
-  <h4 class="title-divider">
+<!--   <h4 class="title-divider">
   <span>在线设备</span>
 </h4>
 
@@ -216,7 +216,7 @@
     您没有设备在线，如果连接遇到问题，请查看<a href="/faq/link" target="_blank">常见问题</a>
   </div>
 </div>
-
+ -->
 
 <script type="text/javascript">
 //<![CDATA[

@@ -1,0 +1,69 @@
+freeradius表分析
+
+
+radcheck 			用户表
+radreply 			
+radgroupcheck		组
+radgroupreply 		
+radusergroup		用户组关系表
+
+radpostauth 		授权历史
+radacct 			上网历史
+
+1：添加组 和限制分别是
+
+
+
+nas 				----	还不知道有什么用
+radippool
+wimax
+
+
+组配置：
+最大连接数
+月最大流量
+
+
+group: sv3,mv3,bv3,ev3
+
+#表建立
+INSERT INTO radgroupcheck (groupname,attribute,op,VALUE) VALUES ('sv3','Simultaneous-Use',':=','1'); 
+INSERT INTO radgroupcheck (groupname,attribute,op,VALUE) VALUES ('mv3','Simultaneous-Use',':=','1'); 
+INSERT INTO radgroupcheck (groupname,attribute,op,VALUE) VALUES ('bv3','Simultaneous-Use',':=','1'); 
+INSERT INTO radgroupcheck (groupname,attribute,op,VALUE) VALUES ('ev3','Simultaneous-Use',':=','1'); 
+
+#套餐流量控制建立
+
+#sv3 月流量：10g  同时在线：2
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('sv3','Auth-Type',':=','Local'); 
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('sv3','Service-Type',':=','Framed-User'); 
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('sv3','Framed-IP-Netmask',':=','255.255.255.0'); 
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('sv3','Acct-Interim-Interval',':=','600'); 
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('sv3','Max-Monthly-Traffic',':=','10737418240'); 
+INSERT INTO radgroupcheck (groupname,attribute,op,VALUE) VALUES ('sv3','Simultaneous-Use',':=','2'); 
+
+#mv3 月流量：100g  同时在线：3
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('mv3','Auth-Type',':=','Local'); 
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('mv3','Service-Type',':=','Framed-User'); 
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('mv3','Framed-IP-Netmask',':=','255.255.255.0'); 
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('mv3','Acct-Interim-Interval',':=','600'); 
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('mv3','Max-Monthly-Traffic',':=','107374182400'); 
+INSERT INTO radgroupcheck (groupname,attribute,op,VALUE) VALUES ('mv3','Simultaneous-Use',':=','3'); 
+
+#bv3 月流量：300g  同时在线：3
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('bv3','Auth-Type',':=','Local'); 
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('bv3','Service-Type',':=','Framed-User'); 
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('bv3','Framed-IP-Netmask',':=','255.255.255.0'); 
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('bv3','Acct-Interim-Interval',':=','600'); 
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('bv3','Max-Monthly-Traffic',':=','322122547200'); 
+INSERT INTO radgroupcheck (groupname,attribute,op,VALUE) VALUES ('bv3','Simultaneous-Use',':=','3'); 
+
+#ev3 月流量：1000g  同时在线：15
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('bv3','Auth-Type',':=','Local'); 
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('bv3','Service-Type',':=','Framed-User'); 
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('bv3','Framed-IP-Netmask',':=','255.255.255.0'); 
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('bv3','Acct-Interim-Interval',':=','600'); 
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('bv3','Max-Monthly-Traffic',':=','322122547200'); 
+INSERT INTO radgroupcheck (groupname,attribute,op,VALUE) VALUES ('bv3','Simultaneous-Use',':=','3'); 
+
+

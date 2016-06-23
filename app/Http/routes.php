@@ -105,8 +105,6 @@ Route::group(['middleware'=>'auth'], function () {
 	Route::get('/admin/speed_up', 'CopyController@autoNavi');
 	Route::get('/admin/servers', 'CopyController@autoNavi');
 	Route::get('/admin/orders', 'CopyController@autoNavi');
-	Route::get('/admin/accountings', 'CopyController@autoNavi');
-	Route::get('/admin', 'CopyController@autoNavi');
 	Route::get('/admin/documents', 'CopyController@autoNavi');
 	Route::get('/admin/tickets', 'CopyController@autoNavi');
 	Route::get('/admin/referral', 'CopyController@autoNavi');
@@ -117,8 +115,13 @@ Route::group(['middleware'=>'auth'], function () {
 	Route::get('/admin/user/edit', 'CopyController@autoNavi');
 	Route::get('/admin/credit_account', 'CopyController@autoNavi');
 	Route::get('/admin/orders/new', 'CopyController@autoNavi');
-	Route::get('/admin/accountings/today', 'CopyController@autoNavi');
-	Route::get('/admin/accountings/this_week', 'CopyController@autoNavi');
-	Route::get('/admin/accountings/this_month', 'CopyController@autoNavi');
+
+	Route::get('/admin', 'AdminController@admin');
+
+	Route::get('/admin/accountings/{type?}', 'AdminController@accountings');
 });
 
+Route::get('/admin/tickets/66959388', 'CopyController@autoNavi');
+Route::get('/admin/tickets/new', 'CopyController@autoNavi');
+Route::get('/admin/orders/288352400', 'CopyController@autoNavi');
+Route::get('/admin/orders/552661752', 'CopyController@autoNavi');

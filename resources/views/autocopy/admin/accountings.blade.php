@@ -137,16 +137,16 @@
                 <div class="content-main">
                   <div class="nav-container">
   <ul class="nav nav-pills nav-justified">
-    <li class="active">
+    <li class="@if(empty($type)) active @endif">
       <a href="/admin/accountings">全部</a>
     </li>
-    <li class="">
+    <li class="@if('today' == $type) active @endif">
       <a href="/admin/accountings/today">今天</a>
     </li>
-    <li class="">
+    <li class="@if('this_week' == $type) active @endif">
       <a href="/admin/accountings/this_week">本周</a>
     </li>
-    <li class="">
+    <li class="@if('this_month' == $type) active @endif">
       <a href="/admin/accountings/this_month">本月</a>
     </li>
   </ul>
@@ -165,104 +165,16 @@
       </tr>
     </thead>
     <tbody>
-        <tr>
-          <td class="align-right">06-26 14:19</td>
-          <td class="align-right">06-26 16:12</td>
-          <td class="align-right">1:53:43</td>
-          <td class="align-right">3.8 MB</td>
-          <td class="align-right">10.0 MB</td>
-        </tr>
-        <tr>
-          <td class="align-right">06-26 11:23</td>
-          <td class="align-right">06-26 12:25</td>
-          <td class="align-right">1:01:33</td>
-          <td class="align-right">1.9 MB</td>
-          <td class="align-right">7.2 MB</td>
-        </tr>
-        <tr>
-          <td class="align-right">06-25 22:17</td>
-          <td class="align-right">06-25 22:18</td>
-          <td class="align-right">0:01:33</td>
-          <td class="align-right">753.2 KB</td>
-          <td class="align-right">492.4 KB</td>
-        </tr>
-        <tr>
-          <td class="align-right">06-25 21:56</td>
-          <td class="align-right">06-25 21:59</td>
-          <td class="align-right">0:03:02</td>
-          <td class="align-right">284.8 KB</td>
-          <td class="align-right">1.8 MB</td>
-        </tr>
-        <tr>
-          <td class="align-right">06-25 19:27</td>
-          <td class="align-right">06-25 19:47</td>
-          <td class="align-right">0:19:19</td>
-          <td class="align-right">1.3 MB</td>
-          <td class="align-right">21.3 MB</td>
-        </tr>
-        <tr>
-          <td class="align-right">06-25 18:57</td>
-          <td class="align-right">06-25 19:08</td>
-          <td class="align-right">0:10:37</td>
-          <td class="align-right">592.4 KB</td>
-          <td class="align-right">7.4 MB</td>
-        </tr>
-        <tr>
-          <td class="align-right">06-25 18:19</td>
-          <td class="align-right">06-25 18:34</td>
-          <td class="align-right">0:15:05</td>
-          <td class="align-right">3.1 MB</td>
-          <td class="align-right">23.1 MB</td>
-        </tr>
-        <tr>
-          <td class="align-right">06-25 17:59</td>
-          <td class="align-right">06-25 18:00</td>
-          <td class="align-right">0:01:08</td>
-          <td class="align-right">26.3 KB</td>
-          <td class="align-right">52.9 KB</td>
-        </tr>
-        <tr>
-          <td class="align-right">06-25 17:28</td>
-          <td class="align-right">06-25 17:47</td>
-          <td class="align-right">0:18:43</td>
-          <td class="align-right">1.3 MB</td>
-          <td class="align-right">4.3 MB</td>
-        </tr>
-        <tr>
-          <td class="align-right">06-25 16:25</td>
-          <td class="align-right">06-25 17:19</td>
-          <td class="align-right">0:53:35</td>
-          <td class="align-right">3.9 MB</td>
-          <td class="align-right">34.4 MB</td>
-        </tr>
-        <tr>
-          <td class="align-right">06-25 15:53</td>
-          <td class="align-right">06-25 16:03</td>
-          <td class="align-right">0:09:25</td>
-          <td class="align-right">860.9 KB</td>
-          <td class="align-right">8.3 MB</td>
-        </tr>
-        <tr>
-          <td class="align-right">06-25 15:21</td>
-          <td class="align-right">06-25 15:48</td>
-          <td class="align-right">0:27:01</td>
-          <td class="align-right">1.6 MB</td>
-          <td class="align-right">7.5 MB</td>
-        </tr>
-        <tr>
-          <td class="align-right">06-25 15:11</td>
-          <td class="align-right">06-25 15:21</td>
-          <td class="align-right">0:09:35</td>
-          <td class="align-right">1.1 MB</td>
-          <td class="align-right">10.5 MB</td>
-        </tr>
-        <tr>
-          <td class="align-right">06-25 14:33</td>
-          <td class="align-right">06-25 14:44</td>
-          <td class="align-right">0:11:04</td>
-          <td class="align-right">1.3 MB</td>
-          <td class="align-right">7.5 MB</td>
-        </tr>
+
+        @foreach($history as $log)
+          <tr>
+            <td class="align-right">{{$log->acctstarttime or ''}}</td>
+            <td class="align-right">{{$log->acctstoptime or ''}}</td>
+            <td class="align-right">{{ gFormatSecond($log->acctsessiontime) }}</td>
+            <td class="align-right">{{ gFormatSize($log->acctinputoctets) }}</td>
+            <td class="align-right">{{ gFormatSize($log->acctoutputoctets) }}</td>
+          </tr>
+        @endforeach
     </tbody>
   </table>
 </div>

@@ -135,61 +135,181 @@
           <div class="row">
               <div class="col-md-12">
                 <div class="content-main">
-                  <h4 class="title-divider">
-  <span>交流中的服务单</span>
-</h4>
+                  <ul class="breadcrumb">
+  <li><a href="/admin/tickets">全部服务单</a></li>
+  <li class="active">66959388</li>
+</ul>
 
-<div class="ticket-actions">
-  <a href="/admin/tickets/new" class="btn btn-primary pull-right">新开服务单</a>
+<div class="ticket">
+  <div class="header">
+    <h3 class="title">不能正常使用代理，申请退款</h3>
+    <div class="row">
+      <div class="isp col-md-6">
+        <strong>运营商</strong>: 中国电信
+      </div>
+      <div class="operation_system col-md-6">
+        <strong>设备系统</strong>: Windows 7
+      </div>
+    </div>
+  </div>
+
+  <div class="contents">
+      <div class="ticket_content">
+    <div class="header user">
+      <div class="avatar">
+        <img alt="Avatar_user" src="/assets/admin/avatar_user-67457b4f47d1898afd5ce16ad474c020.png" />
+      </div>
+      <div class="username">
+        woshijunfa
+      </div>
+      <div class="date text-muted">2015-06-25 14:56</div>
+    </div>
+  <div class="content">
+    <p>链接一会后断开，就不能再次使用了，效果不佳，申请退款</p>
+  </div>
 </div>
 
-<div class="table-responsive">
-  <table class="table table-bordered table-striped tickets">
-    <thead>
-      <tr>
-        <th>编号</th>
-        <th>标题</th>
-        <th>状态</th>
-        <th>创建时间</th>
-        <th>最后更新时间</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td colspan="5">无</td>
-        </tr>
-    </tbody>
-  </table>
+      <div class="ticket_content">
+    <div class="header support">
+      <div class="avatar">
+        <img alt="Avatar_support" src="/assets/admin/avatar_support-3773d7187b81b1e5f9574447aa4149e0.png" />
+      </div>
+      <div class="username">
+        云梯MM
+      </div>
+      <div class="date text-muted">2015-06-25 15:08</div>
+    </div>
+  <div class="content">
+    <p>只要在首次购买3天内，云梯都支持全额退款嗒，请不要担心哟 (⌒▽⌒)
+<br />请给云梯MM 一个机会，帮你一起看看问题的原因在哪里，好吗？</p>
+
+<p>Windows 无法连接时，系统会返回一个错误代码，请告诉云梯MM具体的错误代码，方便我提供对应的解决办法哦～</p>
+  </div>
 </div>
 
-<h4 class="title-divider">
-  <span>已关闭的服务单</span>
-</h4>
-
-<div class="table-responsive">
-  <table class="table table-bordered table-striped">
-    <thead>
-      <tr>
-        <th>编号</th>
-        <th>标题</th>
-        <th>状态</th>
-        <th>创建时间</th>
-        <th>最后更新时间</th>
-      </tr>
-    </thead>
-    <tbody>
-          <tr>
-            <td>66959388</td>
-            <td><a href="/admin/tickets/66959388">不能正常使用代理，申请退款</a></td>
-            <td>已关闭</td>
-            <td>2015-06-25 14:56</td>
-            <td>2015-06-28 23:07</td>
-          </tr>
-    </tbody>
-  </table>
+      <div class="ticket_content">
+    <div class="header user">
+      <div class="avatar">
+        <img alt="Avatar_user" src="/assets/admin/avatar_user-67457b4f47d1898afd5ce16ad474c020.png" />
+      </div>
+      <div class="username">
+        woshijunfa
+      </div>
+      <div class="date text-muted">2015-06-25 15:48</div>
+    </div>
+  <div class="content">
+    <p>还是退款吧，懒得折腾了</p>
+  </div>
 </div>
 
+      <div class="ticket_content">
+    <div class="header support">
+      <div class="avatar">
+        <img alt="Avatar_support" src="/assets/admin/avatar_support-3773d7187b81b1e5f9574447aa4149e0.png" />
+      </div>
+      <div class="username">
+        云梯MM
+      </div>
+      <div class="date text-muted">2015-06-25 15:51</div>
+    </div>
+  <div class="content">
+    <p>云梯MM查询到上一回复后，你的帐号已经有正常的连接记录，请问问题是否已经解决了吗？
+<br />还是同一网络下其他设备连上的VPN呢？</p>
+  </div>
+</div>
 
+      <div class="ticket_content">
+    <div class="header user">
+      <div class="avatar">
+        <img alt="Avatar_user" src="/assets/admin/avatar_user-67457b4f47d1898afd5ce16ad474c020.png" />
+      </div>
+      <div class="username">
+        woshijunfa
+      </div>
+      <div class="date text-muted">2015-06-25 18:04</div>
+    </div>
+  <div class="content">
+    <p>但是还是不稳定，经常性的提示连接没有成功。重新连接被挂起...,也没有错误码返回，有时候会提示错误789：L2TP连接尝试失败，因为安全层在初始化与远程计算机的协商时遇到一个处理错误。然后就上不去了，太不稳定，而且不知道怎么解决 会有连上的时候，但是用到vpn的时候连不上还是挺闹心的，毕竟是工作用，连不上影响工作，所以需要选择一个稳定的vpn，顾如能解决可以，不能解决还是退款吧</p>
+  </div>
+</div>
+
+      <div class="ticket_content">
+    <div class="header user">
+      <div class="avatar">
+        <img alt="Avatar_user" src="/assets/admin/avatar_user-67457b4f47d1898afd5ce16ad474c020.png" />
+      </div>
+      <div class="username">
+        woshijunfa
+      </div>
+      <div class="date text-muted">2015-06-25 18:11</div>
+    </div>
+  <div class="content">
+    <p>也有提示错误：809：无法建立计算机与VPN服务器之间的网络连接，因为远程服务器未响应，类似的问题。一句话就是不稳定，影响工作吧。</p>
+  </div>
+</div>
+
+      <div class="ticket_content">
+    <div class="header support">
+      <div class="avatar">
+        <img alt="Avatar_support" src="/assets/admin/avatar_support-3773d7187b81b1e5f9574447aa4149e0.png" />
+      </div>
+      <div class="username">
+        云梯MM
+      </div>
+      <div class="date text-muted">2015-06-25 18:31</div>
+    </div>
+  <div class="content">
+    <p>错误789和错误809的解决方法是对立的，所以如果经常出现这两个错误，那通常都是本地运营商网络不稳定或者路由器设置不正确导致的。
+<br />云梯在全国各地都有服务器状态监测点，当前所有服务器状态都正常哦，连接人数也都是正常嗒，我们可以保证自己的服务肯定是稳定快速的。
+<br />当用户提出退款时，云梯MM总是希望可以先帮助大家排查解决问题，但如果您并不想进行尝试，只是要退款，那也没关系，我可以理解。</p>
+
+<p>云梯MM正在为您处理退款，但查询到您的帐号正在使用 VPN，请您先断开连接，并回复服务单确认，我才能为您退款，谢谢！</p>
+  </div>
+</div>
+
+      <div class="ticket_content">
+    <div class="header support">
+      <div class="avatar">
+        <img alt="Avatar_support" src="/assets/admin/avatar_support-3773d7187b81b1e5f9574447aa4149e0.png" />
+      </div>
+      <div class="username">
+        云梯MM
+      </div>
+      <div class="date text-muted">2015-06-26 14:26</div>
+    </div>
+  <div class="content">
+    <p>云梯MM正在为您处理退款，但查询到您的帐号正在使用 VPN，请您先断开连接，并回复服务单确认，我才能为您退款，谢谢！
+<br />如果没有收到你的回复，并且你的帐号持续有 VPN 连接的话，将认为问题已经解决，不再为你处理退款。</p>
+  </div>
+</div>
+
+      <div class="ticket_content">
+    <div class="header support">
+      <div class="avatar">
+        <img alt="Avatar_support" src="/assets/admin/avatar_support-3773d7187b81b1e5f9574447aa4149e0.png" />
+      </div>
+      <div class="username">
+        云梯MM
+      </div>
+      <div class="date text-muted">2015-06-26 22:17</div>
+    </div>
+  <div class="content">
+    <p>你购买的云梯 标准版v3 套餐 （订单编号 288352400）已经取消，
+<br />并将订单金额（240元）通过支付宝全额退还给你。
+<br />支付宝显示退款至你的支付宝账户，并且已经退款成功，还请注意查收。</p>
+
+<p>如果有什么问题，联系我好了哦 (⌒▽⌒)
+<br />欢迎常来云梯看看，我们一直在这儿等着你哦，有机会再为你提供优质满意的服务呐 （＾∇＾）</p>
+  </div>
+</div>
+
+  </div>
+
+
+    <div class="alert alert-success">
+      48小时内没有回复，服务单已自动关闭。如果问题没有解决，你可以新开服务单，继续讨论。
+    </div>
+</div>
 
                 </div>
               </div>

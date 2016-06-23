@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use App\Models\User;
+use App\Models\RadAcct;
 use App\Services\UserService;
 use App\Services\CurlService;
 use View;
@@ -44,6 +45,39 @@ class test extends Command
      */
     public function handle()
     {
+                #本月情况
+        $monthInfo = RadAcct::getMonthDetial('sqltest');
+        if (empty($monthInfo)) $monthInfo = [];
+        $detial = [];
+        $totalSize = 0;
+        foreach ($monthInfo as $value)
+        {
+
+            $detial[(int)($value['day'])] = $value['size'];
+            $totalSize += $value['size'];
+        } 
+
+
+        $dayCount = date('t',time());
+        for ($i=0; $i < $dayCount; $i++) 
+        {
+            if (empty($detial[$i])) $detial[$i] = 0;
+        }
+
+
+        var_dump(ksort($detial));
+        var_dump($detial);
+        var_dump($totalSize);
+
+        // $info = RadAcct::getMonthDetial('sqltest');
+        // var_dump($info);
+
+
+        // $log = RadAcct::getHistory('sqltest');
+        // var_dump($log);
+        die;
+
+
         $headerInfo = [
             'Accept'=>'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
             'Connection'=>'keep-alive',
