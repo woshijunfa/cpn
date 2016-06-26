@@ -31,7 +31,7 @@ class CopyController extends Controller
         $user = Auth::user();
         if (!empty($user)) 
         {
-            $msg = '<div class="pull-right content"><span>欢迎您' . $user->email . '</span><span><a href="/admin">我的云梯</a></span><span>/</span><span><a href="/logout">注销</a></span></div>';
+            $msg = '<div class="pull-right content"><span>欢迎您' . $user->username . '</span><span><a href="/admin">我的云梯</a></span><span>/</span><span><a href="/logout">注销</a></span></div>';
             $content = preg_replace("/<div\s+class=\"pull-right\scontent\">(.*?)<\/div>/is", $msg, $content);
         }
 

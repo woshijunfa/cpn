@@ -13,6 +13,8 @@ class RadAcct extends Model
 {
     protected $connection = 'radius';
 
+    public $timestamps = false;
+    
     /**
      * The database table used by the model.
      *

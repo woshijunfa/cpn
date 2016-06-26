@@ -116,6 +116,8 @@
 
     <div class="form-group email required user_email"><label class="email required col-sm-2 control-label" for="user_email"><abbr title="必填">*</abbr> 邮箱</label><div class="col-sm-10"><input autocapitalize="none" autocomplete="off" autocorrect="off" autofocus="autofocus" class="string email required form-control typeahead typeahead-email form-control" id="email" name="email" size="50" type="email" value="" /><p class="help-block">请填写常用的邮箱，便于接收服务器信息等重要通知，方便你长期使用<br>QQ 和 Foxmail 邮箱可能会收不到</p></div></div>
 
+    <div class="form-group string required user_username"><label class="string required col-sm-2 control-label" for="user_username"><abbr title="必填">*</abbr> 用户名</label><div class="col-sm-10"><input autocapitalize="none" autocomplete="off" autocorrect="off" class="string required form-control" id="user_username" name="user[username]" size="50" type="text"><p class="help-block">仅限英文字母和数字,长度在6~30位</p></div></div>
+
     <div class="form-group password required user_password"><label class="password required col-sm-2 control-label" for="user_password"><abbr title="必填">*</abbr> 密码</label><div class="col-sm-10"><input autocapitalize="none" autocomplete="off" autocorrect="off" class="password required form-control" id="password" name="password" size="50" type="password" /></div></div>
 
     <div class="form-group">
@@ -155,21 +157,35 @@
       if(!isemail)
       {
           $("#submit").val("请填写正确的邮箱，然后注册");
-          $("#submit").addClass("btn-warning");
+          $("#submit").addClass("btn-danger");
           $("#submit").removeClass("btn-primary");
           return false;
       }
+
+        var username = $("#user_username").val();
+        username = username.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+        nameReg = /^[0-9a-zA-Z]{6,30}$/i;
+        var isok = nameReg.test(username);
+        if(!isok)
+        {
+            $("#submit").val("请按照规则填写用户名，然后注册");
+            $("#submit").addClass("btn-danger");
+            $("#submit").removeClass("btn-primary");
+            return false;
+        }
+       
+
 
         var password = $("#password").val();
       if(password.length < 8)
       {
           $("#submit").val("密码过短，最少8位");
-          $("#submit").addClass("btn-warning");
+          $("#submit").addClass("btn-danger");
           $("#submit").removeClass("btn-primary");
           return false;
       }
 
-      $("#submit").removeClass("btn-warning");
+      $("#submit").removeClass("btn-danger");
       $("#submit").addClass("btn-primary");
       return true;
     }
@@ -181,6 +197,7 @@
 
         var postdata = {
             email : $("#email").val(),
+            username : $("#user_username").val(),
             password : $("#password").val(),
             _token : "{{ csrf_token() }}"
         };

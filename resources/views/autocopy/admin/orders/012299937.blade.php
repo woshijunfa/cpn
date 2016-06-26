@@ -136,96 +136,43 @@
               <div class="col-md-12">
                 <div class="content-main">
                   
-<div class="order-state-new">
-  <div class="order-process"></div>
-
-  <ul class="order-steps">
-    <li class="new">套餐</li>
-    <li class="placed">支付</li>
-    <li class="paid">设置</li>
-    <li class="completed">完成</li>
-  </ul>
+<div class="note">
+  7天内未付款，该订单已取消。如有问题，欢迎 <a href="/admin/tickets">联系客服</a>
 </div>
 
+<h4 class="title-divider">
+  <span>订单信息</span>
+</h4>
+编号: 012299937
+
+<h4 class="title-divider">
+  <span>商品信息</span>
+</h4>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>名称</th>
+      <th>价格</th>
+      <th>数量</th>
+      <th>合计</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td>标准版v3</td>
+        <td>240 元</td>
+        <td>1</td>
+        <td>240 元</td>
+      </tr>
+    <tr>
+      <th colspan="3">合计</th>
+      <td>240 元</td>
+    </tr>
+  </tbody>
+</table>
 
 
-<form accept-charset="UTF-8" action="/admin/orders" id="new-order-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="NeaRyjJM41mLMZch87q3glbNbqEcctietz+l75jMJ8k=" /></div>
-  <div class="form-inputs">
-    <h4 class="title-divider">
-      <span>选择套餐</span>
-    </h4>
-    <div class="row plans">
-        
-<div class="col-md-3">
-  <label class="radio-container">
-    <p class="radio-icon"><input id="plan_id_14" name="plan_id" type="radio" value="sv3" /></p>
-    <p class="name">小流量版v3</p>
-    <p>月流量：10 GB / 月</p>
-    <p>同时在线：2 台</p>
-    <p>月限时：无限</p>
-    <p>多国机房：17个机房</p>
-    <p class="price">180 元 / 年</p>
-</label></div>
 
-        
-<div class="col-md-3">
-  <label class="radio-container">
-    <p class="radio-icon"><input id="plan_id_15" name="plan_id" type="radio" value="mv3" /></p>
-    <p class="name">标准版v3</p>
-    <p>月流量：100 GB / 月</p>
-    <p>同时在线：3 台</p>
-    <p>月限时：无限</p>
-    <p>多国机房：17个机房</p>
-    <p class="price">240 元 / 年</p>
-</label></div>
-
-        
-<div class="col-md-3">
-  <label class="radio-container">
-    <p class="radio-icon"><input checked="checked" id="plan_id_16" name="plan_id" type="radio" value="bv3" /></p>
-    <p class="name">大流量版v3</p>
-    <p>月流量：300 GB / 月</p>
-    <p>同时在线：3 台</p>
-    <p>月限时：无限</p>
-    <p>多国机房：17个机房</p>
-    <p class="price">600 元 / 年</p>
-</label></div>
-
-        
-<div class="col-md-3">
-  <label class="radio-container">
-    <p class="radio-icon"><input id="plan_id_17" name="plan_id" type="radio" value="ev3" /></p>
-    <p class="name">企业版v3</p>
-    <p>月流量：1000 GB / 月</p>
-    <p>同时在线：15 台</p>
-    <p>月限时：无限</p>
-    <p>多国机房：17个机房</p>
-    <p class="price">3,600 元 / 年</p>
-</label></div>
-
-    </div>
-
-    <h4 class="title-divider">
-      <span>选择周期</span>
-    </h4>
-    <div class="row term">
-        <div class="col-md-3">
-          <label class="radio-container">
-            <p class="radio-icon"><input checked="checked" id="quantity_1" name="quantity" type="radio" value="1" /></p>
-            <p class="term-num">1 年</p>
-</label>        </div>
-        <div class="col-md-3">
-          <label class="radio-container">
-            <p class="radio-icon"><input id="quantity_2" name="quantity" type="radio" value="2" /></p>
-            <p class="term-num">2 年</p>
-</label>        </div>
-    </div>
-  </div>
-{{ csrf_field() }}
-  <div class="form-group">
-    <input class="btn btn-primary btn-lg" data-disable-with="正在提交..." name="commit" type="submit" value="确认订单" />
-  </div>
-</form>
                 </div>
               </div>
           </div>

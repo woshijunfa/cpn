@@ -114,7 +114,7 @@
   <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="JqVZ5sbDPuPQ4V2MGRFOrGPEStaklvgZQtc2bCsI0Bw=" /></div>
     <div class="form-group string optional user_login"><label class="string optional col-sm-2 control-label" for="user_login">帐号</label><div class="col-sm-10">
 
-    <input autocapitalize="none" autocomplete="off" autocorrect="off" autofocus="autofocus" class="string optional form-control" id="email" name="email" placeholder="邮箱" size="50" type="text" /></div></div>
+    <input autocapitalize="none" autocomplete="off" autocorrect="off" autofocus="autofocus" class="string optional form-control" id="email" name="email" placeholder="邮箱或者用户名" size="50" type="text" /></div></div>
     <div class="form-group password optional user_password"><label class="password optional col-sm-2 control-label" for="user_password">密码</label><div class="col-sm-10">
 
     <input autocapitalize="none" autocomplete="off" autocorrect="off" class="password optional form-control" id="password" name="password" size="50" type="password" /></div>
@@ -154,9 +154,14 @@
         emailReg = /^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/i;
         var isemail = emailReg.test(email);
 
-      if(!isemail)
+        var username = $("#email").val();
+        username = username.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+        nameReg = /^[0-9a-zA-Z]{6,30}$/i;
+        var isok = nameReg.test(username);
+
+      if(!isemail && !isok)
       {
-          $("#submit").val("请填写正确的邮箱，然后登录");
+          $("#submit").val("请填写正确的邮箱或者用户名，然后登录");
           $("#submit").addClass("btn-warning");
           $("#submit").removeClass("btn-primary");
           return false;

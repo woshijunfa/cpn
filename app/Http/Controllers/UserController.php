@@ -23,7 +23,9 @@ class UserController extends Controller
     public function regiestPost()
     {
         $email = Input::get("email");
+        $userName = Input::get('username');
         if (empty($email)) return $this->json(1,[],"邮箱不能为空");
+        if (empty($userName)) return $this->json(1,[],"用户名不能为空");
         if (!gIsEmail($email)) return $this->json(1,[],"邮箱格式不正确");
 
         $password = Input::get("password");
@@ -33,8 +35,12 @@ class UserController extends Controller
         $userInfo = User::where("email",$email)->first();
         if (!empty($userInfo)) return $this->json(1,[],"该邮箱已经注册，请直接登录");
 
+        //用户名
+        $userInfo = User::where("username",$userName)->first();
+        if (!empty($userInfo)) return $this->json(1,[],"该用户名已经被使用，请更换一个");
+
         //进行注册
-        $uuid = User::reg($email,$password);
+        $uuid = User::reg($email,$userName,$password);
         if (!$uuid) return $this->json(3,[],"注册失败，请稍后再试");
 
         return $this->json(0,[],"");
@@ -84,8 +90,8 @@ class UserController extends Controller
         if (empty($email) || empty($password)) return $this->json(1,[],"请输入正确的邮箱和密码");
 
         //用户信息校验
-        $userInfo = User::where("email",$email)->where("status",0)->first();
-        if (empty($userInfo))  return $this->json(1,[],"邮箱或密码错误");
+        $userInfo = User::where("email",$email)->orWhere("username",$email)->where("status",0)->first();
+        if (empty($userInfo))  return $this->json(1,[],"邮箱或用户名或密码错误");
 
         //密码校验
         if (!Hash::check($password,$userInfo->password))  return $this->json(1,[],"邮箱或密码错误");

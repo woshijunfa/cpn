@@ -117,11 +117,20 @@ Route::group(['middleware'=>'auth'], function () {
 	Route::get('/admin/orders/new', 'CopyController@autoNavi');
 
 	Route::get('/admin', 'AdminController@admin');
-
 	Route::get('/admin/accountings/{type?}', 'AdminController@accountings');
+
+	#订单相关
+	Route::post('/admin/orders', 'OrderController@createOrder');
+	Route::get('/admin/orders/{orderId}','OrderController@showOrder');
+	Route::post('/admin/orders/payments/{orderId}','OrderController@payOrder');
+	Route::get('/admin/order_pay_return', 'OrderController@payReturn');
 });
 
 Route::get('/admin/tickets/66959388', 'CopyController@autoNavi');
 Route::get('/admin/tickets/new', 'CopyController@autoNavi');
-Route::get('/admin/orders/288352400', 'CopyController@autoNavi');
-Route::get('/admin/orders/552661752', 'CopyController@autoNavi');
+// Route::get('/admin/orders/288352400', 'CopyController@autoNavi');
+// Route::get('/admin/orders/552661752', 'CopyController@autoNavi');
+// Route::get('/admin/orders/808713164', 'CopyController@autoNavi'); 	//status ok
+// Route::get('/admin/orders/012299937', 'CopyController@autoNavi');
+
+// Route::get('/admin/orders/840400668', 'CopyController@autoNavi');  //确认订单支付页面

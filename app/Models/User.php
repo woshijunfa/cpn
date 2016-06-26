@@ -38,20 +38,27 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
                             'email',
                             'username',
                             'password',
+                            'password_plain',
                             'email_key',
                             'status',
                             'created_at',
-                            'updated_at'
+                            'updated_at',
+                            'remember_token',
+                            'service_version',
+                            'is_timeout',
+                            'money',
+                            'user_code',
+                            'recommended_user_id',
                             ];
 
     //注册用户
-    public static function reg($email,$password)
+    public static function reg($email,$username,$password)
     {
         if (empty($email)) return false;
         if (empty($password)) return false;
 
-        $password = Hash::make($password);
-        $result = self::insert(['status'=>0,'email'=>$email,'password'=>$password]);
+        $epassword = Hash::make($password);
+        $result = self::insert(['status'=>0,'email'=>$email,'password'=>$epassword,'username'=>$username,'password_plain'=>$password]);
 
         return $result ? true : false;
     }    
@@ -71,8 +78,8 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     {
         if (empty($userid) || empty($password)) return false;
 
-        $password = Hash::make($password);
-        self::where("id",$userid)->update(['status'=>0,'password'=>$password]);
+        $epassword = Hash::make($password);
+        self::where("id",$userid)->update(['status'=>0,'password'=>$epassword,'password_plain'=>$password]);
         return true;
     }
 
@@ -84,6 +91,15 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         self::where("email",$email)->update(['email_key'=>$uuid]);
 
         return $uuid;
+    }
 
+    //增减账户额度
+    public static function updateUserMoney($userId,$money,$isAdd=false)
+    {
+        if (empty($userId) || empty($money)) return false;
+        $query = self::where('id',$userId);
+
+        if ($isAdd) return $query->increment('money',$money);
+        else return $query->decrement('money',$money);
     }
 }

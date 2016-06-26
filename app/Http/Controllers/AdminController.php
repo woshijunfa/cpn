@@ -40,7 +40,7 @@ class AdminController extends Controller
     	if (empty($info['today_acctsessiontime'])) $info['today_acctsessiontime'] = 0;
 
         #本月情况
-        $monthInfo = RadAcct::getMonthDetial('sqltest');
+        $monthInfo = RadAcct::getMonthDetial($user->username);
         if (empty($monthInfo)) $monthInfo = [];
         $detial = [];
         $totalSize = 0;

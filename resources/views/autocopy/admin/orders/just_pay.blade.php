@@ -17,7 +17,7 @@
   <link href="/assets/apple-touch-icon-152-d1bc0a50a1bf6c411223981a25cacc61.png" rel="apple-touch-icon" size="152x152" type="image/png" />
   <link href="/assets/apple-touch-icon-180-1dc084939a185aafc52020aba27a5586.png" rel="apple-touch-icon" size="180x180" type="image/png" />
   <meta content="authenticity_token" name="csrf-param" />
-<meta content="NeaRyjJM41mLMZch87q3glbNbqEcctietz+l75jMJ8k=" name="csrf-token" />
+<meta content="9Z30SK8a/sZ5dl5tG9yR5iOyBijXAWkLX0RktRGP6zw=" name="csrf-token" />
 </head>
 <body>
   <div id="wrapper">
@@ -135,8 +135,7 @@
           <div class="row">
               <div class="col-md-12">
                 <div class="content-main">
-                  
-<div class="order-state-new">
+                    <div class="order-state-paid">
   <div class="order-process"></div>
 
   <ul class="order-steps">
@@ -148,84 +147,82 @@
 </div>
 
 
+<h4 class="title-divider">
+  <span>订单信息</span>
+</h4>
+编号: {{$order->order_no or ''}}
 
-<form accept-charset="UTF-8" action="/admin/orders" id="new-order-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="NeaRyjJM41mLMZch87q3glbNbqEcctietz+l75jMJ8k=" /></div>
-  <div class="form-inputs">
-    <h4 class="title-divider">
-      <span>选择套餐</span>
-    </h4>
-    <div class="row plans">
-        
-<div class="col-md-3">
-  <label class="radio-container">
-    <p class="radio-icon"><input id="plan_id_14" name="plan_id" type="radio" value="sv3" /></p>
-    <p class="name">小流量版v3</p>
-    <p>月流量：10 GB / 月</p>
-    <p>同时在线：2 台</p>
-    <p>月限时：无限</p>
-    <p>多国机房：17个机房</p>
-    <p class="price">180 元 / 年</p>
-</label></div>
+<h4 class="title-divider">
+  <span>商品信息</span>
+</h4>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>名称</th>
+      <th>价格</th>
+      <th>数量</th>
+      <th>合计</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td>{{$order->order_name or ''}}</td>
+        <td>{{$order->price or ''}} 元</td>
+        <td>{{$order->count or 1}}</td>
+        <td>{{$order->total_price or 0}} 元</td>
+      </tr>
+    <tr>
+      <th colspan="3">合计</th>
+      <td>{{$order->total_price or 0}} 元</td>
+    </tr>
+  </tbody>
+</table>
 
-        
-<div class="col-md-3">
-  <label class="radio-container">
-    <p class="radio-icon"><input id="plan_id_15" name="plan_id" type="radio" value="mv3" /></p>
-    <p class="name">标准版v3</p>
-    <p>月流量：100 GB / 月</p>
-    <p>同时在线：3 台</p>
-    <p>月限时：无限</p>
-    <p>多国机房：17个机房</p>
-    <p class="price">240 元 / 年</p>
-</label></div>
 
-        
-<div class="col-md-3">
-  <label class="radio-container">
-    <p class="radio-icon"><input checked="checked" id="plan_id_16" name="plan_id" type="radio" value="bv3" /></p>
-    <p class="name">大流量版v3</p>
-    <p>月流量：300 GB / 月</p>
-    <p>同时在线：3 台</p>
-    <p>月限时：无限</p>
-    <p>多国机房：17个机房</p>
-    <p class="price">600 元 / 年</p>
-</label></div>
+<div class="payment-methods">
+  <h4 class="title-divider">
+    <span>设置方法</span>
+  </h4>
 
-        
-<div class="col-md-3">
-  <label class="radio-container">
-    <p class="radio-icon"><input id="plan_id_17" name="plan_id" type="radio" value="ev3" /></p>
-    <p class="name">企业版v3</p>
-    <p>月流量：1000 GB / 月</p>
-    <p>同时在线：15 台</p>
-    <p>月限时：无限</p>
-    <p>多国机房：17个机房</p>
-    <p class="price">3,600 元 / 年</p>
-</label></div>
 
-    </div>
+  <p>付款成功<span class="text-danger"><a href='/admin/documents'>请参照帮助进行设置</a></span>，如果遇到问题，请<a href="/admin/tickets/new">联系客服</a></p>
+<script type="text/javascript">
+//<![CDATA[
 
-    <h4 class="title-divider">
-      <span>选择周期</span>
-    </h4>
-    <div class="row term">
-        <div class="col-md-3">
-          <label class="radio-container">
-            <p class="radio-icon"><input checked="checked" id="quantity_1" name="quantity" type="radio" value="1" /></p>
-            <p class="term-num">1 年</p>
-</label>        </div>
-        <div class="col-md-3">
-          <label class="radio-container">
-            <p class="radio-icon"><input id="quantity_2" name="quantity" type="radio" value="2" /></p>
-            <p class="term-num">2 年</p>
-</label>        </div>
-    </div>
-  </div>
-{{ csrf_field() }}
-  <div class="form-group">
-    <input class="btn btn-primary btn-lg" data-disable-with="正在提交..." name="commit" type="submit" value="确认订单" />
-  </div>
-</form>
+  $(document).ready(function() {
+    function check_payment_methods() {
+      var order_amount = $('#payment-methods-form').data('amount');
+
+      var selected_amount = 0;
+      $.each($('#payment-methods-form .available-pre-payment-method:checked'), function(index, element) {
+        selected_amount += parseFloat($(element).data('amount'));
+      });
+
+      if (selected_amount >= order_amount) {
+        $('#default-pay').show();
+        $('.btn-final-payment-method').hide();
+      } else {
+        $('#default-pay').hide();
+        $('.btn-final-payment-method').show();
+      }
+    }
+
+    check_payment_methods();
+
+    $('#payment-methods-form .available-pre-payment-method').change(check_payment_methods);
+
+    $('#payment-methods-form .btn-final-payment-method').click(function(e) {
+      $('#payment-methods-form .payment-method-input').prop('checked', false);
+      $('#' + $(this).data('input')).prop('checked', true);
+      $('#payment-methods-form').submit();
+    });
+  });
+
+//]]>
+</script>
+</div>
+
+
                 </div>
               </div>
           </div>

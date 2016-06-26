@@ -71,7 +71,8 @@ class CommonService
             'Cache-Control'=>'no-cache',
         ];
 
-        $cookie = '_dallas_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVEkiJTViZjRlODRkOTNmY2Y5YjgzODZmNmMxNjhmN2ExMjFjBjsAVEkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjsAVFsHWwZpAiaiSSIiJDJhJDEwJE1VNEFLNzNDTFJWWEhLaXhVSUJ4bk8GOwBUSSIQX2NzcmZfdG9rZW4GOwBGSSIxTmVhUnlqSk00MW1MTVpjaDg3cTNnbGJOYnFFY2N0aWV0eitsNzVqTUo4az0GOwBG--9c1a4d74fc9e5a4506d4660a0f91da477e10d66c';
+        // $cookie = '_dallas_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVEkiJTViZjRlODRkOTNmY2Y5YjgzODZmNmMxNjhmN2ExMjFjBjsAVEkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjsAVFsHWwZpAiaiSSIiJDJhJDEwJE1VNEFLNzNDTFJWWEhLaXhVSUJ4bk8GOwBUSSIQX2NzcmZfdG9rZW4GOwBGSSIxTmVhUnlqSk00MW1MTVpjaDg3cTNnbGJOYnFFY2N0aWV0eitsNzVqTUo4az0GOwBG--9c1a4d74fc9e5a4506d4660a0f91da477e10d66c';
+        $cookie = '_dallas_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVEkiJTVjMDIxMjRkNjJjMmYyYmEyMWM5M2UyMDMyYTZjOWE4BjsAVEkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjsAVFsHWwZpAn6jSSIiJDJhJDEwJEJULnVzZzZ1NHlFV3QyakMvSENMY08GOwBUSSIQX2NzcmZfdG9rZW4GOwBGSSIxOVozMFNLOGEvc1o1ZGw1dEc5eVI1aU95QmlqWEFXa0xYMFJrdFJHUDZ6dz0GOwBG--bd810e7bf3acd6019a405fb6e62f3b4f5d97c689';
         $curlService = new CurlService($curlurl,$headerInfo,$cookie);
         $result = $curlService->get();
         if (!$result) return false;

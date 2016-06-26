@@ -27,10 +27,10 @@ wimax
 group: sv3,mv3,bv3,ev3
 
 #表建立
-INSERT INTO radgroupcheck (groupname,attribute,op,VALUE) VALUES ('sv3','Simultaneous-Use',':=','1'); 
-INSERT INTO radgroupcheck (groupname,attribute,op,VALUE) VALUES ('mv3','Simultaneous-Use',':=','1'); 
-INSERT INTO radgroupcheck (groupname,attribute,op,VALUE) VALUES ('bv3','Simultaneous-Use',':=','1'); 
-INSERT INTO radgroupcheck (groupname,attribute,op,VALUE) VALUES ('ev3','Simultaneous-Use',':=','1'); 
+#INSERT INTO radgroupcheck (groupname,attribute,op,VALUE) VALUES ('sv3','Simultaneous-Use',':=','1'); 
+#INSERT INTO radgroupcheck (groupname,attribute,op,VALUE) VALUES ('mv3','Simultaneous-Use',':=','1'); 
+#INSERT INTO radgroupcheck (groupname,attribute,op,VALUE) VALUES ('bv3','Simultaneous-Use',':=','1'); 
+#INSERT INTO radgroupcheck (groupname,attribute,op,VALUE) VALUES ('ev3','Simultaneous-Use',':=','1'); 
 
 #套餐流量控制建立
 
@@ -59,11 +59,11 @@ INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('bv3','Max-Mont
 INSERT INTO radgroupcheck (groupname,attribute,op,VALUE) VALUES ('bv3','Simultaneous-Use',':=','3'); 
 
 #ev3 月流量：1000g  同时在线：15
-INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('bv3','Auth-Type',':=','Local'); 
-INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('bv3','Service-Type',':=','Framed-User'); 
-INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('bv3','Framed-IP-Netmask',':=','255.255.255.0'); 
-INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('bv3','Acct-Interim-Interval',':=','600'); 
-INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('bv3','Max-Monthly-Traffic',':=','322122547200'); 
-INSERT INTO radgroupcheck (groupname,attribute,op,VALUE) VALUES ('bv3','Simultaneous-Use',':=','3'); 
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('ev3','Auth-Type',':=','Local'); 
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('ev3','Service-Type',':=','Framed-User'); 
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('ev3','Framed-IP-Netmask',':=','255.255.255.0'); 
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('ev3','Acct-Interim-Interval',':=','600'); 
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('ev3','Max-Monthly-Traffic',':=','1073741824000'); 
+INSERT INTO radgroupcheck (groupname,attribute,op,VALUE) VALUES ('ev3','Simultaneous-Use',':=','15'); 
 
 

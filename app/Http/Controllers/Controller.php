@@ -19,6 +19,6 @@ abstract class Controller extends BaseController
 
     public function errorPage($desc='')
     {
-    	return view("errors.error",compact('desc'));
+    	return view("copy.404",compact('desc'));
     }
 }
