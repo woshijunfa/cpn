@@ -25,7 +25,7 @@ class OrderService
         //修改订单支付状态
         $updateInfo = [
             'status' => 'success_pay',
-            'pay_at' => date("Y-m-d H:i:s",strtotime('+1 years'))
+            'pay_at' => date("Y-m-d H:i:s")
         ];
         Order::updateOrderByOrderId($order->order_id,$updateInfo);
 

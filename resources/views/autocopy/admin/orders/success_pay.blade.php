@@ -160,7 +160,7 @@
 <h4 class="title-divider">
   <span>订单信息</span>
 </h4>
-编号: 808713164
+编号: {{$order->order_no or ''}}
 
 <h4 class="title-divider">
   <span>商品信息</span>
@@ -176,18 +176,28 @@
   </thead>
   <tbody>
       <tr>
-        <td>标准版v3</td>
-        <td>240 元</td>
-        <td>1</td>
-        <td>240 元</td>
+        <td>{{ $order->order_name or ''}}</td>
+        <td>{{ $order->price or ''}} 元</td>
+        <td>{{ $order->count or ''}}</td>
+        <td>{{ $order->price * $order->count }} 元</td>
       </tr>
+
+
+      @if($order->rec_desc_money > 0)
       <tr>
-        <th colspan="3">老用户推荐优惠</th>
-        <td>-10 元</td>
+        <th colspan="3">老用户推荐减</th>
+        <td>- {{$order->rec_desc_money}} 元</td>
       </tr>
+      @endif
+      @if($order->account_money > 0)
+      <tr>
+        <th colspan="3">账户余额支付</th>
+        <td>-{{$order->account_money}} 元</td>
+      </tr>
+      @endif
     <tr>
-      <th colspan="3">合计</th>
-      <td>230 元</td>
+      <th colspan="3">实际支付</th>
+      <td>{{ $order->pay_money or ''}} 元</td>
     </tr>
   </tbody>
 </table>

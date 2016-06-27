@@ -171,9 +171,14 @@
         <td>{{$order->count or 1}}</td>
         <td>{{$order->total_price or 0}} 元</td>
       </tr>
-    <tr>
+      @if($order->rec_desc_money > 0)
+      <tr>
+        <th colspan="3">老用户推荐减</th>
+        <td>- {{$order->rec_desc_money}} 元</td>
+      </tr>
+      @endif    <tr>
       <th colspan="3">合计</th>
-      <td>{{$order->total_price or 0}} 元</td>
+      <td>{{$order->total_price - $order->rec_desc_money }} 元</td>
     </tr>
   </tbody>
 </table>

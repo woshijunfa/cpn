@@ -166,14 +166,28 @@
   </thead>
   <tbody>
       <tr>
-        <td>{{$order->order_name or ''}}</td>
-        <td>{{$order->price or ''}} 元</td>
-        <td>{{$order->count or 1}}</td>
-        <td>{{$order->total_price or 0}} 元</td>
+        <td>{{ $order->order_name or ''}}</td>
+        <td>{{ $order->price or ''}} 元</td>
+        <td>{{ $order->count or ''}}</td>
+        <td>{{ $order->price * $order->count }} 元</td>
       </tr>
+
+
+      @if($order->rec_desc_money > 0)
+      <tr>
+        <th colspan="3">老用户推荐减</th>
+        <td>- {{$order->rec_desc_money}} 元</td>
+      </tr>
+      @endif
+      @if($order->account_money > 0)
+      <tr>
+        <th colspan="3">账户余额支付</th>
+        <td>-{{$order->account_money}} 元</td>
+      </tr>
+      @endif
     <tr>
-      <th colspan="3">合计</th>
-      <td>{{$order->total_price or 0}} 元</td>
+      <th colspan="3">实际支付</th>
+      <td>{{ $order->pay_money or ''}} 元</td>
     </tr>
   </tbody>
 </table>

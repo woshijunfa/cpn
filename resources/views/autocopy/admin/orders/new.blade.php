@@ -158,7 +158,7 @@
         
 <div class="col-md-3">
   <label class="radio-container">
-    <p class="radio-icon"><input id="plan_id_14" name="plan_id" type="radio" value="sv3" /></p>
+    <p class="radio-icon"><input id="plan_id_14"  @if(\Input::get('plan_id') == 14) checked="checked" @endif  name="plan_id" type="radio" value="sv3" /></p>
     <p class="name">小流量版v3</p>
     <p>月流量：10 GB / 月</p>
     <p>同时在线：2 台</p>
@@ -170,7 +170,7 @@
         
 <div class="col-md-3">
   <label class="radio-container">
-    <p class="radio-icon"><input id="plan_id_15" name="plan_id" type="radio" value="mv3" /></p>
+    <p class="radio-icon"><input  @if( !in_array(\Input::get('plan_id'),[14,16,17]) ) checked="checked" @endif  id="plan_id_15" name="plan_id" type="radio" value="mv3" /></p>
     <p class="name">标准版v3</p>
     <p>月流量：100 GB / 月</p>
     <p>同时在线：3 台</p>
@@ -182,7 +182,7 @@
         
 <div class="col-md-3">
   <label class="radio-container">
-    <p class="radio-icon"><input checked="checked" id="plan_id_16" name="plan_id" type="radio" value="bv3" /></p>
+    <p class="radio-icon"><input @if(\Input::get('plan_id') == 16) checked="checked" @endif id="plan_id_16" name="plan_id" type="radio" value="bv3" /></p>
     <p class="name">大流量版v3</p>
     <p>月流量：300 GB / 月</p>
     <p>同时在线：3 台</p>
@@ -194,7 +194,7 @@
         
 <div class="col-md-3">
   <label class="radio-container">
-    <p class="radio-icon"><input id="plan_id_17" name="plan_id" type="radio" value="ev3" /></p>
+    <p class="radio-icon"><input @if(\Input::get('plan_id') == 17) checked="checked" @endif  id="plan_id_17" name="plan_id" type="radio" value="ev3" /></p>
     <p class="name">企业版v3</p>
     <p>月流量：1000 GB / 月</p>
     <p>同时在线：15 台</p>

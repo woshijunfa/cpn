@@ -100,7 +100,6 @@ Route::get('/assets/steps/android_2/l2tp/step10-73a4ef35ee2e2516217c70bd63695534
 // Route::any('/imgrec',function(){ echo json_encode(['code'=>-100,'desc'=>'未授权请求']);});
 
 //auto-generate-route
-
 Route::group(['middleware'=>'auth'], function () {
 	Route::get('/admin/speed_up', 'CopyController@autoNavi');
 	Route::get('/admin/servers', 'CopyController@autoNavi');

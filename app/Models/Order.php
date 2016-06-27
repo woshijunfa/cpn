@@ -38,6 +38,7 @@ class Order extends Model
                                 'comment',
                                 'pay_money',
                                 'account_money',
+                                'rec_desc_money',
                                 'order_no',
                                 'user_id',
                                 'count'
@@ -54,7 +55,8 @@ class Order extends Model
         $orderInfo['price'] = $price;
         $orderInfo['total_price'] = $price * $count;
         $orderInfo['status'] = 'be_pay';
-        $orderInfo['pay_money'] = $price * $count;
+        $orderInfo['rec_desc_money'] = $userInfo->recommended_user_id > 0 ? 10 : 0;
+        $orderInfo['pay_money'] = $price * $count - $orderInfo['rec_desc_money'];
         $orderInfo['order_no'] =  date("YmdHis",time()) . rand(1000, 9999);
         $orderInfo['user_id'] = $userInfo->id;
         $orderInfo['count'] = $count;

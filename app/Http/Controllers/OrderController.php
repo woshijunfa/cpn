@@ -64,7 +64,7 @@ class OrderController extends Controller
         if ($order->status == 'success_pay')
         {
             //支付成功1天内展示位设置界面
-            if ($order->pay_at < date('Y-m-d',strtotime('+1 days'))) 
+            if ($order->pay_at < date('Y-m-d H:i:s',strtotime('+1 days'))) 
                 return view("autocopy.admin.orders.just_pay",compact('order','user'));
             return view("autocopy.admin.orders.success_pay",compact('order','user'));
         }
@@ -91,8 +91,10 @@ class OrderController extends Controller
         if (!empty(Input::get('use_account_money')))
         {
             $accountMoney = $user->money <= 0 ? 0 : $user->money;
-            $updateOrderInfo['account_money'] = $user->money > $order->total_price ? $order->total_price : $user->money;
-            $updateOrderInfo['pay_money'] = $order->total_price - $updateOrderInfo['account_money'];
+
+            $tmpPrice = $order->total_price - $order->rec_desc_money;
+            $updateOrderInfo['account_money'] = $user->money > $tmpPrice ? $tmpPrice : $user->money;
+            $updateOrderInfo['pay_money'] = $tmpPrice - $updateOrderInfo['account_money'];
         }
 
         //更新账户金额
