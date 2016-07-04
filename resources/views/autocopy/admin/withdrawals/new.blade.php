@@ -138,7 +138,7 @@
                   <h4 class="title-divider">
   <span>提现</span>
 </h4>
-<p>提现通知，将发送到注册邮箱 chenjunfa1988@yeah.net，如邮箱有误，请先<a href="/admin/user/edit_email">修改邮箱</a>。</p>
+<p>提现通知，将发送到注册邮箱 {{$user->email or ''}}，如邮箱有误，请先<a href="/admin/user/edit_email">修改邮箱</a>。</p>
 <p>所有提现申请，审核通过后，将在3天内转账到相应的支付宝帐号。</p>
 
 <div class="form-container-large">
@@ -146,12 +146,17 @@
     <div class="form-group">
       <label class="col-sm-2 control-label">推荐帐户余额</label>
       <div class="col-sm-10">
-        <p class="form-control-static">0 元</p>
+        <p class="form-control-static">{{$user->sub_money or 0}} 元</p>
       </div>
     </div>
 
-    <div class="form-group decimal required withdrawal_amount"><label class="decimal required col-sm-2 control-label" for="withdrawal_amount"><abbr title="必填">*</abbr> 金额</label><div class="col-sm-10"><input class="numeric decimal required form-control form-control" id="withdrawal_amount" name="withdrawal[amount]" step="any" type="number" /><p class="help-block">最低20元，最高1000元</p></div></div>
+    <div class="form-group decimal required withdrawal_amount"><label class="decimal required col-sm-2 control-label" for="withdrawal_amount"><abbr title="必填">*</abbr> 金额</label><div class="col-sm-10">
+
+    <input class="numeric decimal required form-control form-control" id="withdrawal_amount" name="withdrawal[amount]" step="any" type="number" />
+
+    <p class="help-block">最低20元，最高1000元</p></div></div>
     <div class="form-group string required withdrawal_receiver_account"><label class="string required col-sm-2 control-label" for="withdrawal_receiver_account"><abbr title="必填">*</abbr> 收款支付宝帐号</label><div class="col-sm-10"><input class="string required form-control" id="withdrawal_receiver_account" name="withdrawal[receiver_account]" size="50" type="text" /></div></div>
+    {{csrf_field()}}
     <div class="form-group string required withdrawal_receiver_name"><label class="string required col-sm-2 control-label" for="withdrawal_receiver_name"><abbr title="必填">*</abbr> 收款人姓名</label><div class="col-sm-10"><input class="string required form-control" id="withdrawal_receiver_name" name="withdrawal[receiver_name]" size="50" type="text" /><p class="help-block">在支付宝预留的姓名，提现时将进行核对</p></div></div>
 
     <div class="form-group">

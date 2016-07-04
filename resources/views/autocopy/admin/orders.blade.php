@@ -154,42 +154,18 @@
     </tr>
   </thead>
   <tbody>
+
+      @foreach($orders as $order)
       <tr>
-        <td><a href="/admin/orders/288352400">288352400</a></td>
-        <td>2015-06-25 14:06</td>
-        <td>已退款</td>
-        <td class="col-price">240 元</td>
+        <td><a href="/admin/orders/{{$order->order_no or ''}}">{{$order->order_no or ''}}</a></td>
+        <td>{{$order->created_at or ''}}</td>
+        <td>{{ $order->getStatus() }}</td>
+        <td class="col-price"> {{$order->total_price}} 元</td>
         <td class="control col-md-2">
-          <a href="/admin/orders/288352400">查看</a>
+          <a href="/admin/orders/{{$order->order_no or ''}}">查看</a>
         </td>
       </tr>
-      <tr>
-        <td><a href="/admin/orders/552661752">552661752</a></td>
-        <td>2015-06-25 14:11</td>
-        <td>已取消</td>
-        <td class="col-price">240 元</td>
-        <td class="control col-md-2">
-          <a href="/admin/orders/552661752">查看</a>
-        </td>
-      </tr>
-      <tr>
-        <td><a href="/admin/orders/898056007">898056007</a></td>
-        <td>2015-06-25 14:17</td>
-        <td>已取消</td>
-        <td class="col-price">240 元</td>
-        <td class="control col-md-2">
-          <a href="/admin/orders/898056007">查看</a>
-        </td>
-      </tr>
-      <tr>
-        <td><a href="/admin/orders/012299937">012299937</a></td>
-        <td>2015-06-29 16:08</td>
-        <td>已取消</td>
-        <td class="col-price">240 元</td>
-        <td class="control col-md-2">
-          <a href="/admin/orders/012299937">查看</a>
-        </td>
-      </tr>
+      @endforeach
   </tbody>
 </table>
 

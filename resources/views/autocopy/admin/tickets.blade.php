@@ -155,9 +155,21 @@
       </tr>
     </thead>
     <tbody>
+        @if(empty($list1) || count($list1) <= 0)
         <tr>
           <td colspan="5">无</td>
         </tr>
+        @else
+          @foreach($list1 as $ticket)
+          <tr>
+            <td>{{ $ticket->id or 0}}</td>
+            <td><a href="/admin/tickets/{{ $ticket->id or 0}}">{{ $ticket->title or '' }}</a></td>
+            <td>交流中</td>
+            <td>{{ $ticket->created_at or '' }}</td>
+            <td>{{ $ticket->updated_at or '' }}</td>
+          </tr>
+          @endforeach
+        @endif
     </tbody>
   </table>
 </div>
@@ -178,14 +190,22 @@
       </tr>
     </thead>
     <tbody>
+        @if(empty($list2) || count($list2) <= 0)
+        <tr>
+          <td colspan="5">无</td>
+        </tr>
+        @else
+          @foreach($list2 as $ticket)
           <tr>
-            <td>66959388</td>
-            <td><a href="/admin/tickets/66959388">不能正常使用代理，申请退款</a></td>
+            <td>{{ $ticket->id or 0}}</td>
+            <td><a href="/admin/tickets/{{ $ticket->id or 0}}">{{ $ticket->title or '' }}</a></td>
             <td>已关闭</td>
-            <td>2015-06-25 14:56</td>
-            <td>2015-06-28 23:07</td>
+            <td>{{ $ticket->created_at or '' }}</td>
+            <td>{{ $ticket->updated_at or '' }}</td>
           </tr>
-    </tbody>
+          @endforeach
+        @endif
+      </tbody>
   </table>
 </div>
 

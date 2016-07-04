@@ -137,18 +137,17 @@
                 <div class="content-main">
                   <ul class="breadcrumb">
   <li><a href="/admin/tickets">全部服务单</a></li>
-  <li class="active">66959388</li>
+  <li class="active">{{$ticket->id or ''}}</li>
 </ul>
 
 <div class="ticket">
-  <div class="header">
-    <h3 class="title">不能正常使用代理，申请退款</h3>
+  <div class="header">{{ $ticket->title or '' }}</h3>
     <div class="row">
       <div class="isp col-md-6">
-        <strong>运营商</strong>: 中国电信
+        <strong>运营商</strong>: {{ $ticket->yys or ''}}
       </div>
       <div class="operation_system col-md-6">
-        <strong>设备系统</strong>: Windows 7
+        <strong>设备系统</strong>: {{ $ticket->system or ''}}
       </div>
     </div>
   </div>
@@ -160,16 +159,43 @@
         <img alt="Avatar_user" src="/assets/admin/avatar_user-67457b4f47d1898afd5ce16ad474c020.png" />
       </div>
       <div class="username">
-        woshijunfa
+        {{$user->username or ''}}
       </div>
-      <div class="date text-muted">2015-06-25 14:56</div>
+      <div class="date text-muted">{{$ticket->created_at or ''}}</div>
     </div>
   <div class="content">
-    <p>链接一会后断开，就不能再次使用了，效果不佳，申请退款</p>
+    <p>{!! $ticket->content !!}</p>
   </div>
 </div>
 
+  @foreach($ticketList as $sticket)
       <div class="ticket_content">
+    <div class="header support">
+      <div class="avatar">
+        <img alt="Avatar_support" 
+        @if(!empty($sticket->is_mm))
+        src="/assets/admin/avatar_support-3773d7187b81b1e5f9574447aa4149e0.png"
+        @else
+        src="/assets/admin/avatar_user-67457b4f47d1898afd5ce16ad474c020.png"
+        @endif
+         />
+      </div>
+      <div class="username">
+        @if(!empty($sticket->is_mm))
+        云梯MM
+        @else
+        {{$user->username or '' }}
+        @endif
+      </div>
+      <div class="date text-muted">{{$sticket->created_at or ''}}</div>
+    </div>
+  <div class="content">
+      {!! $sticket->content or '' !!}
+  </div>
+</div>  
+  @endforeach
+
+<!--       <div class="ticket_content">
     <div class="header support">
       <div class="avatar">
         <img alt="Avatar_support" src="/assets/admin/avatar_support-3773d7187b81b1e5f9574447aa4149e0.png" />
@@ -303,12 +329,32 @@
   </div>
 </div>
 
+ -->
   </div>
 
-
+    @if($ticket->status != 'init')
     <div class="alert alert-success">
       48小时内没有回复，服务单已自动关闭。如果问题没有解决，你可以新开服务单，继续讨论。
     </div>
+    @else
+    <form accept-charset="UTF-8" action="/admin/tickets/{{$ticket->id}}/ticket_contents" class="simple_form form-horizontal" id="new_ticket_content" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="xGpzGz3SlrRCvw0w1w8jwG3B4yWQSVEEXQ8f674LD/8=" /></div>
+  
+    {{csrf_field()}}
+  <div class="form-group">
+    <div class="col-sm-12">
+      <textarea as="text" class="form-control" cols="40" id="ticket_content_content" name="ticket_content[content]" rows="5">
+</textarea>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-12">
+      <input class="btn btn-primary" data-disable-with="正在提交..." name="commit" type="submit" value="发送" />
+    </div>
+  </div>
+</form>
+@endif
+
 </div>
 
                 </div>

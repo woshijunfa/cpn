@@ -8,12 +8,19 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use View;
 use Auth;
+use Cookie;
+use Input;
 
 class CopyController extends Controller
 {
     public function common(Request $request)
     {
         $uri = $request->getRequestUri();
+        return $this->cc($uri);
+    }
+
+    public function cc($uri)
+    {
         $bladename = str_replace('/', '_',$uri);
         if (empty($bladename)) $bladename = 'index';
         if ($bladename[0] == '_') $bladename = substr($bladename,1);
@@ -35,9 +42,12 @@ class CopyController extends Controller
             $content = preg_replace("/<div\s+class=\"pull-right\scontent\">(.*?)<\/div>/is", $msg, $content);
         }
 
-        return response($content);
+        //终止推荐用户
+        $recm = Input::get('r');
+        $res =  response($content);        
+        if (!empty($recm)) $res = $res->withCookie('from_user',$recm);
+        return $res;
     }
-
 
     public function autoNavi(Request $request)
     {
@@ -70,7 +80,7 @@ class CopyController extends Controller
      */
     public function index()
     {
-        return $this->common('/');
+        return $this->cc('/');
     }
 
 }

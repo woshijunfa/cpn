@@ -54,7 +54,7 @@ class OrderController extends Controller
 
         //获取订单信息
         if (empty($orderId)) return $this->errorPage();
-        $order = Order::find($orderId);
+        $order = Order::where('order_id',$orderId)->orWhere('order_no',$orderId)->first();
 
         //订单信息有效性校验
         if (empty($order) || $order->user_id != $user->id)  return $this->errorPage();
@@ -123,6 +123,8 @@ class OrderController extends Controller
             Log::info("order_no：" . $orderNo . " 没有对应订单");
             return $this->errorPage();
         } 
+
+        if ($orderInfo->status != 'be_pay')         return Redirect('/admin/orders/' . $orderInfo->order_id);
 
         $isok = OrderService::successPay($orderInfo);
         if (!$isok) return $this->errorPage();

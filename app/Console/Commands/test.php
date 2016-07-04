@@ -45,6 +45,11 @@ class test extends Command
      */
     public function handle()
     {
+        $user= User::find(8);
+        $result = $user->getRecommandInfo();
+        var_dump($result);
+        die;
+
                 #本月情况
         $monthInfo = RadAcct::getMonthDetial('sqltest');
         if (empty($monthInfo)) $monthInfo = [];

@@ -6,9 +6,16 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Models\RadAcct;
+use App\Models\Order;
+use App\Models\User;
+use App\Models\Withdraw;
+use App\Models\UserLog;
+use App\Services\OrderService;
 use App\Http\Controllers\Controller;
 use View;
 use Auth;
+use Input;
+use Config;
 
 class AdminController extends Controller
 {
@@ -62,4 +69,79 @@ class AdminController extends Controller
     	return view("autocopy.admin",compact('info','detial','totalSize'));
     }
 
+    //显示订单列表
+    public function getOrders()
+    {
+        $user = Auth::user();
+
+        $orders = Order::where('user_id',$user->id)->select('order_no','created_at','status','total_price')->get();
+
+        return view('autocopy.admin.orders',compact('orders'));
+    }
+
+    public function getCreditAccount()
+    {
+        $user = Auth::user();
+
+        $creditLog = UserLog::where('user_id',$user->id)->where('type','money')->get();
+        if (empty($creditLog)) $creditLog = [];
+        return view('autocopy.admin.credit_account',compact('user','creditLog'));        
+    }
+
+    public function getCreditReferral()
+    {
+        $user = Auth::user();
+
+        $creditLog = UserLog::where('user_id',$user->id)->where('type','sub_money')->get();
+        if (empty($creditLog)) $creditLog = [];
+        return view('autocopy.admin.credit_referral',compact('user','creditLog'));        
+    }
+
+    public function transfersNew()
+    {
+        $user = Auth::user();
+        return view('autocopy.admin.transfers.new',compact('user'));        
+    }
+
+    public function postTransfers()
+    {
+        $user = Auth::user();
+        $amout = Input::get('transfer_amount');
+        if (empty($amout) || $user->amout > $user->sub_money) return $this->errorPage('转账金额有误');
+
+        OrderService::transferMoney($user,$amout);
+
+        return Redirect('/admin/credit_account');
+    }
+
+    public function getWithdraw()
+    {
+        $user = Auth::user();
+        return view('autocopy.admin.withdrawals.new',compact('user'));
+    }
+
+    public function postWithdraw()
+    {
+        $values = Input::get('withdrawal');
+        if (empty($values['amount']) || empty($values['receiver_account']) || empty($values['receiver_name'])) 
+        {
+            return $this->errorPage('请检查提现信息');
+        }
+        $amout = $values['amount'];
+        $user = Auth::user();
+        if ($amout < 20 || $amout > $user->sub_money || $amout > 1000) return $this->errorPage('提现金额有误，必须在20-1000元内');
+
+        OrderService::withdrawMoney($user,$values);
+
+        return Redirect('/admin/credit_referral');
+    }
+
+    //推荐详情
+    public function referral()
+    {
+        $user = Auth::user();
+        $recmInfo = $user->getRecommandInfo();
+        $url = Config::get('app.url') . '?r=' . $user->username;
+        return view('autocopy.admin.referral',compact('user','recmInfo','url'));
+    }
 }

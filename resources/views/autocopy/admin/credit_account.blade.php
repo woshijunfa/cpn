@@ -132,7 +132,7 @@
           <div class="row">
               <div class="col-md-12">
                 <div class="content-main">
-                  <h4>主帐户 余额：0 元</h4>
+                  <h4>主帐户 余额：{{ $user->money or 0}} 元</h4>
 
 <h4 class="title-divider">
   <span>主帐户 交易明细</span>
@@ -147,10 +147,14 @@
     </tr>
   </thead>
   <tbody>
+
+  @foreach($creditLog as $log)
     <tr>
-      <td colspan="2">余额</td>
-      <td class="col-price"><span class="price-green">0.00 元</span></td>
+      <td>{{$log->created_at or ''}}</td>
+      <td>{{$log->value1 or ''}}</td>
+      <td class="col-price"><span class="price-green">{{$log->value2 or ''}} 元</span></td>
     </tr>
+  @endforeach
   </tbody>
 </table>
 

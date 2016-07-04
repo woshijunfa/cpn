@@ -12,7 +12,7 @@
 */
 
 #主页介绍相关
-Route::get('/', 'CopyController@common');
+Route::get('/', 'CopyController@index');
 Route::get('/feature', 'CopyController@common');
 Route::get('/pricing', 'CopyController@common');
 Route::get('/guides', 'CopyController@common');
@@ -70,7 +70,7 @@ Route::get('/logout',"UserController@logout");
 
 
 
-Route::get('/test',function(){return App\Services\CommonService::autoLoadPage();});
+Route::get('/test','TestController@test');
 Route::get('/assets/steps/android_2/l2tp/step10-73a4ef35ee2e2516217c70bd63695534.jpg',function(){return App\Services\CommonService::autoLoadPage();});
 
 
@@ -103,20 +103,31 @@ Route::get('/assets/steps/android_2/l2tp/step10-73a4ef35ee2e2516217c70bd63695534
 Route::group(['middleware'=>'auth'], function () {
 	Route::get('/admin/speed_up', 'CopyController@autoNavi');
 	Route::get('/admin/servers', 'CopyController@autoNavi');
-	Route::get('/admin/orders', 'CopyController@autoNavi');
 	Route::get('/admin/documents', 'CopyController@autoNavi');
-	Route::get('/admin/tickets', 'CopyController@autoNavi');
-	Route::get('/admin/referral', 'CopyController@autoNavi');
-	Route::get('/admin/credit_referral', 'CopyController@autoNavi');
-	Route::get('/admin/withdrawals/new', 'CopyController@autoNavi');
-	Route::get('/admin/transfers/new', 'CopyController@autoNavi');
 	Route::get('/admin/user/edit_email', 'CopyController@autoNavi');
 	Route::get('/admin/user/edit', 'CopyController@autoNavi');
-	Route::get('/admin/credit_account', 'CopyController@autoNavi');
 	Route::get('/admin/orders/new', 'CopyController@autoNavi');
 
+	#推荐详情
+	Route::get('/admin/referral', 'AdminController@referral');
+
+	##订单相关
+	Route::get('/admin/orders', 'AdminController@getOrders');
 	Route::get('/admin', 'AdminController@admin');
+	Route::get('/admin/credit_account', 'AdminController@getCreditAccount');
+	Route::get('/admin/credit_referral', 'AdminController@getCreditReferral');
 	Route::get('/admin/accountings/{type?}', 'AdminController@accountings');
+	Route::get('/admin/transfers/new', 'AdminController@transfersNew');
+	Route::post('/admin/transfers','AdminController@postTransfers');
+	Route::get('/admin/withdrawals/new', 'AdminController@getWithdraw');
+	Route::post('/admin/withdrawals','AdminController@postWithdraw');
+	
+	#工单相关
+	Route::get('/admin/tickets/new', 'CopyController@autoNavi');
+	Route::get('/admin/tickets', 'TicketController@ticketList');
+	Route::post('/admin/tickets', 'TicketController@create');
+	Route::post('/admin/tickets/{ticketId}/ticket_contents', 'TicketController@addContent');
+	Route::get('/admin/tickets/{ticketId}', 'TicketController@detial');
 
 	#订单相关
 	Route::post('/admin/orders', 'OrderController@createOrder');
@@ -126,7 +137,6 @@ Route::group(['middleware'=>'auth'], function () {
 });
 
 Route::get('/admin/tickets/66959388', 'CopyController@autoNavi');
-Route::get('/admin/tickets/new', 'CopyController@autoNavi');
 // Route::get('/admin/orders/288352400', 'CopyController@autoNavi');
 // Route::get('/admin/orders/552661752', 'CopyController@autoNavi');
 // Route::get('/admin/orders/808713164', 'CopyController@autoNavi'); 	//status ok

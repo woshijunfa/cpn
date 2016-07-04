@@ -55,7 +55,7 @@ class Order extends Model
         $orderInfo['price'] = $price;
         $orderInfo['total_price'] = $price * $count;
         $orderInfo['status'] = 'be_pay';
-        $orderInfo['rec_desc_money'] = $userInfo->recommended_user_id > 0 ? 10 : 0;
+        $orderInfo['rec_desc_money'] = $userInfo->recommended_user_id > 0 && $userInfo->recm_valid_status == 0 ? 10 : 0;
         $orderInfo['pay_money'] = $price * $count - $orderInfo['rec_desc_money'];
         $orderInfo['order_no'] =  date("YmdHis",time()) . rand(1000, 9999);
         $orderInfo['user_id'] = $userInfo->id;
@@ -71,5 +71,16 @@ class Order extends Model
         if (empty($orderId) || empty($udpateInfo)) return false;
 
         return self::where('order_id',$orderId)->update($udpateInfo);
+    }
+
+    public function getStatus()
+    {
+        $map = [];
+        $map['be_pay'] = '待支付';
+        $map['success_pay'] = '支付成功';
+        $map['return'] = '已退款';
+        $map['close'] = '已关闭';
+
+        return isset($map[$this->status]) ? $map[$this->status] : '';
     }
 }

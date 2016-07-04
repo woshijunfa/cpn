@@ -11,7 +11,9 @@ use Illuminate\Support\Facades\Redis;
 use Auth;
 use Session;
 use Config;
+use DB;
 use Hash;
+use Cookie;
 
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract
 {
@@ -49,6 +51,8 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
                             'money',
                             'user_code',
                             'recommended_user_id',
+                            'sub_money',
+                            'is_recm_valid'
                             ];
 
     //注册用户
@@ -57,8 +61,18 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         if (empty($email)) return false;
         if (empty($password)) return false;
 
+        //获取推荐人
+        $recmname = Cookie::get('from_user');
+        if (!empty($recmname)) $recmname = self::where('username',$recmname)->value('id');
+        if (empty($recmname)) $recmname = 0;
+
+        //插入记录
         $epassword = Hash::make($password);
-        $result = self::insert(['status'=>0,'email'=>$email,'password'=>$epassword,'username'=>$username,'password_plain'=>$password]);
+        $result = self::insert(['status'=>0,'email'=>$email,'recommended_user_id'=>$recmname,'password'=>$epassword,'username'=>$username,'password_plain'=>$password]);
+
+        //注册后自动登录
+        $id = self::where('username',$username)->value('id');
+        Auth::loginUsingId($id);
 
         return $result ? true : false;
     }    
@@ -101,5 +115,56 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
         if ($isAdd) return $query->increment('money',$money);
         else return $query->decrement('money',$money);
+    }
+
+    //增减子账户金额
+    public static function updateUserSubMoney($userId,$money,$isAdd=false)
+    {
+        if (empty($userId) || empty($money)) return false;
+        $query = self::where('id',$userId);
+
+        if ($isAdd) return $query->increment('sub_money',$money);
+        else return $query->decrement('sub_money',$money);
+    }
+
+    //用户下单，更新是否下单字段
+    public static function onUserPayOrder($userId)
+    {
+        if (empty($userId)) return false; 
+        self::where('id',$userId)->where('recm_valid_status',0)->update(['recm_valid_status'=>1]);
+    }
+
+    //推荐人下单
+    public static function onRecommandSuccess($order)
+    {
+        if (empty($order)) return false;
+
+        //只能成功推荐一次
+        $recmUser = self::find($order->user_id);
+        if ($recmUser->recm_valid_status != 2 && !empty($recmUser->recommended_user_id)) 
+        {
+            self::updateUserSubMoney($recmUser->recommended_user_id,10,true);
+            UserLog::log([  'user_id'=>$recmUser->recommended_user_id,
+                            'type'=>'sub_money',
+                            'value1'=>'推荐用户'.$recmUser->username.'下单'.$order->order_no.'收入',
+                            'value2'=>'+10']);
+        }
+    }
+
+    //获取推荐数量详情
+    public function getRecommandInfo()
+    {
+        $info = self::where('recommended_user_id',$this->id)->select(DB::Raw('count(1) count,is_recm_valid'))->groupBy('is_recm_valid')->get();
+
+        $rtn = ['ok'=>0,'wait'=>0];
+        if (empty($info)) return $rtn;
+
+        foreach ($info as $value) 
+        {
+            if ($value->is_recm_valid == 2) $rtn['ok'] =$value->count;
+            else $rtn['wait'] += $value->count;
+        }
+
+        return $rtn;
     }
 }

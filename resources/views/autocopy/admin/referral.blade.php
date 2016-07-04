@@ -153,7 +153,7 @@
 
 <div class="referral-url">
   <form accept-charset="UTF-8" action="/admin/referral" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="NeaRyjJM41mLMZch87q3glbNbqEcctietz+l75jMJ8k=" /></div>
-    <input class="form-control auto-select" id="referral_code" name="referral_code" type="text" value="http://reftizi.com/?r=627a549944266f2c" />
+    <input class="form-control auto-select" id="referral_code" name="referral_code" type="text" value="{{ $url or ''}}" />
 </form></div>
 
 <br>
@@ -168,15 +168,15 @@
       <tr>
         <td class="col-md-4">
           <div class="property">等待中</div>
-          <div class="value">0</div>
+          <div class="value">{{$recmInfo['wait'] or 0}}</div>
         </td>
         <td class="col-md-4">
           <div class="property">成功推荐</div>
-          <div class="value">0</div>
+          <div class="value">{{$recmInfo['ok'] or 0}}</div>
         </td>
         <td class="col-md-4">
           <div class="property">推荐帐户</div>
-          <div class="value">0 元</div>
+          <div class="value">{{$user->sub_money or 0}} 元</div>
           <div class="text-center"><a href="/admin/credit_referral">查看明细</a></div>
         </td>
       </tr>

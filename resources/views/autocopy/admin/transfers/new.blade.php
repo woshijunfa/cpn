@@ -148,11 +148,15 @@
     <div class="form-group">
       <label class="col-sm-2 control-label">推荐帐户余额</label>
       <div class="col-sm-10">
-        <p class="form-control-static">0 元</p>
+        <p class="form-control-static">{{$user->sub_money or 0}} 元</p>
       </div>
     </div>
-    <div class="form-group decimal required transfer_amount"><label class="decimal required col-sm-2 control-label" for="transfer_amount"><abbr title="必填">*</abbr> 金额</label><div class="col-sm-10"><input class="numeric decimal required form-control form-control" id="transfer_amount" name="transfer[amount]" step="any" type="number" /></div></div>
+    <div class="form-group decimal required transfer_amount"><label class="decimal required col-sm-2 control-label" for="transfer_amount"><abbr title="必填">*</abbr> 金额</label><div class="col-sm-10">
 
+    <input class="numeric decimal required form-control form-control" id="transfer_amount" 
+    name="transfer_amount" step="any" type="number" /></div>
+    </div>
+    {{csrf_field()}}
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
         <input class="btn btn-primary" data-disable-with="正在提交..." name="commit" type="submit" value="立即转账" />
