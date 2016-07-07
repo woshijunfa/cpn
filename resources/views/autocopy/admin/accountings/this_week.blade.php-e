@@ -117,7 +117,6 @@
 
 
       <div class="alert alert-warning">
-        <p>最近出现2个假冒天梯进行诈骗的网站。识别方法：以 <strong class="text-danger">.net</strong> 或 <strong class="text-danger">.cn</strong> 域名结尾的均为<strong class="text-danger">诈骗</strong>网站，提供 QQ 号的也均为<strong class="text-danger">诈骗</strong>网站，请勿上当受骗。</p>
         <p>建议你把当前网址加入收藏夹，方便下次安全地登录。</p>
         <hr>
         <p>如果你想把天梯推荐给朋友或网友，建议附上推荐链接，这样你的朋友不会在诈骗网站上当，而且，你和你的朋友每次都能获得10元优惠。<a href="/admin/referral">了解详情</a></p>
