@@ -89,7 +89,6 @@
             <span class="name">帐户<b class="caret"></b></span>
           </a>
           <ul class="dropdown-menu">
-            <li><a href="/admin/user/edit_email">修改邮箱</a></li>
             <li><a href="/admin/user/edit">修改密码</a></li>
             <li class="divider"></li>
             <li><a href="/admin/credit_account">主帐户</a></li>
@@ -137,7 +136,7 @@
                   <h4 class="title-divider">
   <span>提现</span>
 </h4>
-<p>提现通知，将发送到注册邮箱 {{$user->email or ''}}，如邮箱有误，请先<a href="/admin/user/edit_email">修改邮箱</a>。</p>
+<p>提现通知，将发送到注册邮箱 {{$user->email or ''}}。</p>
 <p>所有提现申请，审核通过后，将在3天内转账到相应的支付宝帐号。</p>
 
 <div class="form-container-large">

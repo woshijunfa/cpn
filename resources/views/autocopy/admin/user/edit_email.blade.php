@@ -89,7 +89,6 @@
             <span class="name">帐户<b class="caret"></b></span>
           </a>
           <ul class="dropdown-menu">
-            <li><a href="/admin/user/edit_email">修改邮箱</a></li>
             <li><a href="/admin/user/edit">修改密码</a></li>
             <li class="divider"></li>
             <li><a href="/admin/credit_account">主帐户</a></li>
@@ -132,9 +131,7 @@
               <div class="col-md-12">
                 <div class="content-main">
                   <h4 class="title-divider">
-  <span>修改邮箱</span>
 </h4>
-<p>修改邮箱后，后续的订单，支付，服务单，服务器通知等信息都会发往新邮箱。</p>
 
 <div class="form-container-small">
   <form accept-charset="UTF-8" action="/admin/user/update_email" class="simple_form form-horizontal" id="edit_user" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="NeaRyjJM41mLMZch87q3glbNbqEcctietz+l75jMJ8k=" /></div>
@@ -150,7 +147,6 @@
     </div>
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
-        <input class="btn btn-primary" name="commit" type="submit" value="修改邮箱" />
       </div>
     </div>
 </form></div>

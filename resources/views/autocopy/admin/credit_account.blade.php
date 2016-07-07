@@ -89,7 +89,6 @@
             <span class="name">帐户<b class="caret"></b></span>
           </a>
           <ul class="dropdown-menu">
-            <li><a href="/admin/user/edit_email">修改邮箱</a></li>
             <li><a href="/admin/user/edit">修改密码</a></li>
             <li class="divider"></li>
             <li><a href="/admin/credit_account">主帐户</a></li>

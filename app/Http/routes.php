@@ -61,7 +61,7 @@ Route::post('/login',"UserController@loginPost");
 Route::post('/setLoginPass',"UserController@setLoginPass");
 Route::post('/resetPassEmail',"UserController@resetPassEmail");
 Route::get('/logout',"UserController@logout");
-
+Route::any('/users/sign_out',"UserController@logout");
 //
 
 
