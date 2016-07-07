@@ -282,7 +282,6 @@ data-url='https://www.yuntiprivaten.com/guides/ipad_l2tp' data-desc='' data-popu
             </li>
           </ul>
         </div>
-        <h4 class="ytstatus"><a href="https://www.ytstatus.com" target="_blank">天梯VPN - 服务状态</a></h4>
       </div>
       <div class="col-md-3">
         <h4>联系我们</h4>
