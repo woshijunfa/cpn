@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>我的云梯 - 连接世界的梯子</title>
+  <title>我的天梯 - 连接世界的梯子</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link href="/assets/admin/application-9f768e098914f1cdef1ea20aff65e5e8.css" media="all" rel="stylesheet" type="text/css" />
@@ -31,7 +31,7 @@
         <span class="icon-bar"></span>
       </button>
 
-      <a href="https://www.yuntiprivaten.com/admin" class="navbar-brand">我的云梯</a>
+      <a href="https://www.yuntiprivaten.com/admin" class="navbar-brand">我的天梯</a>
     </div>
 
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
@@ -81,7 +81,7 @@
         <li>
           <a href="/" target="_blank">
             <i class="fa fa-external-link-square"></i>
-            <span class="name">云梯首页</span>
+            <span class="name">天梯首页</span>
 </a>        </li>
         <li class="dropdown ">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -187,18 +187,18 @@
       <footer>
         <div class="row">
           <div class="col-md-6 social-container">
-            <div>关注云梯：</div>
+            <div>关注天梯：</div>
             <div><ul class="list-inline">
   <li>
     <a href="https://twitter.com/VPNCloud" target="_blank">
       <img alt="Twitter" src="/assets/twitter-e374f98f346e1afc5f16f75d643d61b0.png" title="Twitter" />
 </a>  </li>
   <li>
-    <a href="https://www.facebook.com/pages/云梯-VPNCloudme/411548455548359" target="_blank">
+    <a href="https://www.facebook.com/pages/天梯-VPNCloudme/411548455548359" target="_blank">
       <img alt="Facebook" src="/assets/facebook-f99f324c6abcb9e88ee3c921c404b136.png" title="Facebook" />
 </a>  </li>
   <li>
-    <a href="https://plus.google.com/+云梯" target="_blank"><img alt="Google Plus" src="/assets/gplus-7688b4f4dfe029c38c29b1b5044e7701.png" title="Google Plus" /></a>  </li>
+    <a href="https://plus.google.com/+天梯" target="_blank"><img alt="Google Plus" src="/assets/gplus-7688b4f4dfe029c38c29b1b5044e7701.png" title="Google Plus" /></a>  </li>
   <li>
     <a href="http://weibo.com/yuntimm" target="_blank">
       <img alt="新浪微博" src="/assets/weibo-e435db2a3ceceb91c5f3c66d990f5be8.png" title="新浪微博" />
@@ -211,7 +211,7 @@
 </div>
           </div>
           <div class="col-md-6">
-            <p class="powered-by pull-right">&copy; 2016 云梯 VPN</p>
+            <p class="powered-by pull-right">&copy; 2016 天梯 VPN</p>
           </div>
         </div>
       </footer>

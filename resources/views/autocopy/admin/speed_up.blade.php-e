@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>我的云梯 - 连接世界的梯子</title>
+  <title>我的天梯 - 连接世界的梯子</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link href="/assets/admin/application-9f768e098914f1cdef1ea20aff65e5e8.css" media="all" rel="stylesheet" type="text/css" />
@@ -31,7 +31,7 @@
         <span class="icon-bar"></span>
       </button>
 
-      <a href="https://www.yuntiprivaten.com/admin" class="navbar-brand">我的云梯</a>
+      <a href="https://www.yuntiprivaten.com/admin" class="navbar-brand">我的天梯</a>
     </div>
 
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
@@ -81,7 +81,7 @@
         <li>
           <a href="/" target="_blank">
             <i class="fa fa-external-link-square"></i>
-            <span class="name">云梯首页</span>
+            <span class="name">天梯首页</span>
 </a>        </li>
         <li class="dropdown ">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -117,14 +117,14 @@
 
 
       <div class="alert alert-warning">
-        <p>最近出现2个假冒云梯进行诈骗的网站。识别方法：以 <strong class="text-danger">.net</strong> 或 <strong class="text-danger">.cn</strong> 域名结尾的均为<strong class="text-danger">诈骗</strong>网站，提供 QQ 号的也均为<strong class="text-danger">诈骗</strong>网站，请勿上当受骗。</p>
+        <p>最近出现2个假冒天梯进行诈骗的网站。识别方法：以 <strong class="text-danger">.net</strong> 或 <strong class="text-danger">.cn</strong> 域名结尾的均为<strong class="text-danger">诈骗</strong>网站，提供 QQ 号的也均为<strong class="text-danger">诈骗</strong>网站，请勿上当受骗。</p>
         <p>建议你把当前网址加入收藏夹，方便下次安全地登录。</p>
         <hr>
-        <p>如果你想把云梯推荐给朋友或网友，建议附上推荐链接，这样你的朋友不会在诈骗网站上当，而且，你和你的朋友每次都能获得10元优惠。<a href="/admin/referral">了解详情</a></p>
+        <p>如果你想把天梯推荐给朋友或网友，建议附上推荐链接，这样你的朋友不会在诈骗网站上当，而且，你和你的朋友每次都能获得10元优惠。<a href="/admin/referral">了解详情</a></p>
       </div>
 
       <div class="alert alert-info">
-        <p>公告：云梯不限制普通下载，但因发达国家对 P2P 严格限制，请<strong class="text-danger">不要</strong>连着云梯使用 BT，迅雷，eMule，FlashGet 等 P2P 工具</p>
+        <p>公告：天梯不限制普通下载，但因发达国家对 P2P 严格限制，请<strong class="text-danger">不要</strong>连着天梯使用 BT，迅雷，eMule，FlashGet 等 P2P 工具</p>
       </div>
 
 
@@ -136,20 +136,20 @@
               <div class="col-md-12">
                 <div class="content-main">
                   <h4 class="title-divider">
-  <span>安装云梯智能加速</span>
+  <span>安装天梯智能加速</span>
 </h4>
 
 <div class="row">
   <div class="col-md-4">
-    <p>安装云梯智能加速后，连接云梯的VPN：</p>
+    <p>安装天梯智能加速后，连接天梯的VPN：</p>
     <ul>
       <li>国内网站的速度和不连接VPN一样快</li>
       <li>国内网站的流量不计入VPN流量</li>
       <li>国外网站依然通过VPN，畅通无阻</li>
     </ul>
     <div class="download">
-        <a href="#" class="btn btn-primary btn-lg" data-content="购买云梯VPN后才能下载&lt;br&gt;前往 &lt;a href=&quot;/pricing&quot; target=&quot;_blank&quot;&gt;选择套餐&lt;/a&gt;" data-original-title="提示" id="btn-no-service" rel="popover">
-          下载 云梯智能加速<br/>
+        <a href="#" class="btn btn-primary btn-lg" data-content="购买天梯VPN后才能下载&lt;br&gt;前往 &lt;a href=&quot;/pricing&quot; target=&quot;_blank&quot;&gt;选择套餐&lt;/a&gt;" data-original-title="提示" id="btn-no-service" rel="popover">
+          下载 天梯智能加速<br/>
           <small>Windows 7 / 8 版</small>
 </a>    </div>
     <div class="os">
@@ -173,7 +173,7 @@
 </div>
 
 <div class="alert alert-info">
-  更新建议：云梯智能加速会持续更新，建议每月下载最新的文件，重新安装(无需卸载之前的)，以保证使用的是最新的规则
+  更新建议：天梯智能加速会持续更新，建议每月下载最新的文件，重新安装(无需卸载之前的)，以保证使用的是最新的规则
 </div>
 
 <h4 class="title-divider">
@@ -212,18 +212,18 @@ $('#btn-no-service').popover({
       <footer>
         <div class="row">
           <div class="col-md-6 social-container">
-            <div>关注云梯：</div>
+            <div>关注天梯：</div>
             <div><ul class="list-inline">
   <li>
     <a href="https://twitter.com/VPNCloud" target="_blank">
       <img alt="Twitter" src="/assets/twitter-e374f98f346e1afc5f16f75d643d61b0.png" title="Twitter" />
 </a>  </li>
   <li>
-    <a href="https://www.facebook.com/pages/云梯-VPNCloudme/411548455548359" target="_blank">
+    <a href="https://www.facebook.com/pages/天梯-VPNCloudme/411548455548359" target="_blank">
       <img alt="Facebook" src="/assets/facebook-f99f324c6abcb9e88ee3c921c404b136.png" title="Facebook" />
 </a>  </li>
   <li>
-    <a href="https://plus.google.com/+云梯" target="_blank"><img alt="Google Plus" src="/assets/gplus-7688b4f4dfe029c38c29b1b5044e7701.png" title="Google Plus" /></a>  </li>
+    <a href="https://plus.google.com/+天梯" target="_blank"><img alt="Google Plus" src="/assets/gplus-7688b4f4dfe029c38c29b1b5044e7701.png" title="Google Plus" /></a>  </li>
   <li>
     <a href="http://weibo.com/yuntimm" target="_blank">
       <img alt="新浪微博" src="/assets/weibo-e435db2a3ceceb91c5f3c66d990f5be8.png" title="新浪微博" />
@@ -236,7 +236,7 @@ $('#btn-no-service').popover({
 </div>
           </div>
           <div class="col-md-6">
-            <p class="powered-by pull-right">&copy; 2016 云梯 VPN</p>
+            <p class="powered-by pull-right">&copy; 2016 天梯 VPN</p>
           </div>
         </div>
       </footer>
