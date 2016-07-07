@@ -3,7 +3,7 @@
 
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>云梯 VPN - 404 - 页面未找到</title>
+    <title>天梯 VPN - 404 - 页面未找到</title>
     <style type="text/css">
       /* reset start*/
       html {
@@ -247,7 +247,7 @@
       </h3>
       <div class="button">
         <a href="/" class="button-clean">
-          <span>返回云梯首页</span>
+          <span>返回天梯首页</span>
         </a>
       </div>
       
@@ -274,7 +274,7 @@
           <li class="divider">|</li>
           <li><a href="/faq">常见问题</a></li>
           <li class="divider">|</li>
-          <li><a href="/admin">我的云梯</a></li>
+          <li><a href="/admin">我的天梯</a></li>
         </ul>
       </div>
     </div>

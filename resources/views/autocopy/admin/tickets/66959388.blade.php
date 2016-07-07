@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>我的云梯 - 连接世界的梯子</title>
+  <title>我的天梯 - 连接世界的梯子</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link href="/assets/admin/application-9f768e098914f1cdef1ea20aff65e5e8.css" media="all" rel="stylesheet" type="text/css" />
@@ -31,7 +31,7 @@
         <span class="icon-bar"></span>
       </button>
 
-      <a href="https://www.yuntiprivaten.com/admin" class="navbar-brand">我的云梯</a>
+      <a href="https://www.yuntiprivaten.com/admin" class="navbar-brand">我的天梯</a>
     </div>
 
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
@@ -81,7 +81,7 @@
         <li>
           <a href="/" target="_blank">
             <i class="fa fa-external-link-square"></i>
-            <span class="name">云梯首页</span>
+            <span class="name">天梯首页</span>
 </a>        </li>
         <li class="dropdown ">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -117,14 +117,14 @@
 
 
       <div class="alert alert-warning">
-        <p>最近出现2个假冒云梯进行诈骗的网站。识别方法：以 <strong class="text-danger">.net</strong> 或 <strong class="text-danger">.cn</strong> 域名结尾的均为<strong class="text-danger">诈骗</strong>网站，提供 QQ 号的也均为<strong class="text-danger">诈骗</strong>网站，请勿上当受骗。</p>
+        <p>最近出现2个假冒天梯进行诈骗的网站。识别方法：以 <strong class="text-danger">.net</strong> 或 <strong class="text-danger">.cn</strong> 域名结尾的均为<strong class="text-danger">诈骗</strong>网站，提供 QQ 号的也均为<strong class="text-danger">诈骗</strong>网站，请勿上当受骗。</p>
         <p>建议你把当前网址加入收藏夹，方便下次安全地登录。</p>
         <hr>
-        <p>如果你想把云梯推荐给朋友或网友，建议附上推荐链接，这样你的朋友不会在诈骗网站上当，而且，你和你的朋友每次都能获得10元优惠。<a href="/admin/referral">了解详情</a></p>
+        <p>如果你想把天梯推荐给朋友或网友，建议附上推荐链接，这样你的朋友不会在诈骗网站上当，而且，你和你的朋友每次都能获得10元优惠。<a href="/admin/referral">了解详情</a></p>
       </div>
 
       <div class="alert alert-info">
-        <p>公告：云梯不限制普通下载，但因发达国家对 P2P 严格限制，请<strong class="text-danger">不要</strong>连着云梯使用 BT，迅雷，eMule，FlashGet 等 P2P 工具</p>
+        <p>公告：天梯不限制普通下载，但因发达国家对 P2P 严格限制，请<strong class="text-danger">不要</strong>连着天梯使用 BT，迅雷，eMule，FlashGet 等 P2P 工具</p>
       </div>
 
 
@@ -182,7 +182,7 @@
       </div>
       <div class="username">
         @if(!empty($sticket->is_mm))
-        云梯MM
+        天梯MM
         @else
         {{$user->username or '' }}
         @endif
@@ -201,15 +201,15 @@
         <img alt="Avatar_support" src="/assets/admin/avatar_support-3773d7187b81b1e5f9574447aa4149e0.png" />
       </div>
       <div class="username">
-        云梯MM
+        天梯MM
       </div>
       <div class="date text-muted">2015-06-25 15:08</div>
     </div>
   <div class="content">
-    <p>只要在首次购买3天内，云梯都支持全额退款嗒，请不要担心哟 (⌒▽⌒)
-<br />请给云梯MM 一个机会，帮你一起看看问题的原因在哪里，好吗？</p>
+    <p>只要在首次购买3天内，天梯都支持全额退款嗒，请不要担心哟 (⌒▽⌒)
+<br />请给天梯MM 一个机会，帮你一起看看问题的原因在哪里，好吗？</p>
 
-<p>Windows 无法连接时，系统会返回一个错误代码，请告诉云梯MM具体的错误代码，方便我提供对应的解决办法哦～</p>
+<p>Windows 无法连接时，系统会返回一个错误代码，请告诉天梯MM具体的错误代码，方便我提供对应的解决办法哦～</p>
   </div>
 </div>
 
@@ -234,12 +234,12 @@
         <img alt="Avatar_support" src="/assets/admin/avatar_support-3773d7187b81b1e5f9574447aa4149e0.png" />
       </div>
       <div class="username">
-        云梯MM
+        天梯MM
       </div>
       <div class="date text-muted">2015-06-25 15:51</div>
     </div>
   <div class="content">
-    <p>云梯MM查询到上一回复后，你的帐号已经有正常的连接记录，请问问题是否已经解决了吗？
+    <p>天梯MM查询到上一回复后，你的帐号已经有正常的连接记录，请问问题是否已经解决了吗？
 <br />还是同一网络下其他设备连上的VPN呢？</p>
   </div>
 </div>
@@ -280,16 +280,16 @@
         <img alt="Avatar_support" src="/assets/admin/avatar_support-3773d7187b81b1e5f9574447aa4149e0.png" />
       </div>
       <div class="username">
-        云梯MM
+        天梯MM
       </div>
       <div class="date text-muted">2015-06-25 18:31</div>
     </div>
   <div class="content">
     <p>错误789和错误809的解决方法是对立的，所以如果经常出现这两个错误，那通常都是本地运营商网络不稳定或者路由器设置不正确导致的。
-<br />云梯在全国各地都有服务器状态监测点，当前所有服务器状态都正常哦，连接人数也都是正常嗒，我们可以保证自己的服务肯定是稳定快速的。
-<br />当用户提出退款时，云梯MM总是希望可以先帮助大家排查解决问题，但如果您并不想进行尝试，只是要退款，那也没关系，我可以理解。</p>
+<br />天梯在全国各地都有服务器状态监测点，当前所有服务器状态都正常哦，连接人数也都是正常嗒，我们可以保证自己的服务肯定是稳定快速的。
+<br />当用户提出退款时，天梯MM总是希望可以先帮助大家排查解决问题，但如果您并不想进行尝试，只是要退款，那也没关系，我可以理解。</p>
 
-<p>云梯MM正在为您处理退款，但查询到您的帐号正在使用 VPN，请您先断开连接，并回复服务单确认，我才能为您退款，谢谢！</p>
+<p>天梯MM正在为您处理退款，但查询到您的帐号正在使用 VPN，请您先断开连接，并回复服务单确认，我才能为您退款，谢谢！</p>
   </div>
 </div>
 
@@ -299,12 +299,12 @@
         <img alt="Avatar_support" src="/assets/admin/avatar_support-3773d7187b81b1e5f9574447aa4149e0.png" />
       </div>
       <div class="username">
-        云梯MM
+        天梯MM
       </div>
       <div class="date text-muted">2015-06-26 14:26</div>
     </div>
   <div class="content">
-    <p>云梯MM正在为您处理退款，但查询到您的帐号正在使用 VPN，请您先断开连接，并回复服务单确认，我才能为您退款，谢谢！
+    <p>天梯MM正在为您处理退款，但查询到您的帐号正在使用 VPN，请您先断开连接，并回复服务单确认，我才能为您退款，谢谢！
 <br />如果没有收到你的回复，并且你的帐号持续有 VPN 连接的话，将认为问题已经解决，不再为你处理退款。</p>
   </div>
 </div>
@@ -315,17 +315,17 @@
         <img alt="Avatar_support" src="/assets/admin/avatar_support-3773d7187b81b1e5f9574447aa4149e0.png" />
       </div>
       <div class="username">
-        云梯MM
+        天梯MM
       </div>
       <div class="date text-muted">2015-06-26 22:17</div>
     </div>
   <div class="content">
-    <p>你购买的云梯 标准版v3 套餐 （订单编号 288352400）已经取消，
+    <p>你购买的天梯 标准版v3 套餐 （订单编号 288352400）已经取消，
 <br />并将订单金额（240元）通过支付宝全额退还给你。
 <br />支付宝显示退款至你的支付宝账户，并且已经退款成功，还请注意查收。</p>
 
 <p>如果有什么问题，联系我好了哦 (⌒▽⌒)
-<br />欢迎常来云梯看看，我们一直在这儿等着你哦，有机会再为你提供优质满意的服务呐 （＾∇＾）</p>
+<br />欢迎常来天梯看看，我们一直在这儿等着你哦，有机会再为你提供优质满意的服务呐 （＾∇＾）</p>
   </div>
 </div>
 
@@ -366,18 +366,18 @@
       <footer>
         <div class="row">
           <div class="col-md-6 social-container">
-            <div>关注云梯：</div>
+            <div>关注天梯：</div>
             <div><ul class="list-inline">
   <li>
     <a href="https://twitter.com/VPNCloud" target="_blank">
       <img alt="Twitter" src="/assets/twitter-e374f98f346e1afc5f16f75d643d61b0.png" title="Twitter" />
 </a>  </li>
   <li>
-    <a href="https://www.facebook.com/pages/云梯-VPNCloudme/411548455548359" target="_blank">
+    <a href="https://www.facebook.com/pages/天梯-VPNCloudme/411548455548359" target="_blank">
       <img alt="Facebook" src="/assets/facebook-f99f324c6abcb9e88ee3c921c404b136.png" title="Facebook" />
 </a>  </li>
   <li>
-    <a href="https://plus.google.com/+云梯" target="_blank"><img alt="Google Plus" src="/assets/gplus-7688b4f4dfe029c38c29b1b5044e7701.png" title="Google Plus" /></a>  </li>
+    <a href="https://plus.google.com/+天梯" target="_blank"><img alt="Google Plus" src="/assets/gplus-7688b4f4dfe029c38c29b1b5044e7701.png" title="Google Plus" /></a>  </li>
   <li>
     <a href="http://weibo.com/yuntimm" target="_blank">
       <img alt="新浪微博" src="/assets/weibo-e435db2a3ceceb91c5f3c66d990f5be8.png" title="新浪微博" />
@@ -390,7 +390,7 @@
 </div>
           </div>
           <div class="col-md-6">
-            <p class="powered-by pull-right">&copy; 2016 云梯 VPN</p>
+            <p class="powered-by pull-right">&copy; 2016 天梯 VPN</p>
           </div>
         </div>
       </footer>

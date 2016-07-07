@@ -4,17 +4,17 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>云梯 VPN -   常见问题 - 功能问题
+  <title>天梯 VPN -   常见问题 - 功能问题
 </title>
   <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@VPNCloud" />
 <meta name="twitter:creator" content="@VPNCloud">
-<meta name="twitter:title" content="云梯 VPN" />
-<meta name="twitter:description" content="云梯 VPN - 自动智能加速国内外访问，速度快又稳定，推荐给需要的人。" />
+<meta name="twitter:title" content="天梯 VPN" />
+<meta name="twitter:description" content="天梯 VPN - 自动智能加速国内外访问，速度快又稳定，推荐给需要的人。" />
 <meta name="twitter:image" content="/assets/twitter/image-ef62a4541213f068d2911972dec4fafd.png" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="云梯VPN提供专业的VPN服务，高速访问互联网，加密数据。注意：最近出现2个假冒云梯的诈骗网站，以.net或.cn域名结尾的均为诈骗网站，请勿上当。">
+    <meta name="description" content="天梯VPN提供专业的VPN服务，高速访问互联网，加密数据。注意：最近出现2个假冒天梯的诈骗网站，以.net或.cn域名结尾的均为诈骗网站，请勿上当。">
   <link href="/assets/application-ba00e5ba87186cd03f11989364793aba.css" media="all" rel="stylesheet" type="text/css" />
   <script src="/assets/application-747264b1f258f099732bfdc2eb002a17.js" type="text/javascript"></script>
   <link href="/assets/favicon-abbf6f81597af75480827c5780723875.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
@@ -55,7 +55,7 @@
         <span class="icon-bar"></span>
       </button>
       <a href="/" class="navbar-brand logo">
-        <span class="text-hide">云梯 VPN</span>
+        <span class="text-hide">天梯 VPN</span>
 </a>    </div>
 
     <div class="collapse navbar-collapse">
@@ -152,10 +152,10 @@
         <a href="#Q3">PPTP 和 L2TP 的区别</a>
       </li>      
       <li>
-        <a href="#Q4">云梯支持哪些 VPN 协议？</a>
+        <a href="#Q4">天梯支持哪些 VPN 协议？</a>
       </li>      
       <li>
-        <a href="#Q5">云梯是否支持 IPv6？</a>
+        <a href="#Q5">天梯是否支持 IPv6？</a>
       </li>
       <li>
         <a href="#Q6">虚拟机可以使用 VPN 吗？</a>
@@ -177,9 +177,9 @@
     <div id="Q2" class="panel panel-basic">
       <div class="panel-heading panel-heading-sm">2. VPN 如何工作？</div>
       <div class="panel-body">
-        VPN 创建一个安全的互联网连接，你的互联网服务商只能看到加密的数据，并最终访问的目标只看到云梯 VPN 的位置和 IP 信息。<br>
+        VPN 创建一个安全的互联网连接，你的互联网服务商只能看到加密的数据，并最终访问的目标只看到天梯 VPN 的位置和 IP 信息。<br>
         <div class="text-center">
-          <img alt="VPN 工作方式：1）没有VPN，未加密，网站看到你的地理位置和你的IP地址，你的网络服务商看到你正在访问的网站、你正在观看的视频、你给谁写邮件、你跟谁网上聊天、你的下载和上传；2）有VPN，加密的，网站看到云梯服务器的地理位置和IP地址，你的网络服务商只能看到云梯加密的通讯、没有网站的网址、视频、电子邮件、聊天记录或下载。" src="/assets/vpn_work-6b32131558fb549d17134b511b764984.png" />
+          <img alt="VPN 工作方式：1）没有VPN，未加密，网站看到你的地理位置和你的IP地址，你的网络服务商看到你正在访问的网站、你正在观看的视频、你给谁写邮件、你跟谁网上聊天、你的下载和上传；2）有VPN，加密的，网站看到天梯服务器的地理位置和IP地址，你的网络服务商只能看到天梯加密的通讯、没有网站的网址、视频、电子邮件、聊天记录或下载。" src="/assets/vpn_work-6b32131558fb549d17134b511b764984.png" />
         </div>
       </div>
       <div class="panel-footer panel-footer-sm text-right">
@@ -200,11 +200,11 @@
     </div>    
     
     <div id="Q4" class="panel panel-basic">
-      <div class="panel-heading panel-heading-sm">4. 云梯支持哪些 VPN 协议？</div>
+      <div class="panel-heading panel-heading-sm">4. 天梯支持哪些 VPN 协议？</div>
       <div class="panel-body">
-        目前云梯支持 PPTP 和 L2TP/IPSec 协议。<br>
+        目前天梯支持 PPTP 和 L2TP/IPSec 协议。<br>
         PPTP 和 L2TP/IPSec 是行业标准，能覆盖绝大部分的设备，而且设置简单。<br>
-        这两个协议在云梯各服务器上连接非常顺畅哦～
+        这两个协议在天梯各服务器上连接非常顺畅哦～
       </div>
       <div class="panel-footer panel-footer-sm text-right">
         <a href="#">返回顶部</a>
@@ -212,13 +212,13 @@
     </div>    
     
     <div id="Q5" class="panel panel-basic">
-      <div class="panel-heading panel-heading-sm">5. 云梯是否支持 IPv6？</div>
+      <div class="panel-heading panel-heading-sm">5. 天梯是否支持 IPv6？</div>
       <div class="panel-body">
-        目前云梯不支持 IPv6。<br>
+        目前天梯不支持 IPv6。<br>
         由于需要路由、网络运营商、访问的网站都支持 IPv6，大家才能顺畅的通过 IPv6 访问互联网；<br>
         目前海外的大部分 IPv6 线路，大都要到美国的 HE.net 绕一下，再达到目标服务器，不少地区的用户速度反而会变慢；<br>
         并且 Google 搜索针对单个 IPv6 地址后面的用户数有限制，同一台服务器用户稍多就会被 Google 误判为机器人程序，影响正常搜索。<br>
-        云梯所有机房和服务器都支持 IPv6，等 IPv6 发展一段时间，解决了以上的局限性后，我们会立即推出相应的服务嗒～
+        天梯所有机房和服务器都支持 IPv6，等 IPv6 发展一段时间，解决了以上的局限性后，我们会立即推出相应的服务嗒～
       </div>
       <div class="panel-footer panel-footer-sm text-right">
         <a href="#">返回顶部</a>
@@ -250,7 +250,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <div class='social-share-button' data-title='云梯 VPN - 自动智能加速国内外访问，速度快又稳定，推荐给需要的人。' data-img=''
+        <div class='social-share-button' data-title='天梯 VPN - 自动智能加速国内外访问，速度快又稳定，推荐给需要的人。' data-img=''
 data-url='/faq/function' data-desc='' data-popup='true' data-via=''>
 <a href="#" class="social-share-button-twitter" data-site="twitter" onclick="return SocialShareButton.share(this);" rel="nofollow " title="分享到 Twitter"></a>
 <a href="#" class="social-share-button-facebook" data-site="facebook" onclick="return SocialShareButton.share(this);" rel="nofollow " title="分享到 Facebook"></a>
@@ -282,10 +282,10 @@ data-url='/faq/function' data-desc='' data-popup='true' data-via=''>
       <div class="col-md-6">
         <h4>关于我们</h4>
         <div class="content">
-          云梯致力于提供专业的 VPN 服务，用我们的技术和热情，为大家打造快速、安全、高效的 VPN 接入及解决方案，满足自由访问互联网、网络传输加密、保护隐私等多种需求。成熟的技术、专业的管理以及真诚的服务，让所有人都能享受开放的互联网。<br>
-          云梯 VPN - 连接世界的梯子！<br>
+          天梯致力于提供专业的 VPN 服务，用我们的技术和热情，为大家打造快速、安全、高效的 VPN 接入及解决方案，满足自由访问互联网、网络传输加密、保护隐私等多种需求。成熟的技术、专业的管理以及真诚的服务，让所有人都能享受开放的互联网。<br>
+          天梯 VPN - 连接世界的梯子！<br>
           <br>
-          <p>注意：最近出现2个假冒云梯进行诈骗的网站。识别方法：以 .net 或 .cn 域名结尾的均为诈骗网站，提供 QQ 号的也均为诈骗网站，已有人被骗钱财，请勿上当。</p>
+          <p>注意：最近出现2个假冒天梯进行诈骗的网站。识别方法：以 .net 或 .cn 域名结尾的均为诈骗网站，提供 QQ 号的也均为诈骗网站，已有人被骗钱财，请勿上当。</p>
         </div>
       </div>
       <div class="col-md-3">
@@ -303,7 +303,7 @@ data-url='/faq/function' data-desc='' data-popup='true' data-via=''>
             </li>
           </ul>
         </div>
-        <h4 class="ytstatus"><a href="https://www.ytstatus.com" target="_blank">云梯VPN - 服务状态</a></h4>
+        <h4 class="ytstatus"><a href="https://www.ytstatus.com" target="_blank">天梯VPN - 服务状态</a></h4>
       </div>
       <div class="col-md-3">
         <h4>联系我们</h4>
@@ -316,11 +316,11 @@ data-url='/faq/function' data-desc='' data-popup='true' data-via=''>
       <img alt="Twitter" src="/assets/twitter-e374f98f346e1afc5f16f75d643d61b0.png" title="Twitter" />
 </a>  </li>
   <li>
-    <a href="https://www.facebook.com/pages/云梯-VPNCloudme/411548455548359" target="_blank">
+    <a href="https://www.facebook.com/pages/天梯-VPNCloudme/411548455548359" target="_blank">
       <img alt="Facebook" src="/assets/facebook-f99f324c6abcb9e88ee3c921c404b136.png" title="Facebook" />
 </a>  </li>
   <li>
-    <a href="https://plus.google.com/+云梯" target="_blank"><img alt="Google Plus" src="/assets/gplus-7688b4f4dfe029c38c29b1b5044e7701.png" title="Google Plus" /></a>  </li>
+    <a href="https://plus.google.com/+天梯" target="_blank"><img alt="Google Plus" src="/assets/gplus-7688b4f4dfe029c38c29b1b5044e7701.png" title="Google Plus" /></a>  </li>
   <li>
     <a href="http://weibo.com/yuntimm" target="_blank">
       <img alt="新浪微博" src="/assets/weibo-e435db2a3ceceb91c5f3c66d990f5be8.png" title="新浪微博" />
@@ -341,7 +341,7 @@ data-url='/faq/function' data-desc='' data-popup='true' data-via=''>
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        &copy; 2016 云梯 VPN 版权所有
+        &copy; 2016 天梯 VPN 版权所有
       </div>
       <div class="col-md-6 text-right"><a href="/terms_of_service">服务条款</a></div>
     </div>
