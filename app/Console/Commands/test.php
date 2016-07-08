@@ -5,8 +5,10 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use App\Models\User;
+use App\Models\Order;
 use App\Models\RadAcct;
-use App\Services\UserService;
+use App\Models\UserService;
+// use App\Services\UserService;
 use App\Services\CurlService;
 use View;
 
@@ -45,59 +47,11 @@ class test extends Command
      */
     public function handle()
     {
-        $user= User::find(8);
-        $result = $user->getRecommandInfo();
-        var_dump($result);
-        die;
+        $order = Order::where('order_id',25)->first();
+        $service = UserService::createUserService($order);
 
-                #本月情况
-        $monthInfo = RadAcct::getMonthDetial('sqltest');
-        if (empty($monthInfo)) $monthInfo = [];
-        $detial = [];
-        $totalSize = 0;
-        foreach ($monthInfo as $value)
-        {
-
-            $detial[(int)($value['day'])] = $value['size'];
-            $totalSize += $value['size'];
-        } 
-
-
-        $dayCount = date('t',time());
-        for ($i=0; $i < $dayCount; $i++) 
-        {
-            if (empty($detial[$i])) $detial[$i] = 0;
-        }
-
-
-        var_dump(ksort($detial));
-        var_dump($detial);
-        var_dump($totalSize);
-
-        // $info = RadAcct::getMonthDetial('sqltest');
-        // var_dump($info);
-
-
-        // $log = RadAcct::getHistory('sqltest');
-        // var_dump($log);
-        die;
-
-
-        $headerInfo = [
-            'Accept'=>'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-            'Connection'=>'keep-alive',
-            'Accept-Language'=>'en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4',
-            'Cache-Control'=>'no-cache',
-        ];
-
-        $cookie = '_dallas_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVEkiJTViZjRlODRkOTNmY2Y5YjgzODZmNmMxNjhmN2ExMjFjBjsAVEkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjsAVFsHWwZpAiaiSSIiJDJhJDEwJE1VNEFLNzNDTFJWWEhLaXhVSUJ4bk8GOwBUSSIQX2NzcmZfdG9rZW4GOwBGSSIxTmVhUnlqSk00MW1MTVpjaDg3cTNnbGJOYnFFY2N0aWV0eitsNzVqTUo4az0GOwBG--9c1a4d74fc9e5a4506d4660a0f91da477e10d66c';
-        $curlService = new CurlService('https://www.yuntiprivaten.com/admin',$headerInfo,$cookie);
-
-        $result = $curlService->get();
-        var_dump($result);
-        var_dump($curlService->status);
-        var_dump($curlService->contentType);
-        var_dump($curlService->content);
+    // $username = User::find(12)->first();
+    // var_dump($username);
 
     }
 }

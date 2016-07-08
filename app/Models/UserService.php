@@ -51,7 +51,7 @@ class UserService extends Model
             $serviceInfo['order_id'] = $order->order_id;
             $serviceInfo['service_version'] = $order->version;
             $serviceInfo['begin_at'] = date("Y-m-d H:i:s");
-            $serviceInfo['end_at'] = date("Y-m-d H:i:s",strtotime("+"+$order->count+" years"));
+            $serviceInfo['end_at'] = date("Y-m-d H:i:s",strtotime("+".$order->count." years"));
 
             $info = self::create($serviceInfo);
             return empty($info) ? false : $info;
@@ -64,10 +64,10 @@ class UserService extends Model
         $userService->service_version = self::isBigerThan($order->version,$userService->service_version) ? $order->version : $userService->service_version;
 
         $baseDate = $userService->end_at > date("Y-m-d H:i:s") ? $userService->end_at : date("Y-m-d H:i:s");
-        $endDate = date("Y-m-d H:i:s",strtotime("+"+$order->count+" years",strtotime($baseDate)));
+        $endDate = date("Y-m-d H:i:s",strtotime("+".$order->count." years",strtotime($baseDate)));
         $userService->end_at = $endDate;        
-        $userService->save();
 
+        $result = $userService->save();
         return $userService;
     }
 

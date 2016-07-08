@@ -94,6 +94,11 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
         $epassword = Hash::make($password);
         self::where("id",$userid)->update(['status'=>0,'password'=>$epassword,'password_plain'=>$password]);
+
+        $username = self::where('id',$userid)->value('username');
+
+        //同事更新vpn密码
+        if(!empty($username)) RadCheck::changePassword($username,$password);
         return true;
     }
 
@@ -131,7 +136,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     public static function onUserPayOrder($userId)
     {
         if (empty($userId)) return false; 
-        self::where('id',$userId)->where('recm_valid_status',0)->update(['recm_valid_status'=>1]);
+        self::where('id',$userId)->where('is_recm_valid',0)->update(['is_recm_valid'=>1]);
     }
 
     //推荐人下单
@@ -141,7 +146,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
         //只能成功推荐一次
         $recmUser = self::find($order->user_id);
-        if ($recmUser->recm_valid_status != 2 && !empty($recmUser->recommended_user_id)) 
+        if ($recmUser->is_recm_valid != 2 && !empty($recmUser->recommended_user_id)) 
         {
             self::updateUserSubMoney($recmUser->recommended_user_id,10,true);
             UserLog::log([  'user_id'=>$recmUser->recommended_user_id,

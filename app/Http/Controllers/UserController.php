@@ -122,8 +122,35 @@ class UserController extends Controller
         //发送激活邮件
         UserService::sendResetPasswordEmail($email,$uuid);
 
-        return $this->json(0,[],"");        
+        return $this->json(0,[],"");       
+
     }
+
+    public function resetPassManual()
+    {
+        $params = Input::get('user');
+        if (empty($params) || empty($params['current_password']) ||
+            empty($params['password']) || empty($params['password_confirmation']))
+            {
+                return $this->errorPage("请填写完整的信息！");
+            } 
+
+        if (strlen($params['password']) <8 || $params['password'] != $params['password_confirmation']) 
+        {
+            return $this->errorPage("确认密码不一致或者密码长度小于8位");
+        }
+
+        $user = Auth::user();
+
+        //校验密码
+        if ($user->password_plain != $params['current_password']) return $this->errorPage("当前密码不正确");
+
+        //更改密码
+        User::setLoginPassword($user->id,$params['password']);
+
+        return Redirect('/admin');
+    }
+
 
 
     //发送激活邮件

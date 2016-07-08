@@ -17,7 +17,7 @@ class TestController extends Controller
      */
     public function test()
     {
-        Auth::loginUsingId(8);
+    	var_dump(Auth::user());
     }
 
 }

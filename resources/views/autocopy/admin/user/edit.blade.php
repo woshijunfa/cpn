@@ -138,6 +138,7 @@
     <div class="form-group password optional user_password_confirmation"><label class="password optional col-sm-2 control-label" for="user_password_confirmation">重复密码</label><div class="col-sm-10"><input class="password optional form-control" id="user_password_confirmation" name="user[password_confirmation]" size="50" type="password" /></div></div>
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
+        {{csrf_field()}}
         <input class="btn btn-primary" name="commit" type="submit" value="修改密码" />
       </div>
     </div>

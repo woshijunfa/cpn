@@ -62,6 +62,7 @@ Route::post('/setLoginPass',"UserController@setLoginPass");
 Route::post('/resetPassEmail',"UserController@resetPassEmail");
 Route::get('/logout',"UserController@logout");
 Route::any('/users/sign_out',"UserController@logout");
+
 //
 
 
@@ -134,6 +135,9 @@ Route::group(['middleware'=>'auth'], function () {
 	Route::get('/admin/orders/{orderId}','OrderController@showOrder');
 	Route::post('/admin/orders/payments/{orderId}','OrderController@payOrder');
 	Route::get('/admin/order_pay_return', 'OrderController@payReturn');
+
+	#修改密码
+	Route::post('/admin/user/update_password',"UserController@resetPassManual");
 });
 
 Route::get('/admin/tickets/66959388', 'CopyController@autoNavi');

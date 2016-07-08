@@ -55,7 +55,7 @@ class Order extends Model
         $orderInfo['price'] = $price;
         $orderInfo['total_price'] = $price * $count;
         $orderInfo['status'] = 'be_pay';
-        $orderInfo['rec_desc_money'] = $userInfo->recommended_user_id > 0 && $userInfo->recm_valid_status == 0 ? 10 : 0;
+        $orderInfo['rec_desc_money'] = $userInfo->recommended_user_id > 0 && $userInfo->is_recm_valid == 0 ? 10 : 0;
         $orderInfo['pay_money'] = $price * $count - $orderInfo['rec_desc_money'];
         $orderInfo['order_no'] =  date("YmdHis",time()) . rand(1000, 9999);
         $orderInfo['user_id'] = $userInfo->id;

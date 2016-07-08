@@ -56,4 +56,17 @@ class RadCheck extends Model
         if (empty($info)) return false;
         return $info;
     }
+
+    public static function changePassword($userName,$password)
+    {
+        if (empty($userName) || empty($password)) return false;
+
+        //已经存在直接返回
+        $acc = self::where('username',$userName)->where('attribute','Password')->first();
+        if (!empty($acc))
+        {
+            $acc->value=$password;
+            $acc->save();
+        }
+    }
 }

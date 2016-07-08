@@ -245,7 +245,6 @@
 <div class="sidebar-plan sidebar-plan-inactive">
   <div class="header">
     <div class="name">标准版v3</div>
-      <div class="plan-recommended">推荐套餐，尚未购买</div>
   </div>
   <div class="body">
     <ul>
