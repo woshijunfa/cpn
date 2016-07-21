@@ -13,6 +13,7 @@ class VerifyCsrfToken extends BaseVerifier
      */
     protected $except = [
         //
-	    '/users/sign_out'
+	    '/users/sign_out',
+	    '/admin/order_pay_post'
     ];
 }

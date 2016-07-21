@@ -79,7 +79,9 @@ return [
     */
 
     'key' => env('APP_KEY', 'SomeRandomString'),
-
+    'private_key_path'=> env('APP_PRIVATE_KEY'),
+    'public_key_path'=> env('APP_PUBLIC_KEY'),
+    
     'cipher' => 'AES-256-CBC',
 
     /*

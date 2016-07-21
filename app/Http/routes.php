@@ -19,6 +19,10 @@ Route::get('/guides', 'CopyController@common');
 Route::get('/faq', 'CopyController@common');
 Route::get('/refund_policy', 'CopyController@common');
 
+#api接口相关
+Route::post('/admin/order_pay_post', 'OrderController@paySuccessPost');
+
+
 #guide
 Route::get('/guides/windows8_pptp', 'CopyController@common');
 Route::get('/guides/windows8_l2tp', 'CopyController@common');
@@ -134,7 +138,7 @@ Route::group(['middleware'=>'auth'], function () {
 	Route::post('/admin/orders', 'OrderController@createOrder');
 	Route::get('/admin/orders/{orderId}','OrderController@showOrder');
 	Route::post('/admin/orders/payments/{orderId}','OrderController@payOrder');
-	Route::get('/admin/order_pay_return', 'OrderController@payReturn');
+	Route::get('/admin/order_pay_return', 'OrderController@payReturn');	
 
 	#修改密码
 	Route::post('/admin/user/update_password',"UserController@resetPassManual");
@@ -147,3 +151,4 @@ Route::get('/admin/tickets/66959388', 'CopyController@autoNavi');
 // Route::get('/admin/orders/012299937', 'CopyController@autoNavi');
 
 // Route::get('/admin/orders/840400668', 'CopyController@autoNavi');  //确认订单支付页面
+Route::get('/admin/mobile_configs/new', 'CopyController@autoNavi');

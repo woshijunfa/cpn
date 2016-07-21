@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Order;
 use App\Services\UserService;
 use App\Services\OrderService;
+use App\Services\HttpSslService;
 use App\Http\Controllers\Controller;
 use Input;
 use Auth;
@@ -15,6 +16,7 @@ use Session;
 use Redirect;
 use Hash;
 use Log;
+use Config;
 
 class OrderController extends Controller
 {
@@ -100,11 +102,35 @@ class OrderController extends Controller
         //更新账户金额
         Order::updateOrderByOrderId($order->order_id,$updateOrderInfo);
 
-        //跳转支付平台进行支付
-        //PASS
+        //跳转到支付平台
+        $url = Config::get('pay.order_url') . "?order_no=" . $order->order_no;
+        return Redirect($url);
+    }
 
-        //跳转到支付返回结果页面
-        return Redirect('/admin/order_pay_return?order_no=' . $order->order_no);
+    //支付成功post通知
+    public function paySuccessPost()
+    {
+        $isok = HttpSslService::sslCheckSign();
+        if (!$isok) return $this->json(-1);
+
+        $orderNo = Input::get("order_no");
+        $payStatus = Input::get("pay_status");
+
+        if (empty($orderNo) || $payStatus !== "success") return $this->json(-1);
+
+        $orderInfo = Order::where('order_no',$orderNo)->first();
+        if (empty($orderInfo))
+        {
+            Log::info("order_no：" . $orderNo . " 没有对应订单");
+            return $this->json(-1);
+        } 
+
+        if ($orderInfo->status != 'be_pay') return $this->json(-1);
+
+        $isok = OrderService::successPay($orderInfo);
+        if (!$isok) return $this->json(-1);
+
+        return $this->json(0);
     }
 
     //支付结果
@@ -117,17 +143,13 @@ class OrderController extends Controller
             Log::info("payReturn 没有 order_no");
             return $this->errorPage();
         } 
+
         $orderInfo = Order::where('order_no',$orderNo)->first();
         if (empty($orderInfo))
         {
             Log::info("order_no：" . $orderNo . " 没有对应订单");
             return $this->errorPage();
         } 
-
-        if ($orderInfo->status != 'be_pay')         return Redirect('/admin/orders/' . $orderInfo->order_id);
-
-        $isok = OrderService::successPay($orderInfo);
-        if (!$isok) return $this->errorPage();
 
         return Redirect('/admin/orders/' . $orderInfo->order_id);
     }
