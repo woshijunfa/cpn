@@ -125,6 +125,7 @@ class OrderController extends Controller
             return $this->json(-1);
         } 
 
+        if ($orderInfo->status == 'success_pay') return $this->json(0);
         if ($orderInfo->status != 'be_pay') return $this->json(-1);
 
         $isok = OrderService::successPay($orderInfo);
