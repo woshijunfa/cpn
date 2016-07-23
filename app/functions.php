@@ -33,5 +33,13 @@ if (! function_exists('gIsEmail'))
 
     	return round($size/(1024*1024*1024),2) . "GB";
     }
+
+    //获取跳转url
+    function gGetTarUrl()
+    {
+        $url = session('tarurl');
+        if (empty($url)) $url = '/';
+        return $url;
+    }
 }
 

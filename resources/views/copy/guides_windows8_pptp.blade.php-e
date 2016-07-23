@@ -456,7 +456,7 @@ data-url='https://www.yuntiprivaten.com/guides/windows8_pptp' data-desc='' data-
       </div>
       <div class="col-md-3">
         <h4>联系我们</h4>
-        <div class="email"><a href="mailto:support@vpncloudmail.com">support@vpncloudmail.com</a></div>
+        <div class="email"><a href="mailto:tiantivpn@163.com">tiantivpn@163.com</a></div>
         <h4>关注我们</h4>
         <div>
           <ul class="list-inline">

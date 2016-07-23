@@ -236,7 +236,7 @@
       <div class="panel-body">
         天梯提供服务单和邮件2种客服方式：<br>
         1.大家有任何问题，可以 <a href="/admin/tickets" target="_blank">提交服务单</a>，天梯MM一定会尽快回复的。<br>
-        2.如果还没有注册或无法登录“我的天梯”，可以邮件联系 <a href="mailto:support@vpncloudmail.com">support@vpncloudmail.com</a><br>
+        2.如果还没有注册或无法登录“我的天梯”，可以邮件联系 <a href="mailto:tiantivpn@163.com">tiantivpn@163.com</a><br>
         另外，大家也可以关注天梯在各大社交网络的官方帐号（请见网站底部关注我们），有什么新消息，天梯都会第一时间告知大家嗒～
       </div>
       <div class="panel-footer panel-footer-sm text-right">
@@ -322,7 +322,7 @@ data-url='/faq' data-desc='' data-popup='true' data-via=''>
       </div>
       <div class="col-md-3">
         <h4>联系我们</h4>
-        <div class="email"><a href="mailto:support@vpncloudmail.com">support@vpncloudmail.com</a></div>
+        <div class="email"><a href="mailto:tiantivpn@163.com">tiantivpn@163.com</a></div>
         <h4>关注我们</h4>
         <div>
           <ul class="list-inline">

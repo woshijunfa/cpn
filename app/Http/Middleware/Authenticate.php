@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
+use Session;
 
 class Authenticate
 {
@@ -38,6 +39,9 @@ class Authenticate
             if ($request->ajax()) {
                 return response('Unauthorized.', 401);
             } else {
+                $url = $request->url();
+                session(['tarurl'=>$url]);
+                Session::save();
                 return redirect()->guest('/users/sign_in');
             }
         }

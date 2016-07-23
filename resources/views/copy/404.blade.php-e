@@ -259,7 +259,7 @@
           <ul>
             <li>如果是手动输入网址，请检查网址拼写是否正确</li>
             <li>通过页面底部的导航栏，查找相关内容</li>
-            <li>联系客服咨询，请发送邮件到 <a href="mailto:support@vpncloudmail.com">support@vpncloudmail.com</a></li>
+            <li>联系客服咨询，请发送邮件到 <a href="mailto:tiantivpn@163.com">tiantivpn@163.com</a></li>
           </ul>
         </div>
       </div>
