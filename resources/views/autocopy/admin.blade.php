@@ -281,11 +281,17 @@
   </div>
 </div>
 
-    <div class="note">
-      您还没有购买任何服务。
-      <hr/>
-      快来 <a href="/admin/orders/new">选择套餐</a> 吧，支付成功后，服务自动开通。
-    </div>
+    @if(!g_inVpnServie())
+        <div class="note">
+          您还没有购买任何服务。
+          <hr/>
+          快来 <a href="/admin/orders/new">选择套餐</a> 吧，支付成功后，服务自动开通。
+        </div>
+    @else
+        <div class="note">
+          l2tp链接支持正在紧张搭建中。。。
+        </div>
+    @endif
 
 
                 </div>
