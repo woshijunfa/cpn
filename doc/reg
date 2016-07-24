@@ -1,0 +1,53 @@
+#删除动态按钮
+grep -rl "/news/listview" ./|xargs sudo sed -i "" "/news\/listview/d"
+grep -rl 'juhe.cn' ./ |xargs sed -i -e 's/juhe.cn/shareapi.com/g'
+
+##删除常见问题
+
+
+//删除条
+grep -rl "B2-20140496" ./|xargs sed -i "" "/B2-20140496/d"
+
+//删除问题
+ grep -rl "/qa" ./|xargs sudo sed -i "" "/\/qa/d"
+
+#隐藏电话悬浮条
+grep -rl "id=\"juhegoTop" ./ |xargs sed -i -e 's/id="juhegoTop"/id="juhegoTop" style="display:none"/g'
+
+#删除-e文件
+ find  ./ -name "*.blade.php-e*"|xargs rm -r
+
+#修正httpsimag
+grep -rl "src=\"https://www.shareapi.com" ./|xargs sudo sed -i -e "s/src=\"https:\/\/www.shareapi.com/src=\"/g"
+grep -rl "href=\"https://www.shareapi.com" ./|xargs sudo sed -i -e "s/href=\"https:\/\/www.shareapi.com/href=\"/g"
+
+
+#git删除-e文件
+find  ./ -name "*.blade.php-e*"|xargs git rm
+
+#删除各种icon
+
+
+
+########resource view下执行命令#######
+grep -rl "/news/listview" ./|xargs sudo sed -i "" "/news\/listview/d"
+grep -rl "B2-20140496" ./|xargs sudo sed -i "" "/B2-20140496/d"
+grep -rl "/qa" ./|xargs sudo sed -i "" "/\/qa/d"
+grep -rl "id=\"juhegoTop" ./ |xargs sudo sed -i -e 's/id="juhegoTop"/id="juhegoTop" style="display:none"/g'
+grep -rl "/qa" ./|xargs sudo sed -i "" "/\/qa/d"
+grep -rl "苏州新科兰德科技有限公司" ./|xargs sudo sed -i -e "s/苏州新科兰德科技有限公司/京 ICP 备 16034375 号ShareApi/g"
+grep -rl "聚合" ./|xargs sudo sed -i -e "s/聚合/分享/g"
+grep -rl "备14006450" ./|xargs sudo sed -i "" "/备14006450/d"
+grep -rl "API测试工具" ./|xargs sudo sed -i "" "/API测试工具/d"
+find  ./ -name "*.blade.php-e*"|xargs sudo rm -r
+grep -rl "color_https" ./|xargs sudo sed -i "" "/color_https/d"
+grep -rl "color_disanfang" ./|xargs sudo sed -i "" "/color_disanfang/d"
+grep -rl "api_newbtn_demo" ./|xargs sudo sed -i "" "/api_newbtn_demo/d"
+grep -rl "【更多次数、更多优惠，请与商务联系>>】" ./|xargs sudo sed  -i -e "s/【更多次数、更多优惠，请与商务联系>>】</</g"
+grep -r "联系我们" ./|grep contact|grep -v ervice@shareapi.cn|awk -F ':' '{print $1}'|xargs sudo sed -i "" "/联系我们/d"
+grep -rl "活动推荐<span>\/Activity" ./|xargs sudo sed -i "" "/活动推荐<span>\/Activity/d"
+grep -rl "hm.baidu.com" ./|xargs sudo sed -i "" "/hm.baidu.com/d"
+grep -rl "docs/index/sortby/2" ./|xargs sudo sed -i -e "s/docs\/index\/sortby\/2/docs\/index\/sortby\/1/g"
+grep -rl "docs/index/sortby/3" ./|xargs sudo sed -i -e "s/docs\/index\/sortby\/3/docs\/index\/sortby\/1/g"
+grep -rl "docs/index/sortby/4" ./|xargs sudo sed -i -e "s/docs\/index\/sortby\/4/docs\/index\/sortby\/1/g"
+
