@@ -195,7 +195,7 @@
     <input  @if($user->money <= 0) disabled="disabled"  @endif id="use_account_money" name="use_account_money" type="checkbox" value="1" />
   使用主帐户余额付款 余额：<span class="price">{{$user->money or 0}} 元</span>
 </label>
-<a href="#" class="btn-final-payment-method btn btn-primary btn-lg" data-input="payment-method-input-1">去付款</a>
+<button class="btn-final-payment-method btn btn-primary btn-lg" data-input="payment-method-input-1">去付款</button>
 
   {{csrf_field()}}
   <input class="btn btn-primary btn-lg" id="default-pay" name="commit" type="submit" value="付款" />
@@ -226,6 +226,7 @@
     $('#payment-methods-form .available-pre-payment-method').change(check_payment_methods);
 
     $('#payment-methods-form .btn-final-payment-method').click(function(e) {
+      $('#payment-methods-form .btn-final-payment-method').text("正在跳转支付。。。");
       $('#payment-methods-form .payment-method-input').prop('checked', false);
       $('#' + $(this).data('input')).prop('checked', true);
       $('#payment-methods-form').submit();
