@@ -41,4 +41,5 @@ class UserService
         return !empty($service) && $service->end_at > date("Y-m-d H:i:s");
 
     }
+
 }

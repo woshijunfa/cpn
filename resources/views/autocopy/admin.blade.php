@@ -166,11 +166,11 @@
         已用流量：{{ gFormatSize($totalSize) }}
       </div>
       <div class="pull-right">
-        套餐月流量：0 Bytes
+        套餐月流量：{{ gFormatSize($taocanSize) }}
       </div>
     </div>
     <div class="progress">
-      <div class="progress-bar progress-bar-danger" style="min-width:40px; max-width:100%; width: 100%">100%</div>
+      <div class="progress-bar progress-bar-danger" style="min-width:40px; max-width:100%; width: {{ $per or 0}}%">{{ $per or 0}}%</div>
     </div>
   </div>
 </div>

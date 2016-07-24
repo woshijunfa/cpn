@@ -90,4 +90,23 @@ class UserService extends Model
         $result = self::where('user_id',$userId)->first();
         return $result;
     }
+
+    public static function getUserTaocanLiuliang($userId)
+    {
+        if (empty($userId)) return 0;
+        $result = self::where('user_id',$userId)->first();
+        if (empty($result)) return 0;
+        if ($result->end_at < date("Y-m-d H:i:s")) return 0;
+
+        $table = [
+            'sv3'=>10*1024*1024*1024,
+            'mv3'=>100*1024*1024*1024,
+            'bv3'=>300*1024*1024*1024,
+            'ev3'=>1000*1024*1024*1024
+        ];
+
+        if (array_key_exists($result->service_version,$table)) return $table[$result->service_version];
+
+        return 0;
+    }
 }

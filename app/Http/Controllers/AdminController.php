@@ -10,6 +10,7 @@ use App\Models\Order;
 use App\Models\User;
 use App\Models\Withdraw;
 use App\Models\UserLog;
+use App\Models\UserService;
 use App\Services\OrderService;
 use App\Http\Controllers\Controller;
 use View;
@@ -66,7 +67,14 @@ class AdminController extends Controller
         }
         ksort($detial);
 
-    	return view("autocopy.admin",compact('info','detial','totalSize'));
+        $per = 0;
+        $taocanSize = UserService::getUserTaocanLiuliang($user->id);
+        if ($taocanSize > 0) 
+        {
+            $per = (int)($totalSize*100/$taocanSize);
+        }
+
+    	return view("autocopy.admin",compact('info','detial','totalSize','taocanSize','per'));
     }
 
     //显示订单列表
