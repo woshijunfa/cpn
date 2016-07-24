@@ -81,6 +81,21 @@ class UserController extends Controller
         return $this->json(0,[],"");
     }
 
+    public function users_set_password()
+    {
+        $uuid = Input::get("uuid");
+        if (!empty($uuid)) 
+        {
+            $user = User::where('email_key',$uuid)->first();
+            if (!empty($user)) 
+            {
+                Session::set("reg_userid",$user->id);
+            }
+        }
+
+        return View("copy.users_set_password");
+    }
+
     //登录操作
     public function loginPost()
     {

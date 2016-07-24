@@ -9,7 +9,7 @@ class UserService
     public static function sendRegiestEmail($email,$uuid)
     {
         $data = compact("email",'uuid');
-        $title = "欢迎选择shareApi,请验证您的邮箱";
+        $title = "欢迎选择天梯vpn,请验证您的邮箱";
 
         $result = EmailSerivce::sendBladeEmail([$email=>$email],$title,"passport.registerEmail",$data);
 
@@ -19,7 +19,7 @@ class UserService
     public static function sendResetPasswordEmail($email,$uuid)
     {
         $data = compact("email",'uuid');
-        $title = "我的vpn重置密码,请验证您的邮箱";
+        $title = "天梯vpn重置密码,请验证您的邮箱";
 
         $result = EmailSerivce::sendBladeEmail([$email=>$email],$title,"passport.resetPasswordEmail",$data);
 

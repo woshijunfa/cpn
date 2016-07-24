@@ -56,7 +56,6 @@ Route::get('/faq/account', 'CopyController@common');
 Route::get('/faq/shop', 'CopyController@common');
 Route::get('/terms_of_service', 'CopyController@common');
 Route::get('/users/password/new', 'CopyController@common');
-Route::get('/users_set_password', 'CopyController@common');
 
 //登录注册相关
 Route::get('/users/sign_in', 'CopyController@common');
@@ -64,6 +63,7 @@ Route::get('/users/sign_up', 'CopyController@common');
 Route::post('/register',"UserController@regiestPost");
 Route::post('/login',"UserController@loginPost");
 Route::post('/setLoginPass',"UserController@setLoginPass");
+Route::get('/users_set_password', 'UserController@users_set_password');
 Route::post('/resetPassEmail',"UserController@resetPassEmail");
 Route::get('/logout',"UserController@logout");
 Route::any('/users/sign_out',"UserController@logout");

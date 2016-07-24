@@ -46,5 +46,16 @@ if (! function_exists('gIsEmail'))
     {
         return \App\Services\UserService::isUserInVpnService();
     }
+
+    function gGetHost()
+    {
+        $request = request();    
+        if (empty($request)) return false;
+
+        //获取协议
+        $rootUrl = $request->root();
+
+        return $rootUrl;
+    }
 }
 
