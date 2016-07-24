@@ -40,7 +40,7 @@ class EmailSerivce
             //邮件对象实例化
             $mailer = \Swift_Mailer::newInstance($transport);
             $message = \Swift_Message::newInstance();
-            $message->setFrom([$userName => 'ShareApi']);
+            $message->setFrom([$userName => '天梯vpn']);
 
             if(empty($receiver)){
                 $message->setTo(config("mail.exception_receiver"));
