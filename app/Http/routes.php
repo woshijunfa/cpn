@@ -31,16 +31,17 @@ Route::get('/guides/windows7_pptp', 'CopyController@common');
 Route::get('/guides/windows7_l2tp', 'CopyController@common');
 Route::get('/guides/windows_xp_pptp', 'CopyController@common');
 Route::get('/guides/windows_xp_l2tp', 'CopyController@common');
-Route::get('/guides/mac_os_mobile_config', 'CopyController@common');
+
+Route::get('/guides/mac_os_mobile_config', function(){return redirect('/guides/mac_os_pptp');});
 Route::get('/guides/mac_os_pptp', 'CopyController@common');
 Route::get('/guides/mac_os_l2tp', 'CopyController@common');
 Route::get('/guides/ubuntu_pptp', 'CopyController@common');
 Route::get('/guides/ubuntu_l2tp', 'CopyController@common');
 
-Route::get('/guides/iphone_mobile_config', 'CopyController@common');
+Route::get('/guides/iphone_mobile_config', function(){return redirect('/guides/iphone_pptp');});
 Route::get('/guides/iphone_pptp', 'CopyController@common');
 Route::get('/guides/iphone_l2tp', 'CopyController@common');
-Route::get('/guides/ipad_mobile_config', 'CopyController@common');
+Route::get('/guides/ipad_mobile_config', function(){return redirect('/guides/ipad_pptp');});
 Route::get('/guides/ipad_pptp', 'CopyController@common');
 Route::get('/guides/ipad_l2tp', 'CopyController@common');
 Route::get('/guides/android_pptp', 'CopyController@common');

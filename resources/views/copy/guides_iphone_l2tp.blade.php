@@ -115,11 +115,11 @@
   <div class="col-md-12">
     <div class="step-nav">
       <h4 class="title">iPhone:</h4>
-      <span>
+<!--       <span>
         <a href="/guides/iphone_mobile_config" class="btn btn-inverse">
           一键安装
 </a>      </span>
-      <span>
+ -->      <span>
         <a href="/guides/iphone_pptp" class="btn btn-inverse">
           PPTP协议
 </a>      </span>

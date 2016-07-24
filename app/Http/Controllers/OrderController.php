@@ -118,6 +118,8 @@ class OrderController extends Controller
 
         if (empty($orderNo) || $payStatus !== "success") return $this->json(-1);
 
+        if (strlen($orderNo)>18) $orderNo = substr($orderNo,0,18);
+
         $orderInfo = Order::where('order_no',$orderNo)->first();
         if (empty($orderInfo))
         {
@@ -144,6 +146,7 @@ class OrderController extends Controller
             Log::info("payReturn 没有 order_no");
             return $this->errorPage();
         } 
+        if (strlen($orderNo)>18) $orderNo = substr($orderNo,0,18);
 
         $orderInfo = Order::where('order_no',$orderNo)->first();
         if (empty($orderInfo))

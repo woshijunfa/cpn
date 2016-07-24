@@ -115,11 +115,11 @@
   <div class="col-md-12">
     <div class="step-nav">
       <h4 class="title">Mac OS X:</h4>
-      <span>
+<!--       <span>
         <a href="/guides/mac_os_mobile_config" class="btn btn-inverse">
           一键安装
 </a>      </span>
-      <span class="active">
+ -->      <span class="active">
         <a href="/guides/mac_os_pptp" class="btn btn-inverse">
           PPTP协议
 </a>      </span>

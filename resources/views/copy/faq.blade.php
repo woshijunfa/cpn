@@ -168,7 +168,6 @@
     <div id="Q1" class="panel panel-basic">
       <div class="panel-heading panel-heading-sm">1. 智能加速、国内外分流是什么？</div>
       <div class="panel-body">
-        天梯智能加速、国内外分流功能，一键安装，免去手动设置的麻烦！<br>
         安装天梯智能加速后，连接天梯的 VPN 就能实现以下功能：<br>
         1. 国内网站的速度和不连接 VPN 一样快。<br>
         2. 国内网站的流量不计入 VPN 流量。<br>
