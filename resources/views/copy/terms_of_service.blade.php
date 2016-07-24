@@ -193,7 +193,6 @@ data-url='/terms_of_service' data-desc='' data-popup='true' data-via=''>
               <a href="/faq/function#Q1">VPN 是什么</a>
             </li>
             <li>
-              <a href="/faq/function#Q3">PPTP 和 L2TP 的区别</a>
             </li>
             <li>
               <a href="/faq">了解更多</a>
