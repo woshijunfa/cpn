@@ -83,4 +83,11 @@ class UserService extends Model
 
         return in_array($ver2,$table[$ver1]);
     }
+
+    public static function getUserServiceById($userId)
+    {
+        if (empty($userId)) return false;
+        $result = self::where('user_id',$userId)->first();
+        return $result;
+    }
 }

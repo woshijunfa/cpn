@@ -17,7 +17,9 @@ class TestController extends Controller
      */
     public function test()
     {
-    	var_dump(Auth::user());
+    	$res = g_inVpnServie();
+    	var_dump($res);
+//    	var_dump(Auth::user());
     }
 
 }

@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Services;
+use App\Models\UserService as ms;
+use Auth;
 
 class UserService
 {
@@ -24,4 +26,19 @@ class UserService
         return $result;
     }
 
+    public static function isUserInVpnService($userId = NULL)
+    {
+        if (empty($userId)) 
+        {
+            $user = Auth::user();
+            if (empty($user)) return false;
+            $userId = $user->id;
+        }
+
+        if (empty($userId)) return false;
+        $service = ms::getUserServiceById($userId);
+
+        return !empty($service) && $service->end_at > date("Y-m-d H:i:s");
+
+    }
 }

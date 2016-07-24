@@ -138,12 +138,21 @@
   <span>服务器</span>
 </h4>
 
+<style type="text/css">
+  .domain {
+    text-align: center;
+    @if(!g_inVpnServie())display: none; @endif
+  }
+
+</style>
+
 <div class="table-responsive">
   <table class="table table-bordered">
     <thead>
       <tr>
         <th>国家/地区</th>
         <th>名称</th>
+        <th class="domain">服务器</th>
         <th>实时状态</th>
         <th>协议</th>
         <th>概述</th>
@@ -152,237 +161,269 @@
     <tbody>
 
           <tr>
-              <td rowspan="8" class="country-name">日本</td>
-              <td rowspan="2">
-                日本1号
-              </td>
+            <td rowspan="4" class="country-name">日本</td>
+            <td >日本1号</td>
+            <td class="domain">jp1.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>PPTP</td>
             <td>电信良好。联通优秀。移动良好。</td>
           </tr>
-          <tr>
+<!--           <tr>
+            <td class="domain">jp1.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>L2TP</td>
             <td>电信良好。联通优秀。移动良好。</td>
           </tr>
-          <tr>
-              <td rowspan="2">
+ -->          <tr>
+              <td >
                 日本2号
               </td>
+            <td class="domain">jp2.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>PPTP</td>
             <td>电信一般。联通良好。移动良好。</td>
           </tr>
-          <tr>
+<!--           <tr>
+            <td class="domain">jp2.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>L2TP</td>
             <td>电信一般。联通良好。移动良好。</td>
           </tr>
-          <tr>
-              <td rowspan="2">
+ -->          <tr>
+              <td >
                 日本3号
               </td>
+            <td class="domain">jp3.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>PPTP</td>
             <td>电信良好。联通良好。移动良好。</td>
           </tr>
-          <tr>
+<!--           <tr>
+            <td class="domain">jp3.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>L2TP</td>
             <td>电信良好。联通良好。移动良好。</td>
           </tr>
-          <tr>
-              <td rowspan="2">
+ -->          <tr>
+              <td >
                 日本4号
               </td>
+            <td class="domain">jp4.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>PPTP</td>
             <td>电信较差。联通良好。移动良好。</td>
           </tr>
-          <tr>
+<!--           <tr>
+            <td class="domain">jp4.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>L2TP</td>
             <td>电信较差。联通良好。移动良好。</td>
           </tr>
-
+ -->
           <tr>
-              <td rowspan="12" class="country-name">美国</td>
-              <td rowspan="2">
+              <td rowspan="6" class="country-name">美国</td>
+              <td >
                 美国1号
               </td>
+            <td class="domain">us1.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>PPTP</td>
             <td>电信良好。联通良好。移动优秀。</td>
           </tr>
-          <tr>
+<!--           <tr>
+            <td class="domain">us1.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>L2TP</td>
             <td>电信良好。联通良好。移动优秀。</td>
           </tr>
-          <tr>
-              <td rowspan="2">
+ -->          <tr>
+              <td >
                 美国2号
               </td>
+            <td class="domain">us2.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>PPTP</td>
             <td>电信良好。联通良好。移动优秀。</td>
           </tr>
-          <tr>
+<!--           <tr>
+            <td class="domain">us2.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>L2TP</td>
             <td>电信良好。联通良好。移动优秀。</td>
           </tr>
-          <tr>
-              <td rowspan="2">
+ -->          <tr>
+              <td >
                 美国3号
               </td>
+            <td class="domain">us3.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>PPTP</td>
             <td>电信优秀。联通良好。移动优秀。</td>
           </tr>
-          <tr>
+<!--           <tr>
+            <td class="domain">us3.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>L2TP</td>
             <td>电信优秀。联通良好。移动优秀。</td>
           </tr>
-          <tr>
-              <td rowspan="2">
+ -->          <tr>
+              <td >
                 美国4号
               </td>
+            <td class="domain">us4.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>PPTP</td>
             <td>电信良好。联通一般。移动优秀。</td>
           </tr>
-          <tr>
+<!--           <tr>
+            <td class="domain">us4.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>L2TP</td>
             <td>电信良好。联通一般。移动优秀。</td>
           </tr>
-          <tr>
-              <td rowspan="2">
+ -->          <tr>
+              <td >
                 美国5号
               </td>
+            <td class="domain">us5.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>PPTP</td>
             <td>电信良好。联通较差。移动一般。</td>
           </tr>
-          <tr>
+<!--           <tr>
+            <td class="domain">us5.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>L2TP</td>
             <td>电信良好。联通较差。移动一般。</td>
-          </tr>
+          </tr> -->
           <tr>
-              <td rowspan="2">
+              <td >
                 美国6号
               </td>
+            <td class="domain">us6.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>PPTP</td>
             <td>电信优秀。联通优秀。移动优秀。</td>
           </tr>
-          <tr>
+<!--           <tr>
+            <td class="domain">us6.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>L2TP</td>
             <td>电信优秀。联通优秀。移动优秀。</td>
-          </tr>
+          </tr> -->
 
           <tr>
-              <td rowspan="4" class="country-name">新加坡</td>
-              <td rowspan="2">
+              <td rowspan="2" class="country-name">新加坡</td>
+              <td >
                 新加坡1号
               </td>
+            <td class="domain">sgp1.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>PPTP</td>
             <td>电信一般。联通一般。移动良好。</td>
           </tr>
-          <tr>
+<!--           <tr>
+            <td class="domain">sgp1.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>L2TP</td>
             <td>电信一般。联通一般。移动良好。</td>
-          </tr>
+          </tr> -->
           <tr>
-              <td rowspan="2">
+              <td >
                 新加坡2号
               </td>
+            <td class="domain">sgp2.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>PPTP</td>
             <td>电信一般。联通一般。移动良好。</td>
           </tr>
-          <tr>
+<!--           <tr>
+            <td class="domain">sgp2.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>L2TP</td>
             <td>电信一般。联通一般。移动良好。</td>
-          </tr>
+          </tr> -->
 
           <tr>
-              <td rowspan="2" class="country-name">台湾</td>
-              <td rowspan="2">
+              <td  class="country-name">台湾</td>
+              <td >
                 台湾1号
               </td>
+            <td class="domain">tw1.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>PPTP</td>
             <td>电信优秀。联通优秀。移动优秀。</td>
           </tr>
-          <tr>
+<!--           <tr>
+            <td class="domain">tw1.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>L2TP</td>
             <td>电信优秀。联通优秀。移动优秀。</td>
-          </tr>
+          </tr> -->
 
           <tr>
-              <td rowspan="6" class="country-name">香港</td>
-              <td rowspan="2">
+              <td rowspan="3" class="country-name">香港</td>
+              <td >
                 香港1号
               </td>
+            <td class="domain">hk1.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>PPTP</td>
             <td>电信优秀。联通良好。移动优秀。</td>
           </tr>
-          <tr>
+<!--           <tr>
+            <td class="domain">hk1.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>L2TP</td>
             <td>电信优秀。联通良好。移动优秀。</td>
           </tr>
-          <tr>
-              <td rowspan="2">
+ -->          <tr>
+              <td >
                 香港2号
               </td>
+            <td class="domain">hk2.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>PPTP</td>
             <td>电信优秀。联通优秀。移动优秀。</td>
           </tr>
-          <tr>
+<!--           <tr>
+            <td class="domain">hk2.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>L2TP</td>
             <td>电信优秀。联通优秀。移动优秀。</td>
-          </tr>
+          </tr> -->
           <tr>
-              <td rowspan="2">
+              <td >
                 香港3号
               </td>
+            <td class="domain">hk3.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>PPTP</td>
             <td>电信一般。联通一般。移动良好。</td>
           </tr>
-          <tr>
+<!--           <tr>
+            <td class="domain">hk3.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>L2TP</td>
             <td>电信一般。联通一般。移动良好。</td>
-          </tr>
+          </tr> -->
 
           <tr>
-              <td rowspan="2" class="country-name">英国</td>
-              <td rowspan="2">
+              <td  class="country-name">英国</td>
+              <td >
                 英国1号
               </td>
+            <td class="domain">en1.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>PPTP</td>
             <td>适合要英国或欧洲IP才能访问的互联网服务。</td>
           </tr>
-          <tr>
+<!--           <tr>
+            <td class="domain">en1.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
             <td>L2TP</td>
             <td>适合要英国或欧洲IP才能访问的互联网服务。</td>
-          </tr>
+          </tr> -->
     </tbody>
   </table>
 </div>

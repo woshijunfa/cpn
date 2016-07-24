@@ -41,5 +41,10 @@ if (! function_exists('gIsEmail'))
         if (empty($url)) $url = '/';
         return $url;
     }
+
+    function g_inVpnServie()
+    {
+        return \App\Services\UserService::isUserInVpnService();
+    }
 }
 

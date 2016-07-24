@@ -188,14 +188,14 @@
   </h4>
 
 
-  <p>付款完成后，<span class="text-danger">请不要关闭支付宝窗口</span>，它将自动跳回本订单，方便您继续操作。</p>
+  <p>付款完成后，<span class="text-danger">请不要关闭窗口</span>，它将自动跳回本订单，方便您继续操作。</p>
   <p>如果遇到问题，请<a href="/admin/tickets/new">联系客服</a></p>
   <form accept-charset="UTF-8" action="/admin/orders/payments/{{$order->order_id}}" data-amount="480.0" id="payment-methods-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="9Z30SK8a/sZ5dl5tG9yR5iOyBijXAWkLX0RktRGP6zw=" /></div>
     <label class="checkbox">
     <input  @if($user->money <= 0) disabled="disabled"  @endif id="use_account_money" name="use_account_money" type="checkbox" value="1" />
   使用主帐户余额付款 余额：<span class="price">{{$user->money or 0}} 元</span>
 </label>
-<a href="#" class="btn-final-payment-method btn btn-primary btn-lg" data-input="payment-method-input-1">支付宝付款</a>
+<a href="#" class="btn-final-payment-method btn btn-primary btn-lg" data-input="payment-method-input-1">去付款</a>
 
   {{csrf_field()}}
   <input class="btn btn-primary btn-lg" id="default-pay" name="commit" type="submit" value="付款" />

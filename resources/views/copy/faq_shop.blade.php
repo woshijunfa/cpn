@@ -186,9 +186,8 @@
     <div id="Q3" class="panel panel-basic">
       <div class="panel-heading panel-heading-sm">3. 支付方式包括哪些？</div>
       <div class="panel-body">
-        天梯支持在线购买，你可以直接在网站上下单，使用支付宝付款。<br>
-        海外用户如果不方便使用支付宝，天梯也提供 PayPal 支付。下单后请提交服务单，天梯MM会告诉你具体的操作哦～
-      </div>
+        天梯支持在线购买，你可以直接在网站上下单，使用微信，银联等付款。
+        </div>
       <div class="panel-footer panel-footer-sm text-right">
         <a href="#">返回顶部</a>
       </div>

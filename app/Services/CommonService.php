@@ -33,6 +33,8 @@ class CommonService
 
     public static function autoLoadPage()
     {
+        //关闭自动复制
+        return false;
     	if (strtoupper(request()->getMethod()) != 'GET') return false;
 
     	$uri = request()->getRequestUri();

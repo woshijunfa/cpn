@@ -144,7 +144,7 @@ Route::group(['middleware'=>'auth'], function () {
 	Route::post('/admin/user/update_password',"UserController@resetPassManual");
 });
 
-Route::get('/admin/tickets/66959388', 'CopyController@autoNavi');
+// Route::get('/admin/tickets/66959388', 'CopyController@autoNavi');
 // Route::get('/admin/orders/288352400', 'CopyController@autoNavi');
 // Route::get('/admin/orders/552661752', 'CopyController@autoNavi');
 // Route::get('/admin/orders/808713164', 'CopyController@autoNavi'); 	//status ok
