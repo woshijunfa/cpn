@@ -359,6 +359,7 @@ data-url='/faq/function' data-desc='' data-popup='true' data-via=''>
   </footer>
 
   
+    @include('public.baidu')
 </body>
 </html>
 

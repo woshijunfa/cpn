@@ -604,6 +604,7 @@ data-url='https://www.yuntiprivaten.com/guides/windows8_l2tp' data-desc='' data-
   </footer>
 
   
+@include('public.baidu')
 </body>
 </html>
 

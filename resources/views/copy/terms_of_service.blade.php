@@ -245,6 +245,7 @@ data-url='/terms_of_service' data-desc='' data-popup='true' data-via=''>
 
   </footer>
 
+@include('public.baidu')
   
 </body>
 </html>

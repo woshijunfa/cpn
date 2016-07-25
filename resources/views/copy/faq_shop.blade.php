@@ -324,6 +324,7 @@ data-url='/faq/shop' data-desc='' data-popup='true' data-via=''>
   </footer>
 
   
+@include('public.baidu')
 </body>
 </html>
 

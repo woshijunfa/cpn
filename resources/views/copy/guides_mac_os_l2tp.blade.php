@@ -485,6 +485,7 @@ data-url='https://www.yuntiprivaten.com/guides/mac_os_l2tp' data-desc='' data-po
 
   </footer>
 
+@include('public.baidu')
   
 </body>
 </html>

@@ -217,5 +217,6 @@
 
     </div>
   </div>
+@include('public.baidu')
 </body>
 </html>

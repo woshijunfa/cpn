@@ -79,5 +79,6 @@
         </div>
       </div>
     </footer>
+@include('public.baidu')
 </body></html>
 

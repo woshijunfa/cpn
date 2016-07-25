@@ -305,6 +305,7 @@ data-url='/users/password/new' data-desc='' data-popup='true' data-via=''>
 
   </footer>
 
+@include('public.baidu')
   
 </body>
 </html>

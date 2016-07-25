@@ -518,6 +518,7 @@ data-url='https://www.yuntiprivaten.com/guides/windows_xp_pptp' data-desc='' dat
   </footer>
 
   
+@include('public.baidu')
 </body>
 </html>
 

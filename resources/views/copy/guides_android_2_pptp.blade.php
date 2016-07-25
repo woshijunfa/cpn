@@ -429,6 +429,7 @@ data-url='https://www.yuntiprivaten.com/guides/android_2_pptp' data-desc='' data
   </footer>
 
   
+@include('public.baidu')
 </body>
 </html>
 

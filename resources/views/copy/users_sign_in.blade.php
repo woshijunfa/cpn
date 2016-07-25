@@ -325,6 +325,7 @@ data-url='/users/sign_in' data-desc='' data-popup='true' data-via=''>
 
   </footer>
 
+@include('public.baidu')
   
 </body>
 </html>

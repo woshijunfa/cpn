@@ -84,4 +84,5 @@
     });
 </script>
 </body>
+@include('public.baidu')
 </html>

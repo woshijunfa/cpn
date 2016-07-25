@@ -393,6 +393,7 @@ data-url='https://www.yuntiprivaten.com/guides/ubuntu_pptp' data-desc='' data-po
 
   </footer>
 
+@include('public.baidu')
   
 </body>
 </html>

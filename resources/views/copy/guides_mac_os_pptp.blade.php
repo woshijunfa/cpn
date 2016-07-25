@@ -485,7 +485,8 @@ data-url='https://www.yuntiprivaten.com/guides/mac_os_pptp' data-desc='' data-po
 
   </footer>
 
-  
+ @include('public.baidu')
+ 
 </body>
 </html>
 

@@ -303,6 +303,7 @@ data-url='/pricing' data-desc='' data-popup='true' data-via=''>
 
   </footer>
 
+@include('public.baidu')
   
 </body>
 </html>

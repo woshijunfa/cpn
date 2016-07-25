@@ -245,6 +245,7 @@ data-url='https://www.yuntiprivaten.com/guides/pptp_vs_l2tp' data-desc='' data-p
 
   </footer>
 
+@include('public.baidu')
   
 </body>
 </html>

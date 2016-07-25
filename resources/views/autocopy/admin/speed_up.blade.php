@@ -241,5 +241,6 @@ $('#btn-no-service').popover({
 
     </div>
   </div>
+@include('public.baidu')
 </body>
 </html>

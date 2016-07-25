@@ -422,6 +422,7 @@ data-url='/users/sign_up' data-desc='' data-popup='true' data-via=''>
 
   </footer>
 
+@include('public.baidu')
   
 </body>
 </html>

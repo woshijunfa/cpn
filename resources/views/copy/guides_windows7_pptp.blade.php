@@ -498,6 +498,7 @@ data-url='https://www.yuntiprivaten.com/guides/windows7_pptp' data-desc='' data-
 
   </footer>
 
+@include('public.baidu')
   
 </body>
 </html>

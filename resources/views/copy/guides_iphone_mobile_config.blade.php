@@ -354,7 +354,8 @@ data-url='https://www.yuntiprivaten.com/guides/iphone_mobile_config' data-desc='
 
   </footer>
 
-  
+  @include('public.baidu')
+
 </body>
 </html>
 

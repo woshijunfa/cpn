@@ -378,6 +378,7 @@ data-url='https://www.yuntiprivaten.com/guides/android_l2tp' data-desc='' data-p
   </footer>
 
   
+@include('public.baidu')
 </body>
 </html>
 

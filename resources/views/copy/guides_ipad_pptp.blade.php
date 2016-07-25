@@ -326,7 +326,8 @@ data-url='https://www.yuntiprivaten.com/guides/ipad_pptp' data-desc='' data-popu
 
   </footer>
 
-  
+ @include('public.baidu')
+ 
 </body>
 </html>
 

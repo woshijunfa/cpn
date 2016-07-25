@@ -430,6 +430,7 @@ data-url='https://www.yuntiprivaten.com/guides/mac_os_mobile_config' data-desc='
 
   </footer>
 
+@include('public.baidu')
   
 </body>
 </html>

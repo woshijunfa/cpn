@@ -358,7 +358,8 @@ data-url='https://www.yuntiprivaten.com/guides/iphone_pptp' data-desc='' data-po
 
   </footer>
 
-  
+ @include('public.baidu')
+ 
 </body>
 </html>
 
