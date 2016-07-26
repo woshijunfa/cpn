@@ -1,5 +1,5 @@
 @extends('layout.main')
-@section('title', '天梯 VPN - 使用教程 - Android 安卓 PPTP 协议)
+@section('title', '天梯 VPN - 使用教程 - Android 安卓 PPTP 协议')
 @section('content')
 
 

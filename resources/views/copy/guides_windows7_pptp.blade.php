@@ -1,5 +1,5 @@
 @extends('layout.main')
-@section('title', '天梯 VPN - 使用教程 - Windows 7 PPTP 协议)
+@section('title', '天梯 VPN - 使用教程 - Windows 7 PPTP 协议')
 @section('content')
 
   <div id="page">
