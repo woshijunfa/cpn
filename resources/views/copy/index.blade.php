@@ -1,6 +1,6 @@
 @extends('layout.main')
 @section('title', '天梯 VPN - 连接世界的梯子')
-@section('keyword', '天梯VPN,搭梯子,天梯加速器')
+@section('keyword','天梯,天梯VPN,搭梯子,天梯加速器')
 @section('content')
   <div id="page">
 
