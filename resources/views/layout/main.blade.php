@@ -11,7 +11,7 @@
 <meta name="twitter:image" content="/assets/twitter/image-ef62a4541213f068d2911972dec4fafd.png" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="天梯VPN提供专业的VPN服务，高速访问互联网，加密数据。注意：最近出现2个假冒天梯的诈骗网站，以.net或.cn域名结尾的均为诈骗网站，请勿上当。">
+    <meta name="description" content="天梯VPN 穹顶之上看世界，打开世界之窗 秒开twitter,youtube,facebook">
   <link href="/assets/application-ba00e5ba87186cd03f11989364793aba.css" media="all" rel="stylesheet" type="text/css" />
   <script src="/assets/application-747264b1f258f099732bfdc2eb002a17.js" type="text/javascript"></script>
   <link href="/assets/favicon-abbf6f81597af75480827c5780723875.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
@@ -171,11 +171,11 @@ data-url='/' data-desc='' data-popup='true' data-via=''>
   <li>
     <a href="https://plus.google.com/+天梯" target="_blank"><img alt="Google Plus" src="/assets/gplus-7688b4f4dfe029c38c29b1b5044e7701.png" title="Google Plus" /></a>  </li>
   <li>
-    <a href="http://weibo.com/yuntimm" target="_blank">
+    <a href="http://weibo.com/tiantimm" target="_blank">
       <img alt="新浪微博" src="/assets/weibo-e435db2a3ceceb91c5f3c66d990f5be8.png" title="新浪微博" />
 </a>  </li>
   <li>
-    <a href="http://page.renren.com/601470925" target="_blank">
+    <a href="http://page.renren.com/" target="_blank">
       <img alt="人人网" src="/assets/renren-02e7feeebdeafd6c782af6742a7ba597.png" title="人人网" />
 </a>  </li>
 </ul>

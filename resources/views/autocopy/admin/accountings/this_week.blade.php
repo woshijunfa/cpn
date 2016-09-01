@@ -31,7 +31,7 @@
         <span class="icon-bar"></span>
       </button>
 
-      <a href="https://www.yuntiprivaten.com/admin" class="navbar-brand">我的天梯</a>
+      <a href="/admin" class="navbar-brand">我的天梯</a>
     </div>
 
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
