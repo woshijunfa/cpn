@@ -74,7 +74,7 @@ class AdminController extends Controller
             $per = (int)($totalSize*100/$taocanSize);
         }
 
-    	return view("autocopy.admin",compact('info','detial','totalSize','taocanSize','per'));
+    	return view("autocopy.admin",compact('info','detial','totalSize','taocanSize','per','user'));
     }
 
     //显示订单列表

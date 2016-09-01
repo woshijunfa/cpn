@@ -135,7 +135,7 @@
                 <div class="content-main">
                   <div id="dashboard">
   <div class="title-container">
-    <strong>欢迎您，woshijunfa</strong> <span class="text-muted">(chenjunfa1988@yeah.net)</span>
+    <strong>欢迎您，{{$user->username or ''}}</strong> <span class="text-muted">({{$user->email or ''}})</span>
 </div>
 
 
