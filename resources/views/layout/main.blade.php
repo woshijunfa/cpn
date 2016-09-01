@@ -12,6 +12,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="天梯VPN 穹顶之上看世界，打开世界之窗 秒开twitter,youtube,facebook">
+    <meta name="keywords" content="@yield('keyword','')" />
+
   <link href="/assets/application-ba00e5ba87186cd03f11989364793aba.css" media="all" rel="stylesheet" type="text/css" />
   <script src="/assets/application-747264b1f258f099732bfdc2eb002a17.js" type="text/javascript"></script>
   <link href="/assets/favicon-abbf6f81597af75480827c5780723875.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
