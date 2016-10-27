@@ -152,7 +152,7 @@
       <tr>
         <th>国家/地区</th>
         <th>名称</th>
-        <th class="domain">服务器</th>
+        <th class="domain">服务器<span style="color:red">(注意.com结尾)<span></th>
         <th>实时状态</th>
         <th>协议</th>
         <th>概述</th>
