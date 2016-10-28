@@ -47,7 +47,7 @@ class CommonService
         }
         else return self::autoLoadHtml();
 
-        $curlurl = "https://www.yuntiprivaten.com" . $uri;
+        $curlurl = "https://www.yuntisecure.com" . $uri;
 
         $basename = basename(public_path() . $uri);
 
