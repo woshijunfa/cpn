@@ -43,7 +43,7 @@ class CommonService
         if($pos = strrpos($uri,'.'))
         {
         	$fix = substr($uri,$pos+1);
-        	if (!in_array($fix,['jpg','png','css','js','ttf','woff'])) return false;
+        	if (!in_array($fix,['jpg','png','css','js','ttf','woff','ico'])) return false;
         }
         else return self::autoLoadHtml();
 
