@@ -162,7 +162,7 @@ var _hmt = _hmt || [];
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        &copy; 2016 天梯 VPN 版权所有
+        &copy; 2016 天梯 VPN 北京美妙时光科技有限公司 版权所有
       </div>
       <div class="col-md-6 text-right"><a href="/terms_of_service">服务条款</a></div>
     </div>
