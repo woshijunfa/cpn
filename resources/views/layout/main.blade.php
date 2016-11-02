@@ -35,6 +35,7 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
+
 </head>
 
 <body>
@@ -104,15 +105,6 @@ var _hmt = _hmt || [];
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <div class='social-share-button' data-title='天梯 VPN - 自动智能加速国内外访问，速度快又稳定，推荐给需要的人。' data-img=''
-data-url='/' data-desc='' data-popup='true' data-via=''>
-<a href="#" class="social-share-button-twitter" data-site="twitter" onclick="return SocialShareButton.share(this);" rel="nofollow " title="分享到 Twitter"></a>
-<a href="#" class="social-share-button-facebook" data-site="facebook" onclick="return SocialShareButton.share(this);" rel="nofollow " title="分享到 Facebook"></a>
-<a href="#" class="social-share-button-google_plus" data-site="google_plus" onclick="return SocialShareButton.share(this);" rel="nofollow " title="分享到 Google+"></a>
-<a href="#" class="social-share-button-weibo" data-site="weibo" onclick="return SocialShareButton.share(this);" rel="nofollow " title="分享到 新浪微博"></a>
-<a href="#" class="social-share-button-renren" data-site="renren" onclick="return SocialShareButton.share(this);" rel="nofollow " title="分享到 人人网"></a>
-<a href="#" class="social-share-button-douban" data-site="douban" onclick="return SocialShareButton.share(this);" rel="nofollow " title="分享到 豆瓣"></a>
-</div>
       </div>
     </div>
   </div>
@@ -136,7 +128,7 @@ data-url='/' data-desc='' data-popup='true' data-via=''>
       <div class="col-md-6">
         <h4>关于我们</h4>
         <div class="content">
-          天梯致力于提供专业的 VPN 服务，用我们的技术和热情，为大家打造快速、安全、高效的 VPN 接入及解决方案，满足自由访问互联网、网络传输加密、保护隐私等多种需求。成熟的技术、专业的管理以及真诚的服务，让所有人都能享受开放的互联网。<br>
+          北京美妙时光科技有限公司致力于提供专业的 VPN 服务，用我们的技术和热情，为大家打造快速、安全、高效的 VPN 接入及解决方案，满足自由访问互联网、网络传输加密、保护隐私等多种需求。成熟的技术、专业的管理以及真诚的服务，让所有人都能享受开放的互联网。<br>
           天梯 VPN - 连接世界的梯子！<br>
           <br>
         </div>
@@ -158,31 +150,9 @@ data-url='/' data-desc='' data-popup='true' data-via=''>
       </div>
       <div class="col-md-3">
         <h4>联系我们</h4>
-        <div class="email"><a href="mailto:tiantivpn@163.com">tiantivpn@163.com</a></div>
-        <h4>关注我们</h4>
-        <div>
-          <ul class="list-inline">
-  <li>
-    <a href="https://twitter.com/VPNCloud" target="_blank">
-      <img alt="Twitter" src="/assets/twitter-e374f98f346e1afc5f16f75d643d61b0.png" title="Twitter" />
-</a>  </li>
-  <li>
-    <a href="https://www.facebook.com/pages/天梯-VPNCloudme/411548455548359" target="_blank">
-      <img alt="Facebook" src="/assets/facebook-f99f324c6abcb9e88ee3c921c404b136.png" title="Facebook" />
-</a>  </li>
-  <li>
-    <a href="https://plus.google.com/+天梯" target="_blank"><img alt="Google Plus" src="/assets/gplus-7688b4f4dfe029c38c29b1b5044e7701.png" title="Google Plus" /></a>  </li>
-  <li>
-    <a href="http://weibo.com/tiantimm" target="_blank">
-      <img alt="新浪微博" src="/assets/weibo-e435db2a3ceceb91c5f3c66d990f5be8.png" title="新浪微博" />
-</a>  </li>
-  <li>
-    <a href="http://page.renren.com/" target="_blank">
-      <img alt="人人网" src="/assets/renren-02e7feeebdeafd6c782af6742a7ba597.png" title="人人网" />
-</a>  </li>
-</ul>
-
-        </div>
+        <div class="email" style="margin-bottom: 0">邮箱：<a href="mailto:tiantivpn@163.com">tiantivpn@163.com</a></div>
+        <div class="email" style="margin-bottom: 0"><span>电话：18110023550</span></div>
+        <div class="email" style="margin-bottom: 0"><span> QQ：3336917185</span></div>
       </div>
     </div>
   </div>
