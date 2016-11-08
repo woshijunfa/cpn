@@ -289,7 +289,7 @@
         </div>
     @else
         <div class="note">
-          l2tp链接支持正在紧张搭建中。。。
+          l2tp共享密钥(<span style="color:red">tiantivpn</span>)
         </div>
     @endif
 

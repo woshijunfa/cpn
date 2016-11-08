@@ -180,7 +180,7 @@
               </td>
             <td class="domain">jp2.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
-            <td>PPTP</td>
+            <td>L2TP</td>
             <td>电信一般。联通良好。移动良好。</td>
           </tr>
 <!--           <tr>
@@ -210,7 +210,7 @@
               </td>
             <td class="domain">jp4.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
-            <td>PPTP</td>
+            <td>L2TP</td>
             <td>电信较差。联通良好。移动良好。</td>
           </tr>
 <!--           <tr>
@@ -242,7 +242,7 @@
               </td>
             <td class="domain">us2.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
-            <td>PPTP</td>
+            <td>L2TP</td>
             <td>电信良好。联通良好。移动优秀。</td>
           </tr>
 <!--           <tr>
@@ -272,7 +272,7 @@
               </td>
             <td class="domain">us4.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
-            <td>PPTP</td>
+            <td>L2TP</td>
             <td>电信良好。联通一般。移动优秀。</td>
           </tr>
 <!--           <tr>
@@ -302,7 +302,7 @@
               </td>
             <td class="domain">us6.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
-            <td>PPTP</td>
+            <td>L2TP</td>
             <td>电信优秀。联通优秀。移动优秀。</td>
           </tr>
 <!--           <tr>
@@ -334,7 +334,7 @@
               </td>
             <td class="domain">sgp2.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
-            <td>PPTP</td>
+            <td>L2TP</td>
             <td>电信一般。联通一般。移动良好。</td>
           </tr>
 <!--           <tr>
@@ -383,7 +383,7 @@
               </td>
             <td class="domain">hk2.tiantivpn.com</td>
             <td><span class="label label-working">正常</span></td>
-            <td>PPTP</td>
+            <td>L2TP</td>
             <td>电信优秀。联通优秀。移动优秀。</td>
           </tr>
 <!--           <tr>
