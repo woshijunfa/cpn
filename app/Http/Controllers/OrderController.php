@@ -39,7 +39,13 @@ class OrderController extends Controller
         //用户信息
         $userInfo = Auth::user();
 
-        $mPrice = ['sv3'=> 180,'mv3'=>240,'bv3'=>600,'ev3'=>3600];
+        $mPrice = 
+        [
+            'sv3'=> \Config::get('price.1.price'),
+            'mv3'=>\Config::get('price.2.price'),
+            'bv3'=>\Config::get('price.3.price'),
+            'ev3'=>\Config::get('price.4.price')
+        ];
 
         $price = $mPrice[$serviceVersion];
 

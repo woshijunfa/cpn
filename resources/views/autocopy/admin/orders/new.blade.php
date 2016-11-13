@@ -162,7 +162,7 @@
     <p>同时在线：2 台</p>
     <p>月限时：无限</p>
     <p>多国机房：17个机房</p>
-    <p class="price">180 元 / 年</p>
+    <p class="price">{{\Config::get('price.1.price')}} 元 / 年</p>
 </label></div>
 
         
@@ -174,7 +174,7 @@
     <p>同时在线：3 台</p>
     <p>月限时：无限</p>
     <p>多国机房：17个机房</p>
-    <p class="price">240 元 / 年</p>
+    <p class="price">{{\Config::get('price.2.price')}} 元 / 年</p>
 </label></div>
 
         
@@ -186,7 +186,7 @@
     <p>同时在线：3 台</p>
     <p>月限时：无限</p>
     <p>多国机房：17个机房</p>
-    <p class="price">600 元 / 年</p>
+    <p class="price">{{\Config::get('price.3.price')}} 元 / 年</p>
 </label></div>
 
         
@@ -198,7 +198,7 @@
     <p>同时在线：15 台</p>
     <p>月限时：无限</p>
     <p>多国机房：17个机房</p>
-    <p class="price">3,600 元 / 年</p>
+    <p class="price">{{\Config::get('price.4.price')}} 元 / 年</p>
 </label></div>
 
     </div>
