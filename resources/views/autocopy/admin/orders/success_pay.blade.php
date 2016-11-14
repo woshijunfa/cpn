@@ -168,7 +168,7 @@
     <tr>
       <th>名称</th>
       <th>价格</th>
-      <th>数量</th>
+      <th>时间</th>
       <th>合计</th>
     </tr>
   </thead>
@@ -176,7 +176,13 @@
       <tr>
         <td>{{ $order->order_name or ''}}</td>
         <td>{{ $order->price or ''}} 元</td>
-        <td>{{ $order->count or ''}}</td>
+        <td>
+        @if($order->count == 3)
+        终身
+        @else
+        {{$order->count or 1}}年
+        @endif
+        </td>
         <td>{{ $order->price * $order->count }} 元</td>
       </tr>
 

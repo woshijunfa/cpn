@@ -217,7 +217,15 @@
             <p class="radio-icon"><input id="quantity_2" name="quantity" type="radio" value="2" /></p>
             <p class="term-num">2 年</p>
 </label>        </div>
+
+        <div class="col-md-3">
+          <label class="radio-container">
+            <p class="radio-icon"><input id="quantity_2" name="quantity" type="radio" value="3" /></p>
+            <p class="term-num">终身（只需3年费用）</p>
+</label>        </div>
     </div>
+
+
   </div>
 {{ csrf_field() }}
   <div class="form-group">

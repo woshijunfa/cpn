@@ -47,12 +47,13 @@ class Order extends Model
 
     //创建订单
     //成功返回对象，失败返回false
-    public static function createOrder($version,$price,$count,$userInfo)
+    public static function createOrder($version,$price,$count,$unit,$userInfo)
     {
         $orderInfo = [];
-        $orderInfo['order_name'] = "套餐-" . $version . '数量-' . $count;
+        $orderInfo['order_name'] = "套餐-" . $version . '时间-' . ($count >= 3 ? "终身" : $count . "年");
         $orderInfo['version'] = $version;
         $orderInfo['price'] = $price;
+        $orderInfo['unit'] = $unit == 'month' ? 'month' : 'year';
         $orderInfo['total_price'] = $price * $count;
         $orderInfo['status'] = 'be_pay';
         $orderInfo['rec_desc_money'] = $userInfo->recommended_user_id > 0 && $userInfo->is_recm_valid == 0 ? 10 : 0;

@@ -34,7 +34,9 @@ class OrderController extends Controller
 
         //数量
         $count = Input::get('quantity');
-        if ($count != 2) $count = 1;
+        if ($count != 2 && $count != 3) $count = 1;
+        $unit = Input::get('unit');
+        if (empty($unit)) $unit = 'year';
 
         //用户信息
         $userInfo = Auth::user();
@@ -50,7 +52,7 @@ class OrderController extends Controller
         $price = $mPrice[$serviceVersion];
 
         //生成订单，信息
-        $order = Order::createOrder($serviceVersion,$price,$count,$userInfo);
+        $order = Order::createOrder($serviceVersion,$price,$count,$unit,$userInfo);
         if (empty($order)) return $this->errorPage();
 
         return $this->showOrder($order->order_id);
