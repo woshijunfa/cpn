@@ -152,6 +152,28 @@
   <span class="text-highlight">试用条件：</span>
   首次注册用户有<span class="btn-danger">三次</span>免费获取测试账号的机会，测试账号密码将在<span class="btn-danger">每个整点时间更改密码</span>，请您悉知
 </p>
+<p>
+  <span class="text-highlight">pptp试用服务器：</span>
+  us1.tiantivpn.com或者其他支持pptp的服务器，详见服务器列表
+ </p>
+<p>
+  <span class="text-highlight">l2tp试用服务器：</span>
+  us2.tiantivpn.com或者其他支持l2tp的服务器，详见服务器列表 共享秘钥<span class="btn-danger">tiantivpn</span>
+ </p>
+
+
+<p>
+  <span class="text-highlight">未连接上小技巧：</span><br/>
+  1：ping us1.tiantivpn.com 等要连接的服务器是否能ping通<br/>
+  2：是否过了整点时间，测试账号变了<br/>
+  3：仔细检查配置过程是否有遗漏，详细请查看帮助中心<br/>
+ </p>
+
+
+<p>
+  <span class="text-highlight">账号密码：</span>
+  <span class="btn-danger" id="testpwd">点击下方按钮获取</span>
+ </p>
 
 
 
@@ -170,7 +192,8 @@
   $("#testbtn").click(function(){
     // alert("用户名：test 密码：982343");
   $.get("/admin/gettest", function(result){
-    alert(result.message);
+    $("#testpwd").text(result.message);
+    // alert(result.message);
   });
 
   });

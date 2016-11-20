@@ -18,7 +18,7 @@ use View;
 use Auth;
 use Input;
 use Config;
-
+use Log;
 class AdminController extends Controller
 {
     //显示首页
@@ -173,7 +173,7 @@ class AdminController extends Controller
 
         User::where('id',$user->id)->update(['testcount'=>$user->testcount+1]);
 
-        \Log::info("user:" . $user->id ." 试用测试账号：" . $str);
+        Log::info("user:" . $user->id ." 试用测试账号：" . $str);
 
         return $this->json(0,[],$str);
     }
