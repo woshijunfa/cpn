@@ -116,6 +116,8 @@ Route::group(['middleware'=>'auth'], function () {
 
 	#推荐详情
 	Route::get('/admin/referral', 'AdminController@referral');
+	Route::get('/admin/test', 'AdminController@testacc');
+	Route::get('/admin/gettest', 'AdminController@testaccpost');
 
 	##订单相关
 	Route::get('/admin/orders', 'AdminController@getOrders');

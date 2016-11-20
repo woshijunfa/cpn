@@ -10,6 +10,7 @@ use App\Models\Order;
 use App\Models\User;
 use App\Models\Withdraw;
 use App\Models\UserLog;
+use App\Models\RadCheck;
 use App\Models\UserService;
 use App\Services\OrderService;
 use App\Http\Controllers\Controller;
@@ -151,5 +152,27 @@ class AdminController extends Controller
         $recmInfo = $user->getRecommandInfo();
         $url = Config::get('app.url') . '?r=' . $user->username;
         return view('autocopy.admin.referral',compact('user','recmInfo','url'));
+    }
+
+    //测试账号
+    public function testacc()
+    {
+        $user = Auth::user();
+        $recmInfo = $user->getRecommandInfo();
+        $url = Config::get('app.url') . '?r=' . $user->username;
+        return view('autocopy.admin.test',compact('user','recmInfo','url'));
+    }
+
+    public function testaccpost()
+    {
+        $user = Auth::user();
+        if ($user->testcount >= 2) return $this->json(1,[],"您已经获取过测试账号两次");
+        $obj = RadCheck::where("username","test")->first();
+
+        $str = "用户名：test 密码：" . $obj->value;
+
+        User::where('id',$user->id)->update(['testcount'=>$user->testcount+1]);
+
+        return $this->json(0,[],$str);
     }
 }
