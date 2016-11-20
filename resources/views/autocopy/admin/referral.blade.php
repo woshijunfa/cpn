@@ -71,6 +71,18 @@
             <i class="fa fa-comments-o"></i>
             <span class="name">联系客服</span>
 </a>        </li>
+<li>
+          <style type="text/css">
+            .fa-thumbs-o-up2:before {
+    content: "\f076";
+}
+          </style>
+            <a href="/admin/test">
+              <i class="fa fa-thumbs-o-up2";'></i>
+              <span class="name">试用</span>
+</a>          </li>
+
+
           <li class="active">
             <a href="/admin/referral">
               <i class="fa fa-thumbs-o-up"></i>

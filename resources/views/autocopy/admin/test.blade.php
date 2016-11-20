@@ -80,7 +80,7 @@
           </style>
             <a href="/admin/referral">
               <i class="fa fa-thumbs-o-up2";'></i>
-              <span class="name">测试</span>
+              <span class="name">试用</span>
 </a>          </li>
           <li class="">
             <a href="/admin/referral">
@@ -143,22 +143,25 @@
               <div class="col-md-12">
                 <div class="content-main">
                   <h4 class="title-divider">
-  <span>如何进行测试</span>
+  <span>如何进行试用</span>
 </h4>
 
-<p>天梯vpn支持首次注册用户进行测试</p>
+<p>天梯vpn支持首次注册用户进行试用</p>
 
 <p>
-  <span class="text-highlight">测试条件：</span>
-  首次注册用户有两次免费获取测试账号的机会，<span class="text-highlight">免费账号密码将在每个整点时间更改密码，请您悉知</span> 
+  <span class="text-highlight">试用条件：</span>
+  首次注册用户有<span class="btn-danger">三次</span>免费获取测试账号的机会，测试账号密码将在<span class="btn-danger">每个整点时间更改密码</span>，请您悉知
 </p>
 
 
 
 <div class="body">
+          <a href="/admin/orders/new" style="width: 200px;float:right;"  class="btn btn-primary btn-block">测完了？下订单吧亲！</a>
+
       <div id="testbtn" class="plan-actions" style="width:200px;">
-          <span  class="btn btn-success btn-block">点击查看测试账号</span>
+          <span  class="btn btn-success btn-block" >点击查看测试账号</span>
       </div>
+
 </div>
 
 

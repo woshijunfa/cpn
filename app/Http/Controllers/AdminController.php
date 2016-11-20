@@ -166,7 +166,7 @@ class AdminController extends Controller
     public function testaccpost()
     {
         $user = Auth::user();
-        if ($user->testcount >= 2) return $this->json(1,[],"您已经获取过测试账号两次");
+        if ($user->testcount >= 3) return $this->json(1,[],"您已经获取过试用账号三次");
         $obj = RadCheck::where("username","test")->first();
 
         $str = "用户名：test 密码：" . $obj->value;

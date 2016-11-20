@@ -71,6 +71,17 @@
             <i class="fa fa-comments-o"></i>
             <span class="name">联系客服</span>
 </a>        </li>
+          <li>
+
+          <style type="text/css">
+            .fa-thumbs-o-up2:before {
+    content: "\f076";
+}
+          </style>
+            <a href="/admin/test">
+              <i class="fa fa-thumbs-o-up2";'></i>
+              <span class="name">试用</span>
+</a>          </li>
           <li class="">
             <a href="/admin/referral">
               <i class="fa fa-thumbs-o-up"></i>
@@ -141,7 +152,7 @@
 <style type="text/css">
   .domain {
     text-align: center;
-    @if(!g_inVpnServie())display: none; @endif
+    @if(false && !g_inVpnServie())display: none; @endif
   }
 
 </style>

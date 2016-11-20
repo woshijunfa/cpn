@@ -96,7 +96,7 @@
         </span>
       </div>
       <div class="panel-footer">
-        <a href="/feature" class="btn btn-basic">超大的流量</a>
+        <a href="/admin/test" class="btn btn-basic btn-highlight-lg">免费试用</a>
       </div>
     </div>
   </div>
